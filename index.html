@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>船舶安全风险评估系统</title>
+
+    <link rel="stylesheet" href="lib/weui/style/weui.css">
+</head>
+<body>
+<div class="container" id="container"></div>
+<script type="text/html" id="tpl_login">
+    <div class="weui_cells">
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">所属公司</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入公司名称"/>
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" placeholder="请输入船名"/>
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">呼号</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" placeholder="请输入呼号"/>
+            </div>
+        </div>
+    </div>
+    <div class="weui_btn_area">
+        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">登录</a>
+    </div>
+</script>
+
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/weui/router.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
