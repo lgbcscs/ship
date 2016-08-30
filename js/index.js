@@ -4,11 +4,11 @@
 $(function(){
     var router = new Router({
         container: '#container',
-        enterTimeout: 250,
-        leaveTimeout: 250
+        enterTimeout: 0,
+        leaveTimeout: 0
     });
 
-    // grid
+    // login
     var login = {
         url: '/',
         className: 'login',
@@ -17,7 +17,17 @@ $(function(){
         }
     };
 
+    // index
+    var indexPage = {
+        url: '/index',
+        className: 'indexPage',
+        render: function () {
+            return $('#tpl_index').html();
+        }
+    };
+
     router.push(login)
+        .push(indexPage)
         .setDefault('/')
         .init();
 });
