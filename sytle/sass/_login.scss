@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.login{
+  .logoDiv{
+    margin: 50px auto;
+    .logoPic{
+      width: 90px;
+      height: 120px;
+      margin: 0 auto;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .systemTitle{
+      margin-top: 30px;
+      text-align: center;
+      @include setFontInfo(#204492,$defaultFontFamily,px2rem(38),600);
+    }
+  }
+  .weui_cells{
+    width: 90%;
+    margin: 0 auto;
+    .weui_label{
+    }
+    &:before{
+      border: none;
+    }
+    .weui_input{
+      @include setNoOutLine();
+      &:focus,
+      &:active{
+        border: none;
+        outline: none;
+      }
+      border: none;
+    }
+  }
+  .weui_btn_area{
+    width: 90%;
+    margin: 30px auto;
+  }
+}

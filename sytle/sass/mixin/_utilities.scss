@@ -1,0 +1,112 @@
+@charset "utf-8";
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+body{
+  line-height:normal;
+}
+*{
+  box-sizing: border-box
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.text-overflow{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
+.page-part-split{
+  height:px2rem(10);
+  @include setBackgroundColor(#EFEFEF);
+}
+
+// 按钮样式
+.btn_primary {
+  $btn-primary:#224491;
+  border: 1px solid $btn-primary;
+  background-color: $btn-primary;
+  @include setFontInfo(#fff,nth($defaultFontFamily,6),px2rem(16),normal);
+  color: #fff !important;
+  &:visited {
+    color: darken($btn-primary,10%);
+  }
+  &:active {
+    color: #fff;
+    background-color: darken($btn-primary,10%);
+  }
+}
+.btn{
+  padding: px2rem(6) px2rem(12);
+}
+
+@include w-percent();

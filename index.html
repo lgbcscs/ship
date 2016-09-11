@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <title>船舶安全风险评估系统</title>
+    <title>船舶管理检查智能平台</title>
+    <link href="image/shi.ico" rel="shortcut icon">
 
     <link rel="stylesheet" href="lib/weui/style/weui.css">
+    <link rel="stylesheet" href="sytle/css/index.css">
 </head>
 <body>
 <div class="container" id="container"></div>
 <script type="text/html" id="tpl_login">
+    <div class="logoDiv">
+        <div class="logoPic">
+            <img src="image/ico_logo.png">
+        </div>
+        <p class="systemTitle">船舶管理检查智能平台</p>
+    </div>
     <div class="weui_cells">
         <div class="weui_cell">
             <div class="weui_cell_hd"><label class="weui_label">所属公司</label></div>
@@ -31,26 +39,243 @@
         </div>
     </div>
     <div class="weui_btn_area">
-        <a class="weui_btn weui_btn_primary" href="#/index" id="showTooltips">登录</a>
+        <!--<a class="weui_btn weui_btn_primary" href="#/index" id="showTooltips">登录</a>-->
+        <a class="weui_btn btn_primary" href="#/index" id="showTooltips">登录</a>
     </div>
 </script>
+
 
 <script type="text/html" id="tpl_index">
     <div class="userInfoPart">
-        <div class="ico_system">系统logo</div>
+        <div class="ico_system"></div>
         <div class="userInfoDiv">
-            <span class="shipName">启程号</span>
+            <p class="text-center">船长</p>
+            <p class="text-center">
+                <span class="shipName">启程号</span>
+                <span class="shipName">远洋公司第二舰队</span>
+            </p>
         </div>
     </div>
-    <ul class="navList">
-        <li class="navItem">信息列表</li>
-        <li class="navItem">信息登记</li>
-        <li class="navItem">系统设置</li>
-        <li class="navItem">用户信息</li>
-    </ul>
+    <div class="weui_grids">
+        <a href="#/list" class="weui_grid">
+            <div class="weui_grid_icon">
+                <i class="icon">
+                    <img src="image/ico_rczf.png">
+                </i>
+            </div>
+            <p class="weui_grid_label">
+                历史检查
+            </p>
+        </a>
+        <a href="#/cell" class="weui_grid">
+            <div class="weui_grid_icon">
+                <i class="icon">
+                    <img src="image/ico_gztj.png">
+                </i>
+            </div>
+            <p class="weui_grid_label">
+                项目检查
+            </p>
+        </a>
+        <a href="#/toast" class="weui_grid">
+            <div class="weui_grid_icon">
+                <i class="icon">
+                    <img src="image/ico_gztj.png">
+                </i>
+            </div>
+            <p class="weui_grid_label">
+                系统设置
+            </p>
+        </a>
+        <a href="#/dialog" class="weui_grid">
+            <div class="weui_grid_icon">
+                <i class="icon">
+                    <img src="image/ico_zdzf.png">
+                </i>
+            </div>
+            <p class="weui_grid_label">
+                用户信息
+            </p>
+        </a>
+    </div>
+    <!--<ul class="navList">-->
+        <!--<li class="navItem">信息列表</li>-->
+        <!--<li class="navItem">信息登记</li>-->
+        <!--<li class="navItem">系统设置</li>-->
+        <!--<li class="navItem">用户信息</li>-->
+    <!--</ul>-->
 </script>
 
+
+<script type="text/html" id="tpl_list">
+    <div class="weui_tab">
+        <div class="nav-item-cont weui_tab_bd">
+            <ul class="info-part">
+                <li>
+                    <a class="item-link" href="javascipt:void(0)">
+                        <div class="weui_panel_bd">
+                            <div class="weui_media_box weui_media_text clearfix">
+                                <h4 class="weui_media_title clearfix">
+                                    <span class="type-name pull-left">船舶自查</span>
+                                    <span class="check-time pull-left">2016-06-06</span>
+                                    <span class="item-state pull-right">已上传</span>
+                                </h4>
+                                <p class="weui_media_desc">
+                                    <span class="country-name">国家：波斯尼亚和黑塞哥维那</span>
+                                    <span class="pory-name">港口：克珀斯-克里斯堤港</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="item-link" href="javascipt:void(0)">
+                        <div class="weui_panel_bd">
+                            <div class="weui_media_box weui_media_text">
+                                <h4 class="weui_media_title clearfix">
+                                    <span class="type-name pull-left">PSC检查</span>
+                                    <span class="check-time pull-left">2016-06-06</span>
+                                    <button type="button" class="pull-right item-state btn_primary">上传</button>
+                                </h4>
+                                <p class="weui_media_desc">
+                                    <span class="country-name">国家：波斯尼亚和黑塞哥维那</span>
+                                    <span class="pory-name">港口：克珀斯-克里斯堤港</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-item-cont check-item-cont" style="display: none;">
+            <div class="check-type">
+                <h5 class="info-title">
+                    <span>选择检查项类型</span>
+                </h5>
+                <div class="weui_cells weui_cells_access">
+                    <a class="weui_cell" href="addCheckInfo.html">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>PSC风险评估</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                        </div>
+                    </a>
+                    <a class="weui_cell" href="javascript:;">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>油公司检查</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                        </div>
+                    </a>
+                    <a class="weui_cell" href="javascript:;">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>船公司检查</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                        </div>
+                    </a>
+                    <a class="weui_cell" href="javascript:;">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>船舶自查</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item-cont" style="display: none;">
+            系统设置
+        </div>
+        <div class="nav-item-cont" style="display: none;">
+            用户信息
+        </div>
+        <div class="weui_tabbar">
+            <a href="javascript:;" class="weui_tabbar_item weui_bar_item_on">
+                <div class="weui_tabbar_icon">
+                    <img src="image/ico_rczf.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">历史检查</p>
+            </a>
+            <a href="javascript:;" class="weui_tabbar_item">
+                <div class="weui_tabbar_icon">
+                    <img src="image/ico_gztj.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">项目检查</p>
+            </a>
+            <a href="javascript:;" class="weui_tabbar_item">
+                <div class="weui_tabbar_icon">
+                    <img src="image/ico_gztj.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">系统设置</p>
+            </a>
+            <a href="javascript:;" class="weui_tabbar_item">
+                <div class="weui_tabbar_icon">
+                    <img src="image/ico_zdzf.png" alt="">
+                </div>
+                <p class="weui_tabbar_label">用户信息</p>
+            </a>
+        </div>
+    </div>
+    <!--BEGIN dialog1-->
+    <div class="weui_dialog_confirm" id="add-country" style="display: none;">
+        <div class="weui_mask"></div>
+        <div class="weui_dialog">
+            <div class="weui_dialog_hd"><strong class="weui_dialog_title">新增国家</strong></div>
+            <div class="weui_dialog_bd">
+                <div class="weui_cells">
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd"><label class="weui_label">国家名称</label></div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入国家名称">
+                        </div>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <textarea class="weui_textarea" placeholder="请输备注" rows="3"></textarea>
+                            <div class="weui_textarea_counter"><span>0</span>/200</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weui_dialog_ft">
+                <a href="javascript:;" class="weui_btn_dialog default">取消</a>
+                <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+            </div>
+        </div>
+    </div>
+    <!--END dialog1-->
+    <!--BEGIN dialog2-->
+    <div class="weui_dialog_alert" id="add-port" style="display: none;">
+        <div class="weui_mask"></div>
+        <div class="weui_dialog">
+            <div class="weui_dialog_hd"><strong class="weui_dialog_title">新增港口</strong></div>
+            <div class="weui_dialog_bd">
+                <div class="weui_cells">
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd"><label class="weui_label">港口名称</label></div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入港口名称">
+                        </div>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <textarea class="weui_textarea" placeholder="请输备注" rows="3"></textarea>
+                            <div class="weui_textarea_counter"><span>0</span>/200</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weui_dialog_ft">
+                <a href="javascript:;" class="weui_btn_dialog default">取消</a>
+                <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+            </div>
+        </div>
+    </div>
+    <!--END dialog2-->
+</script>
 <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/hotcss/hotcss.js"></script>
 <script type="text/javascript" src="lib/weui/router.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 </body>

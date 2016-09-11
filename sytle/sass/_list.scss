@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+.listPage {
+    height: 100%;
+    .weui_tab_bd {
+        @include setBackgroundColor(#EFEFEF);
+    }
+    @at-root .info-part {
+        padding: px2rem(10);
+        > li {
+            font-size: 0;
+            @include setBackgroundColor(#fff);
+            margin-bottom: px2rem(10);
+            border: 1px solid #ddd;
+            .weui_media_box {
+                .weui_media_title {
+                    @include setFontInfo(#222, $defaultFontFamily, px2rem(20), normal);
+                    .check-time {
+                        margin-left: px2rem(20);
+                    }
+                }
+                .weui_media_desc {
+                    > span {
+                        display: block;
+                        margin-bottom: px2rem(8);
+                    }
+                }
+            }
+            .item-link{
+                display: block;
+            }
+            .item-state{
+                text-align: center;
+                min-width: px2rem(80);
+                border:1px solid #ddd;
+                padding: px2rem(6) px2rem(16);
+                @include setFontInfo(#222, $defaultFontFamily, px2rem(16), normal);
+            }
+            span{
+                &.item-state{
+                    @include setBackgroundColor(#ddd);
+                }
+            }
+        }
+    }
+    .check-item-cont{
+        .check-info-detail{}
+    }
+    @at-root .info-title{
+        $titleHeight : px2rem(60);
+        border-top:none;
+        height:$titleHeight;
+        @include setBackgroundColor(#fff);
+        border-bottom:1px solid #CCC;
+        span{
+            padding-left: px2rem(8);
+            @include setBoxSizing();
+            min-width:px2rem(120);
+            border-bottom:2px solid #0075C2;
+            text-shadow: none;
+            float: left;
+            text-align: left;
+            @include setLine($titleHeight,$titleHeight);
+            @include setFontInfo(#3880bd,nth($defaultFontFamily,6),px2rem(20),normal);
+        }
+        .btn_add{
+            margin-right: px2rem(8);
+            margin-top: px2rem(10);
+        }
+    }
+}

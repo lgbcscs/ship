@@ -1,0 +1,134 @@
+@charset "utf-8";
+$designWidth : 420; //如设计图是720
+$defaultFontFamily: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei" ;
+$defaultFontSize: px2rem(28) !default;
+$fontLightColor : #808080;
+
+@mixin setFontInfo($fontColor:$fontLightColor,$fontFamily:nth($defaultFontFamily,1),$fontSize: 12px,$fontWeight:normal) {
+  font-family: $fontFamily;
+  color: $fontColor;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+}
+
+@mixin setInfo_a($color:$fontLightColor #428bca,$underLine:none underline){
+  text-decoration: nth($underLine,1);
+  color: nth($color,2);
+  &:hover{
+    text-decoration: nth($underLine,2);
+    color: nth($color,2);
+  }
+  &:active,&:visited{
+    text-decoration: nth($underLine,1);
+  }
+  &:focus{
+    text-decoration: nth($underLine,1);
+    outline: none;
+  }
+}
+@mixin setNoOutLine(){
+  &:hover,
+  &:focus,
+  &:active{
+    outline: none;
+    box-shadow: none;
+  }
+}
+@mixin noBoxShadow(){
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+@mixin setBoxSizing($boxType:border-box){
+  -webkit-box-sizing: $boxType;
+  -moz-box-sizing: $boxType;
+  box-sizing: $boxType;
+}
+@mixin setBorder($border: none, $radio: 0) {
+  border: $border;
+  -webkit-border-radius:px2rem($radio);
+  -moz-border-radius:px2rem($radio);
+  border-radius:px2rem($radio);
+}
+@mixin setBorderRadius($radio:0){
+  -webkit-border-radius:px2rem($radio) !important;
+  -moz-border-radius:px2rem($radio) !important;
+  border-radius:px2rem($radio) !important;
+}
+@mixin baseTable($borderSpacing: 0, $borderCollapse: collapse) {
+  border-collapse: $borderCollapse;
+  border-spacing: $borderSpacing;
+}
+
+@mixin setLine($height: 30px, $lineHeight: 30px) {
+  height: $height;
+  line-height: $lineHeight;
+}
+
+@mixin setOverFlow($overFlow:hidden,$textOverFlow:ellipsis,$whiteSpace:nowrap){
+  overflow: $overFlow;
+  text-overflow: $textOverFlow;
+  white-space: $whiteSpace;
+}
+
+@mixin setPosition($state:static,$top:0,$right:0,$bottom:0,$left:0){
+  position: $state;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin setPadding($top:0,$right:0,$bottom:0,$left:0){
+  padding-left: $left;
+  padding-right: $right;
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+@mixin setMargin($top:0,$right:0,$bottom:0,$left:0){
+  margin-left: $left;
+  margin-right: $right;
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin partBorder($borderTop:none,$borderRight:none,$borderBottom:none,$borderLeft:none){
+  border-top: $borderTop;
+  border-bottom: $borderBottom;
+  border-left: $borderLeft;
+  border-right: $borderRight;
+}
+@mixin  setIco($width,$height,$url,$marginTop:0){
+  width: $width;
+  height: $height;
+  background:url($url) no-repeat center;
+  margin-top: $marginTop;
+}
+
+@mixin setBackgroundColor($bgColor:transparent){
+  background-color: $bgColor;
+}
+
+@mixin setOpacity($opacity:1){
+  opacity: $opacity;
+  filter:alpha(opacity=$opacity*100);
+}
+
+//计算form表单的格子宽度
+@mixin set-grid-width($gridVal){
+  width: $gridVal*10%;
+}
+@mixin w-percent() {
+  @for $i from 0 through 10 {
+    $list: ".w-percent-#{$i*10}";
+    #{$list}{
+      @include set-grid-width($i);
+    }
+  }
+  .w-percent-25{
+    width: 25%;
+  }
+  .w-percent-33{
+    width: 33.333%;
+  }
+}

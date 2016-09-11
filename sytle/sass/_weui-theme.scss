@@ -1,0 +1,54 @@
+@charset "utf-8";
+.weui_tab_bd{
+    padding-bottom: px2rem(120);
+}
+.weui_media_box{
+    padding: px2rem(10);
+}
+.weui_tabbar{
+    .weui_tabbar_item{
+        padding: px2rem(20) 0;
+        .weui_tabbar_label{
+            @include setFontInfo(#888, $defaultFontFamily, px2rem(22), normal);
+        }
+        &.weui_bar_item_on{
+            .weui_tabbar_label{
+                color: #09BB07;
+            }
+        }
+    }
+}
+.weui_cell{
+    padding: px2rem(10) px2rem(15);
+}
+.weui_cells{
+    margin-top: 0;
+    .weui_cell{
+        &:before{
+            left: 0;
+        }
+    }
+    .weui_cell_bd{
+        position: relative;
+        .btn_primary{
+            position: absolute;
+            right: px2rem(10);
+            top: px2rem(0);
+            border:none;
+        }
+    }
+    .weui_select{
+        line-height: normal;
+        height: px2rem(34);
+    }
+    .has_btn{
+        min-height: px2rem(34);
+        $btnWidth : px2rem(150);
+        .weui_input{
+            padding-right: $btnWidth;
+        }
+    }
+    //.weui_cell_select{
+    //    padding: px2rem(10) px2rem(15);
+    //}
+}
