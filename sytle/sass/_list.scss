@@ -15,14 +15,20 @@
             .weui_media_box {
                 .weui_media_title {
                     @include setFontInfo(#222, $defaultFontFamily, px2rem(20), normal);
+                   .type-name{
+                       line-height: px2rem(28);
+                   }
                     .check-time {
                         margin-left: px2rem(20);
+                        line-height: px2rem(28);
                     }
                 }
                 .weui_media_desc {
+                    margin-top: px2rem(8);
                     > span {
                         display: block;
-                        margin-bottom: px2rem(8);
+                        margin-bottom: px2rem(2);
+                        @include setFontInfo(#666, $defaultFontFamily, px2rem(14), normal);
                     }
                 }
             }
@@ -34,7 +40,7 @@
                 min-width: px2rem(80);
                 border:1px solid #ddd;
                 padding: px2rem(6) px2rem(16);
-                @include setFontInfo(#222, $defaultFontFamily, px2rem(16), normal);
+                @include setFontInfo(#222, $defaultFontFamily, px2rem(14), normal);
             }
             span{
                 &.item-state{
@@ -47,25 +53,47 @@
         .check-info-detail{}
     }
     @at-root .info-title{
-        $titleHeight : px2rem(60);
+        $titleHeight : px2rem(50);
         border-top:none;
         height:$titleHeight;
         @include setBackgroundColor(#fff);
         border-bottom:1px solid #CCC;
         span{
-            padding-left: px2rem(8);
+            padding: 0 px2rem(12);
             @include setBoxSizing();
             min-width:px2rem(120);
-            border-bottom:2px solid #0075C2;
+            border-bottom:4px solid #0075C2;
             text-shadow: none;
             float: left;
             text-align: left;
             @include setLine($titleHeight,$titleHeight);
-            @include setFontInfo(#3880bd,nth($defaultFontFamily,6),px2rem(20),normal);
+            @include setFontInfo(#3880bd,nth($defaultFontFamily,6),px2rem(16),normal);
         }
         .btn_add{
-            margin-right: px2rem(8);
+            margin-right: px2rem(10);
             margin-top: px2rem(10);
         }
+    }
+}
+
+//项目检查项目的样式
+.check-info-detail{
+    .weui_cell_bd{
+        min-height: 0;
+        .btn{
+            font-size: px2rem(14);
+            top: px2rem(-2);
+        }
+    }
+    .weui_label{
+        @include setFontInfo($fontColor:#222,$fontSize:px2rem(16));
+        width: px2rem(100);
+    }
+    .weui_input{
+        @include setFontInfo($fontColor:#222,$fontSize:px2rem(16));
+    }
+    .weui_select{
+        height: px2rem(22);
+        @include setFontInfo($fontColor:#222,$fontSize:px2rem(16));
     }
 }

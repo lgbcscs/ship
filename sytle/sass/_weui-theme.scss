@@ -7,13 +7,21 @@
 }
 .weui_tabbar{
     .weui_tabbar_item{
-        padding: px2rem(20) 0;
+        padding: px2rem(10) 0;
         .weui_tabbar_label{
-            @include setFontInfo(#888, $defaultFontFamily, px2rem(22), normal);
+            @include setFontInfo(#888, $defaultFontFamily, px2rem(16), normal);
         }
         &.weui_bar_item_on{
             .weui_tabbar_label{
                 color: #09BB07;
+            }
+        }
+        .weui_tabbar_icon{
+            width: px2rem(25);
+            height: px2rem(25);
+            img{
+                width: 100%;
+                height: 100%;
             }
         }
     }
@@ -35,6 +43,16 @@
             right: px2rem(10);
             top: px2rem(0);
             border:none;
+        }
+        .jc-content{
+            @include setFontInfo(#222, $defaultFontFamily, px2rem(16), normal);
+        }
+    }
+    .weui_cell_ft{
+        &:after{
+            height: px2rem(10);
+            width: px2rem(10);
+            border-width: px2rem(2) px2rem(2) 0 0;
         }
     }
     .weui_select{
