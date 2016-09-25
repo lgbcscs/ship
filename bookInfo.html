@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>船舶管理检查智能平台</title>
+    <link href="image/shi.ico" rel="shortcut icon">
+
+    <link rel="stylesheet" href="lib/weui/style/weui.css">
+    <link rel="stylesheet" href="sytle/css/index.css">
+</head>
+<body>
+<div class="layout-header">
+    <a href="javascript:history.back(-1);" class="header-btn-l">返回</a>
+    <h1 class="page-title">项目检查</h1>
+    <span id="showActionSheet" class="header-btn-r">快速定位</span>
+</div>
+<div class="container" id="container"></div>
+
+<script type="text/html" id="tpl_first">
+    <div class="check-info-detail">
+        <h5 class="info-title">
+            <span>第一章第一节</span>
+        </h5>
+        <div class="weui_cells">
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--BEGIN actionSheet-->
+    <div id="actionSheet_wrap">
+        <div class="weui_mask_transition" id="mask"></div>
+        <div class="weui_actionsheet" id="weui_actionsheet">
+            <div class="weui_actionsheet_menu">
+                <div class="weui_actionsheet_cell">示例菜单</div>
+                <div class="weui_actionsheet_cell">示例菜单</div>
+                <div class="weui_actionsheet_cell">示例菜单</div>
+                <div class="weui_actionsheet_cell">示例菜单</div>
+            </div>
+            <div class="weui_actionsheet_action">
+                <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+            </div>
+        </div>
+    </div>
+    <!--END actionSheet-->
+</script>
+
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/hotcss/hotcss.js"></script>
+<script type="text/javascript" src="lib/weui/router.min.js"></script>
+<script type="text/javascript" src="js/bookInfo.js"></script>
+</body>
+</html>

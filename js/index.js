@@ -14,6 +14,9 @@ $(function(){
         className: 'login',
         render: function () {
             return $('#tpl_login').html();
+        },
+        bind:function(){
+            $(".layout-header").hide();
         }
     };
 
@@ -23,6 +26,9 @@ $(function(){
         className: 'indexPage',
         render: function () {
             return $('#tpl_index').html();
+        },
+        bind:function(){
+            $(".layout-header").show().find(".page-title").text("系统信息列表");
         }
     };
     // 登记历史列表
@@ -33,9 +39,14 @@ $(function(){
             return $('#tpl_list').html();
         },
         bind:function() {
+            $(".layout-header").show().find(".page-title").text("历史检查");
             $('#container').on('click', '.weui_tabbar_item', function () {
                 var nar_index = $(this).index();
+                var nar_title = $(this).find(".weui_tabbar_label").text();
                 console.info(nar_index);
+
+                $(".layout-header").find(".page-title").text(nar_title);
+
                 $(".nav-item-cont").eq(nar_index).show().siblings(".nav-item-cont").hide();
                 $(this).addClass('weui_bar_item_on').siblings('.weui_bar_item_on').removeClass('weui_bar_item_on');
             });

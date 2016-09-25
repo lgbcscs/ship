@@ -51,6 +51,28 @@
     .weui_cells .has_btn .weui_input {
       padding-right: 5.71429rem; }
 
+.weui_dialog_confirm .weui_dialog .weui_dialog_hd {
+  padding: 0.38095rem 0;
+  font-size: 0; }
+.weui_dialog_confirm .weui_dialog .weui_dialog_title {
+  font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+  color: #222;
+  font-weight: normal;
+  font-size: 0.68571rem; }
+.weui_dialog_confirm .weui_dialog_bd {
+  padding: 0; }
+.weui_dialog_confirm .weui_dialog_ft {
+  height: 1.52381rem;
+  line-height: 1.52381rem;
+  margin-top: 0; }
+  .weui_dialog_confirm .weui_dialog_ft a {
+    font-family: "SimSun";
+    color: #808080;
+    font-weight: normal;
+    font-size: 0.68571rem; }
+    .weui_dialog_confirm .weui_dialog_ft a.weui_btn_dialog.primary {
+      color: #0BB20C; }
+
 body {
   line-height: normal; }
 
@@ -203,6 +225,58 @@ body {
   width: 90%;
   margin: 30px auto; }
 
+.layout-header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  height: 1.90476rem;
+  background-color: #000; }
+  .layout-header .header-btn-l,
+  .layout-header .header-btn-r {
+    position: absolute;
+    top: 0.57143rem;
+    height: 0.95238rem;
+    line-height: 0.95238rem;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #666;
+    font-weight: normal;
+    font-size: 0.7619rem;
+    color: #fff; }
+  .layout-header .header-btn-l {
+    left: 0.38095rem; }
+    .layout-header .header-btn-l:before {
+      vertical-align: bottom;
+      margin-right: 0.38095rem;
+      content: '';
+      display: inline-block;
+      width: 0.57143rem;
+      height: 0.95238rem;
+      background: url("../../image/ico_left.png") center no-repeat;
+      background-size: 100% 100%; }
+  .layout-header .page-title {
+    text-align: center;
+    position: absolute;
+    left: 2.85714rem;
+    right: 2.85714rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 1.90476rem;
+    line-height: 1.90476rem;
+    color: #fff;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #fff;
+    font-weight: normal;
+    font-size: 0.99048rem; }
+  .layout-header .header-btn-r {
+    cursor: pointer;
+    right: 0.38095rem;
+    background-color: transparent;
+    border: none; }
+    .layout-header .header-btn-r:hover, .layout-header .header-btn-r:focus, .layout-header .header-btn-r:active {
+      outline: none;
+      box-shadow: none; }
+
 .listPage {
   height: 100%; }
   .listPage .weui_tab_bd {
@@ -233,6 +307,30 @@ body {
           color: #666;
           font-weight: normal;
           font-size: 0.53333rem; }
+      .info-part > li .weui_media_box .weui_progress .weui_progress_label {
+        font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+        color: #666;
+        font-weight: normal;
+        font-size: 0.53333rem; }
+      .info-part > li .weui_media_box .weui_progress span.weui_progress_opr {
+        margin-left: 0.38095rem;
+        width: 2.28571rem;
+        height: 1.14286rem;
+        line-height: 1.14286rem;
+        font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+        color: #666;
+        font-weight: normal;
+        font-size: 0.53333rem; }
+        .info-part > li .weui_media_box .weui_progress span.weui_progress_opr em, .info-part > li .weui_media_box .weui_progress span.weui_progress_opr b {
+          font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+          color: #666;
+          font-weight: normal;
+          font-size: 0.53333rem;
+          font-style: normal; }
+        .info-part > li .weui_media_box .weui_progress span.weui_progress_opr em {
+          color: red; }
+        .info-part > li .weui_media_box .weui_progress span.weui_progress_opr b {
+          color: green; }
       .info-part > li .item-link {
         display: block; }
       .info-part > li .item-state {
@@ -293,6 +391,8 @@ body {
   color: #222;
   font-weight: normal;
   font-size: 0.60952rem; }
+.check-info-detail .btn-add-next {
+  font-size: 0.7619rem; }
 
 body, html {
   height: 100%;
@@ -301,6 +401,7 @@ body, html {
 
 .container {
   height: 100%;
+  padding-top: 1.90476rem;
   overflow-y: auto; }
 
 .userInfoPart {
