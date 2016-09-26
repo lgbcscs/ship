@@ -73,6 +73,12 @@
     .weui_dialog_confirm .weui_dialog_ft a.weui_btn_dialog.primary {
       color: #0BB20C; }
 
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+
 body {
   line-height: normal; }
 
@@ -227,6 +233,7 @@ body {
 
 .layout-header {
   position: fixed;
+  z-index: 2;
   width: 100%;
   left: 0;
   height: 1.90476rem;
@@ -276,6 +283,48 @@ body {
     .layout-header .header-btn-r:hover, .layout-header .header-btn-r:focus, .layout-header .header-btn-r:active {
       outline: none;
       box-shadow: none; }
+
+.actionsheet-bookList dl {
+  text-align: left;
+  font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+  color: #222;
+  font-weight: normal;
+  font-size: 0.68571rem; }
+  .actionsheet-bookList dl dd {
+    padding-left: 0.38095rem; }
+  .actionsheet-bookList dl dt {
+    display: none; }
+
+.check-info-detail {
+  padding-bottom: 4.57143rem; }
+
+.layout-footer {
+  background-color: #fff; }
+  .layout-footer .raido-option-list {
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
+    .layout-footer .raido-option-list .raido-item {
+      float: left;
+      overflow: hidden;
+      width: 25%;
+      height: 1.33333rem;
+      line-height: 1.33333rem;
+      border-left: 1px solid #ddd;
+      text-align: center; }
+      .layout-footer .raido-option-list .raido-item:first-child {
+        border-left: none; }
+      .layout-footer .raido-option-list .raido-item input {
+        margin-right: 0.30476rem; }
+  .layout-footer .weui_dialog_ft {
+    margin-top: 0; }
+  .layout-footer .weui_btn_footer {
+    text-align: center;
+    border-left: none;
+    border-right: none; }
+    .layout-footer .weui_btn_footer:first-child {
+      border-right: 1px solid #979798; }
 
 .listPage {
   height: 100%; }

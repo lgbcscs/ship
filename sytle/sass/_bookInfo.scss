@@ -1,0 +1,48 @@
+@charset "utf-8";
+.actionsheet-bookList{
+    dl{
+        text-align: left;
+        @include setFontInfo(#222, $defaultFontFamily, px2rem(18), normal);
+        dd{
+            padding-left: px2rem(10);
+        }
+        dt{
+            display: none;
+        }
+    }
+}
+.check-info-detail{
+    padding-bottom: px2rem(120);
+}
+.layout-footer{
+    @include setBackgroundColor(#fff);
+    
+    .raido-option-list{
+        @include setFontInfo(#222, $defaultFontFamily, px2rem(18), normal);
+        .raido-item{
+            float: left;
+            overflow: hidden;
+            width: 25%;
+            @include setLine(px2rem(35),px2rem(35));
+            border-left: 1px solid #ddd;
+            text-align: center;
+            &:first-child{
+                border-left: none;
+            }
+            input{
+                margin-right: px2rem(8);
+            }
+        }
+    }
+    .weui_dialog_ft{
+        margin-top: 0;
+    }
+    .weui_btn_footer{
+        text-align: center;
+        border-left: none;
+        border-right: none;
+        &:first-child{
+            border-right: 1px solid #979798;
+        }
+    }
+}

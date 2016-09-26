@@ -16,6 +16,30 @@
     <span id="showActionSheet" class="header-btn-r">快速定位</span>
 </div>
 <div class="container" id="container"></div>
+<div class="layout-footer fixed-bottom">
+    <div class="raido-option-list clearfix">
+        <label class="raido-item" for="zc">
+            <input type="radio" name="zc" id="zc">正常
+        </label>
+        <label class="raido-item" for="yc">
+            <input type="radio" name="zc" id="yc">异常
+        </label>
+        <label class="raido-item" for="bsy">
+            <input type="radio" name="zc" id="bsy">不适用
+        </label>
+        <label class="raido-item" for="qt">
+            <input type="radio" name="zc" id="qt">其他
+        </label>
+        <!--<span class="raido-item">正常</span>-->
+        <!--<span class="raido-item">异常</span>-->
+        <!--<span class="raido-item"><i class="weui_icon_success_no_circle"></i>不适用</span>-->
+        <!--<span class="raido-item">其他</span>-->
+    </div>
+    <div class="weui_dialog_ft">
+        <a href="javascript:;" class="weui_btn_footer weui_btn_plain_default">上一项</a>
+        <a href="javascript:;" class="weui_btn_footer weui_btn_plain_default">下一项</a>
+    </div>
+</div>
 
 <script type="text/html" id="tpl_first">
     <div class="check-info-detail">
@@ -29,14 +53,97 @@
                     <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
                 </div>
             </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名132">
+                </div>
+            </div>
+
         </div>
     </div>
     <!--BEGIN actionSheet-->
-    <div id="actionSheet_wrap">
+    <div id="actionSheet_wrap" class="actionsheet-bookList">
         <div class="weui_mask_transition" id="mask"></div>
         <div class="weui_actionsheet" id="weui_actionsheet">
             <div class="weui_actionsheet_menu">
-                <div class="weui_actionsheet_cell">示例菜单</div>
+                <div class="weui_actionsheet_cell">
+                    <dl>
+                        <dd>第一章</dd>
+                        <dt>
+                            <div class="weui_cell">
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <p>第一节</p>
+                                </div>
+                                <div class="weui_cell_ft">完成</div>
+                            </div>
+                        </dt>
+                        <dt>
+                            <div class="weui_cell">
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <p>第二节</p>
+                                </div>
+                                <div class="weui_cell_ft">未完成</div>
+                            </div>
+                        </dt>
+                        <dt>
+                            <div class="weui_cell">
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <p>第三节</p>
+                                </div>
+                                <div class="weui_cell_ft">完成</div>
+                            </div>
+                        </dt>
+                    </dl>
+                </div>
                 <div class="weui_actionsheet_cell">示例菜单</div>
                 <div class="weui_actionsheet_cell">示例菜单</div>
                 <div class="weui_actionsheet_cell">示例菜单</div>

@@ -5,6 +5,7 @@
     $header-height : px2rem(50);
     $header-l-r-padding: px2rem(10);
     position: fixed;
+    z-index:2;
     width: 100%;
     left:0;
     height: $header-height;
