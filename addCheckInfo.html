@@ -10,12 +10,61 @@
     <link rel="stylesheet" href="sytle/css/index.css">
 </head>
 <body>
+<div class="layout-header">
+    <a href="javascript:history.back(-1);" class="header-btn-l">返回</a>
+    <h1 class="page-title">项目检查</h1>
+    <a href="#" class="header-btn-r"></a>
+</div>
 <div class="container" id="container"></div>
 
 <script type="text/html" id="tpl_list">
+    <!-- -->
+    <!--446-->
+    <!--<div class="check-type-list">-->
+        <!--<h5 class="info-title clearfix">-->
+            <!--<span>PSC风险评估历史记录</span>-->
+            <!--<a href="#/info" class="btn btn_primary btn_add pull-right">新增</a>-->
+        <!--</h5>-->
+        <!--<ul class="info-part">-->
+            <!--<li>-->
+                <!--<a class="item-link" href="javascript:void(0)">-->
+                    <!--<div class="weui_panel_bd">-->
+                        <!--<div class="weui_media_box weui_media_text clearfix">-->
+                            <!--<h4 class="weui_media_title clearfix">-->
+                                <!--<span class="type-name pull-left">船舶自查</span>-->
+                                <!--<span class="check-time pull-left">2016-06-06</span>-->
+                                <!--&lt;!&ndash;<span class="item-state pull-right">已上传</span>&ndash;&gt;-->
+                            <!--</h4>-->
+                            <!--<p class="weui_media_desc">-->
+                                <!--<span class="country-name">国家：波斯尼亚和黑塞哥维那</span>-->
+                                <!--<span class="pory-name">港口：克珀斯-克里斯堤港</span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a class="item-link" href="javascript:void(0)">-->
+                    <!--<div class="weui_panel_bd">-->
+                        <!--<div class="weui_media_box weui_media_text">-->
+                            <!--<h4 class="weui_media_title clearfix">-->
+                                <!--<span class="type-name pull-left">PSC检查</span>-->
+                                <!--<span class="check-time pull-left">2016-06-06</span>-->
+                                <!--&lt;!&ndash;<button type="button" class="pull-right item-state btn_primary">上传</button>&ndash;&gt;-->
+                            <!--</h4>-->
+                            <!--<p class="weui_media_desc">-->
+                                <!--<span class="country-name">国家：波斯尼亚和黑塞哥维那</span>-->
+                                <!--<span class="pory-name">港口：克珀斯-克里斯堤港</span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
     <div class="check-type-list">
         <h5 class="info-title clearfix">
-            <span>PSC风险评估历史记录</span>
+            <span>未完成检查项列表</span>
             <a href="#/info" class="btn btn_primary btn_add pull-right">新增</a>
         </h5>
         <ul class="info-part">
@@ -26,12 +75,43 @@
                             <h4 class="weui_media_title clearfix">
                                 <span class="type-name pull-left">船舶自查</span>
                                 <span class="check-time pull-left">2016-06-06</span>
-                                <!--<span class="item-state pull-right">已上传</span>-->
+                                <button type="button" class="pull-right item-state btn_primary">上传</button>
                             </h4>
                             <p class="weui_media_desc">
                                 <span class="country-name">国家：波斯尼亚和黑塞哥维那</span>
                                 <span class="pory-name">港口：克珀斯-克里斯堤港</span>
                             </p>
+                            <div class="weui_progress">
+                                <span class="weui_progress_label">完成情况：</span>
+                                <div class="weui_progress_bar">
+                                    <div class="weui_progress_inner_bar js_progress" style="width: 100%;"></div>
+                                </div>
+                                <span class="weui_progress_opr"><b>200</b>/<em>200</em></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="item-link" href="javascript:void(0)">
+                    <div class="weui_panel_bd">
+                        <div class="weui_media_box weui_media_text clearfix">
+                            <h4 class="weui_media_title clearfix">
+                                <span class="type-name pull-left">船舶自查</span>
+                                <span class="check-time pull-left">2016-06-06</span>
+                                <!--<button type="button" class="pull-right item-state btn_primary">上传</button>-->
+                            </h4>
+                            <p class="weui_media_desc">
+                                <span class="country-name">国家：波斯尼亚和黑塞哥维那</span>
+                                <span class="pory-name">港口：克珀斯-克里斯堤港</span>
+                            </p>
+                            <div class="weui_progress">
+                                <span class="weui_progress_label">完成情况：</span>
+                                <div class="weui_progress_bar">
+                                    <div class="weui_progress_inner_bar js_progress" style="width: 50%;"></div>
+                                </div>
+                                <span class="weui_progress_opr"><b>100</b>/<em>200</em></span>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -49,6 +129,37 @@
                                 <span class="country-name">国家：波斯尼亚和黑塞哥维那</span>
                                 <span class="pory-name">港口：克珀斯-克里斯堤港</span>
                             </p>
+                            <div class="weui_progress">
+                                <span class="weui_progress_label">完成情况：</span>
+                                <div class="weui_progress_bar">
+                                    <div class="weui_progress_inner_bar js_progress" style="width: 30%;"></div>
+                                </div>
+                                <span class="weui_progress_opr"><b>60</b>/<em>200</em></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="item-link" href="javascript:void(0)">
+                    <div class="weui_panel_bd">
+                        <div class="weui_media_box weui_media_text">
+                            <h4 class="weui_media_title clearfix">
+                                <span class="type-name pull-left">PSC检查</span>
+                                <span class="check-time pull-left">2016-06-06</span>
+                                <!--<button type="button" class="pull-right item-state btn_primary">上传</button>-->
+                            </h4>
+                            <p class="weui_media_desc">
+                                <span class="country-name">国家：波斯尼亚和黑塞哥维那</span>
+                                <span class="pory-name">港口：克珀斯-克里斯堤港</span>
+                            </p>
+                            <div class="weui_progress">
+                                <span class="weui_progress_label">完成情况：</span>
+                                <div class="weui_progress_bar">
+                                    <div class="weui_progress_inner_bar js_progress" style="width: 30%;"></div>
+                                </div>
+                                <span class="weui_progress_opr"><b>60</b>/<em>200</em></span>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -79,14 +190,14 @@
                 <div class="weui_cell_hd"><label class="weui_label">所在国家</label></div>
                 <div class="weui_cell_bd weui_cell_primary has_btn">
                     <input class="weui_input" type="text" placeholder="请输入所在国家">
-                    <button type="button" class="btn btn_primary btn-addCountry">新增国家</button>
+                    <button type="button" id="addCountry" class="btn btn_primary btn-addCountry">新增国家</button>
                 </div>
             </div>
             <div class="weui_cell">
                 <div class="weui_cell_hd"><label class="weui_label">所在港口</label></div>
                 <div class="weui_cell_bd weui_cell_primary has_btn">
                     <input class="weui_input" type="text" placeholder="请输入所在港口">
-                    <button type="button" class="btn btn_primary btn-addPort">新增港口</button>
+                    <button type="button" id="addPort" class="btn btn_primary btn-addPort">新增港口</button>
                 </div>
             </div>
             <div class="weui_cell">
@@ -121,20 +232,67 @@
             </div>
         </div>
         <div class="page-part-split"></div>
-        <h5 class="info-title">
-            <span>检查项</span>
-        </h5>
-        <div class="weui_cells">
-            <div class="weui_cell weui_cell_select">
-                <div class="weui_cell_hd"><label class="weui_label">船舶检查</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <select class="weui_select" name="select1">
-                        <option selected="" value="1">船公司自查</option>
-                        <option value="2">PSC风险检测</option>
-                    </select>
+        <a href="bookInfo.html" class="weui_btn weui_btn_primary btn-add-next">下一步</a>
+        <!--<h5 class="info-title">-->
+            <!--<span>检查项</span>-->
+        <!--</h5>-->
+        <!--<div class="weui_cells">-->
+            <!--<div class="weui_cell weui_cell_select">-->
+                <!--<div class="weui_cell_hd"><label class="weui_label">船舶检查</label></div>-->
+                <!--<div class="weui_cell_bd weui_cell_primary">-->
+                    <!--<select class="weui_select" name="select1">-->
+                        <!--<option selected="" value="1">船公司自查</option>-->
+                        <!--<option value="2">PSC风险检测</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--BEGIN dialog1-->
+        <div class="weui_dialog_confirm" id="modal-addCountry" style="display: none;">
+            <div class="weui_mask"></div>
+            <div class="weui_dialog">
+                <div class="weui_dialog_hd"><strong class="weui_dialog_title">新增国家</strong></div>
+                <div class="weui_dialog_bd">
+                    <div class="weui_cells">
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label">国家名称</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text"  placeholder="请输入要新增国家的名称">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui_dialog_ft">
+                    <a href="javascript:;" class="weui_btn_dialog default">取消</a>
+                    <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
                 </div>
             </div>
         </div>
+        <!--END dialog1-->
+
+        <!--BEGIN dialog1-->
+        <div class="weui_dialog_confirm" id="modal-addPort" style="display: none;">
+            <div class="weui_mask"></div>
+            <div class="weui_dialog">
+                <div class="weui_dialog_hd"><strong class="weui_dialog_title">新增港口</strong></div>
+                <div class="weui_dialog_bd">
+                    <div class="weui_cells">
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label">港口名称</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text"  placeholder="请输入要新增港口名称">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui_dialog_ft">
+                    <a href="javascript:;" class="weui_btn_dialog default">取消</a>
+                    <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+                </div>
+            </div>
+        </div>
+        <!--END dialog1-->
     </div>
 </script>
 

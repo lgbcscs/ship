@@ -34,6 +34,18 @@ $fontLightColor : #808080;
     box-shadow: none;
   }
 }
+//超出省略号显示
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//设置宽带高度
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
+}
+
 @mixin noBoxShadow(){
   -webkit-box-shadow: none;
   -moz-box-shadow: none;

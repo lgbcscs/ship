@@ -31,6 +31,31 @@
                         @include setFontInfo(#666, $defaultFontFamily, px2rem(14), normal);
                     }
                 }
+                .weui_progress{
+                    //margin: px2rem(10) 0;
+                    //width: 50%;
+                    .weui_progress_label{
+                        @include setFontInfo(#666, $defaultFontFamily, px2rem(14), normal);
+                    }
+                    span.weui_progress_opr{
+                        margin-left: px2rem(10);
+                        width: px2rem(60);
+                        //width: px2rem(300);
+                        height: px2rem(30);
+                        line-height: px2rem(30);
+                        @include setFontInfo(#666, $defaultFontFamily, px2rem(14), normal);
+                        em,b{
+                            @include setFontInfo(#666, $defaultFontFamily, px2rem(14), normal);
+                            font-style: normal;
+                        }
+                        em{
+                            color: red;
+                        }
+                        b{
+                            color: green;
+                        }
+                    }
+                }
             }
             .item-link{
                 display: block;
@@ -50,7 +75,9 @@
         }
     }
     .check-item-cont{
-        .check-info-detail{}
+        .check-info-detail{
+
+        }
     }
     @at-root .info-title{
         $titleHeight : px2rem(50);
@@ -95,5 +122,8 @@
     .weui_select{
         height: px2rem(22);
         @include setFontInfo($fontColor:#222,$fontSize:px2rem(16));
+    }
+    .btn-add-next{
+        font-size: px2rem(20);
     }
 }

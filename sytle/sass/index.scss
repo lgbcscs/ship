@@ -8,6 +8,7 @@
 @import "mixin/utilities";
 //页面文件
 @import "login";
+@import "header";
 //登录页面
 //历史列表页面
 @import "list";
@@ -20,6 +21,7 @@ body, html {
 
 .container {
     height: 100%;
+    padding-top: px2rem(50);
     overflow-y: auto;
 
 }

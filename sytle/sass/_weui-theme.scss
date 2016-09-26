@@ -70,3 +70,32 @@
     //    padding: px2rem(10) px2rem(15);
     //}
 }
+
+//模态框样式
+.weui_dialog_confirm{
+    .weui_dialog{
+        .weui_dialog_hd{
+            padding: px2rem(10) 0;
+            //text-align: left;
+            font-size: 0;
+        }
+        .weui_dialog_title{
+            //padding-left: px2rem(20);
+            @include setFontInfo(#222, $defaultFontFamily, px2rem(18), normal);
+        }
+    }
+    .weui_dialog_bd{
+        padding: 0;
+    }
+    .weui_dialog_ft{
+        height: px2rem(40);
+        line-height: px2rem(40);
+        margin-top: 0;
+        a{
+            @include setFontInfo($fontSize:px2rem(18));
+            &.weui_btn_dialog.primary{
+                color: #0BB20C;
+            }
+        }
+    }
+}
