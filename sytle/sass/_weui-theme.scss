@@ -106,3 +106,13 @@
     left:0;
     width: 100%;
 }
+
+//关于panel的样式
+.weui_panel_bd{
+    .weui_media_title{
+        @include setFontInfo($fontSize:px2rem(20),$fontColor:#222);
+    }
+    .weui_media_desc{
+        @include setFontInfo($fontSize:px2rem(16),$fontColor:#666);
+    }
+}

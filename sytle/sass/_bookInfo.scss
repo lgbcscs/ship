@@ -23,8 +23,9 @@
             float: left;
             overflow: hidden;
             width: 25%;
-            @include setLine(px2rem(35),px2rem(35));
+            @include setLine(px2rem(50),px2rem(50));
             border-left: 1px solid #ddd;
+            border-top: 1px solid #666;
             text-align: center;
             &:first-child{
                 border-left: none;
@@ -41,8 +42,34 @@
         text-align: center;
         border-left: none;
         border-right: none;
+        height: px2rem(45);
+        line-height: px2rem(45);
+        border-top: 1px solid #ddd;
+        @include setFontInfo(#222, $defaultFontFamily, px2rem(18), normal);
         &:first-child{
-            border-right: 1px solid #979798;
+            border-right: 1px solid #ddd;
+        }
+    }
+}
+
+.check-info-item{
+    .weui_panel_bd{
+        margin: px2rem(10);
+        @include setBackgroundColor(#fff);
+    }
+
+    .ng-info{
+        margin-top: px2rem(10);
+        .weui_cells{
+            &:before,&:after{
+                border-color: #333;
+            }
+            .weui_textarea{
+                @include setFontInfo(#666, $defaultFontFamily, px2rem(16), normal);
+            }
+            .weui_textarea_counter{
+                @include setFontInfo(#666, $defaultFontFamily, px2rem(16), normal);
+            }
         }
     }
 }

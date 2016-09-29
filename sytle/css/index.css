@@ -79,6 +79,17 @@
   left: 0;
   width: 100%; }
 
+.weui_panel_bd .weui_media_title {
+  font-family: "SimSun";
+  color: #222;
+  font-weight: normal;
+  font-size: 0.7619rem; }
+.weui_panel_bd .weui_media_desc {
+  font-family: "SimSun";
+  color: #666;
+  font-weight: normal;
+  font-size: 0.60952rem; }
+
 body {
   line-height: normal; }
 
@@ -309,9 +320,10 @@ body {
       float: left;
       overflow: hidden;
       width: 25%;
-      height: 1.33333rem;
-      line-height: 1.33333rem;
+      height: 1.90476rem;
+      line-height: 1.90476rem;
       border-left: 1px solid #ddd;
+      border-top: 1px solid #666;
       text-align: center; }
       .layout-footer .raido-option-list .raido-item:first-child {
         border-left: none; }
@@ -322,9 +334,34 @@ body {
   .layout-footer .weui_btn_footer {
     text-align: center;
     border-left: none;
-    border-right: none; }
+    border-right: none;
+    height: 1.71429rem;
+    line-height: 1.71429rem;
+    border-top: 1px solid #ddd;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
     .layout-footer .weui_btn_footer:first-child {
-      border-right: 1px solid #979798; }
+      border-right: 1px solid #ddd; }
+
+.check-info-item .weui_panel_bd {
+  margin: 0.38095rem;
+  background-color: #fff; }
+.check-info-item .ng-info {
+  margin-top: 0.38095rem; }
+  .check-info-item .ng-info .weui_cells:before, .check-info-item .ng-info .weui_cells:after {
+    border-color: #333; }
+  .check-info-item .ng-info .weui_cells .weui_textarea {
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #666;
+    font-weight: normal;
+    font-size: 0.60952rem; }
+  .check-info-item .ng-info .weui_cells .weui_textarea_counter {
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #666;
+    font-weight: normal;
+    font-size: 0.60952rem; }
 
 .listPage {
   height: 100%; }
@@ -403,7 +440,7 @@ body {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      min-width: 4.57143rem;
+      min-width: 0.7619rem;
       border-bottom: 4px solid #0075C2;
       text-shadow: none;
       float: left;

@@ -18,17 +18,17 @@
 <div class="container" id="container"></div>
 <div class="layout-footer fixed-bottom">
     <div class="raido-option-list clearfix">
-        <label class="raido-item" for="zc">
-            <input type="radio" name="zc" id="zc">正常
+        <label class="raido-item" for="Y">
+            <input type="radio" name="zc" id="Y">是(Y)
         </label>
-        <label class="raido-item" for="yc">
-            <input type="radio" name="zc" id="yc">异常
+        <label class="raido-item" for="N">
+            <input type="radio" name="zc" id="N">不是(N)
         </label>
-        <label class="raido-item" for="bsy">
-            <input type="radio" name="zc" id="bsy">不适用
+        <label class="raido-item" for="NS">
+            <input type="radio" name="zc" id="NS">未见(NS)
         </label>
-        <label class="raido-item" for="qt">
-            <input type="radio" name="zc" id="qt">其他
+        <label class="raido-item" for="NA">
+            <input type="radio" name="zc" id="NA">不适用(NA)
         </label>
         <!--<span class="raido-item">正常</span>-->
         <!--<span class="raido-item">异常</span>-->
@@ -36,126 +36,102 @@
         <!--<span class="raido-item">其他</span>-->
     </div>
     <div class="weui_dialog_ft">
-        <a href="javascript:;" class="weui_btn_footer weui_btn_plain_default">上一项</a>
-        <a href="javascript:;" class="weui_btn_footer weui_btn_plain_default">下一项</a>
+        <a href="javascript:;" id="go_back" class="weui_btn_footer weui_btn_plain_default">上一项</a>
+        <a href="#/1_02" id="go_to" class="weui_btn_footer weui_btn_plain_default">下一项</a>
     </div>
 </div>
 
-<script type="text/html" id="tpl_first">
-    <div class="check-info-detail">
+<script type="text/html" id="tpl_1">
+    <div class="check-info-detail check-info-item">
         <h5 class="info-title">
-            <span>第一章第一节</span>
+            <span>1.01</span>
         </h5>
-        <div class="weui_cells">
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
-                </div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
-                </div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
-                </div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
-                </div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
-                </div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
-                </div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
-                </div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
-                </div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名">
-                </div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入船名132">
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!--BEGIN actionSheet-->
-    <div id="actionSheet_wrap" class="actionsheet-bookList">
-        <div class="weui_mask_transition" id="mask"></div>
-        <div class="weui_actionsheet" id="weui_actionsheet">
-            <div class="weui_actionsheet_menu">
-                <div class="weui_actionsheet_cell">
-                    <dl>
-                        <dd>第一章</dd>
-                        <dt>
-                            <div class="weui_cell">
-                                <div class="weui_cell_bd weui_cell_primary">
-                                    <p>第一节</p>
-                                </div>
-                                <div class="weui_cell_ft">完成</div>
+        <div class="weui_panel_bd">
+            <div class="weui_media_box weui_media_text">
+                <h4 class="weui_media_title">船名</h4>
+                <p class="weui_media_desc">船名是否规范，是否正确</p>
+                <div class="ng-info">
+                    <div class="weui_cells weui_cells_form">
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <textarea class="weui_textarea" placeholder="请输入不规范的理由" rows="3"></textarea>
+                                <div class="weui_textarea_counter"><span>0</span>/200</div>
                             </div>
-                        </dt>
-                        <dt>
-                            <div class="weui_cell">
-                                <div class="weui_cell_bd weui_cell_primary">
-                                    <p>第二节</p>
-                                </div>
-                                <div class="weui_cell_ft">未完成</div>
-                            </div>
-                        </dt>
-                        <dt>
-                            <div class="weui_cell">
-                                <div class="weui_cell_bd weui_cell_primary">
-                                    <p>第三节</p>
-                                </div>
-                                <div class="weui_cell_ft">完成</div>
-                            </div>
-                        </dt>
-                    </dl>
+                        </div>
+                    </div>
                 </div>
-                <div class="weui_actionsheet_cell">示例菜单</div>
-                <div class="weui_actionsheet_cell">示例菜单</div>
-                <div class="weui_actionsheet_cell">示例菜单</div>
-            </div>
-            <div class="weui_actionsheet_action">
-                <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
             </div>
         </div>
     </div>
-    <!--END actionSheet-->
+</script>
+<script type="text/html" id="tpl_2">
+    <div class="check-info-detail check-info-item">
+        <h5 class="info-title">
+            <span>1.02</span>
+        </h5>
+        <div class="weui_panel_bd">
+            <div class="weui_media_box weui_media_text">
+                <h4 class="weui_media_title">船舶IMO编码</h4>
+                <p class="weui_media_desc">船舶IMO编码是否规范，是否正确</p>
+                <div class="ng-info">
+                    <div class="weui_cells weui_cells_form">
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <textarea class="weui_textarea" placeholder="请输入不规范的理由" rows="3"></textarea>
+                                <div class="weui_textarea_counter"><span>0</span>/200</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </script>
 
+<!--BEGIN actionSheet-->
+<div id="actionSheet_wrap" class="actionsheet-bookList">
+    <div class="weui_mask_transition" id="mask"></div>
+    <div class="weui_actionsheet" id="weui_actionsheet">
+        <div class="weui_actionsheet_menu">
+            <div class="weui_actionsheet_cell">
+                <dl>
+                    <dd>第一章</dd>
+                    <dt>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>第一节</p>
+                        </div>
+                        <div class="weui_cell_ft">完成</div>
+                    </div>
+                    </dt>
+                    <dt>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>第二节</p>
+                        </div>
+                        <div class="weui_cell_ft">未完成</div>
+                    </div>
+                    </dt>
+                    <dt>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>第三节</p>
+                        </div>
+                        <div class="weui_cell_ft">完成</div>
+                    </div>
+                    </dt>
+                </dl>
+            </div>
+            <div class="weui_actionsheet_cell">示例菜单</div>
+            <div class="weui_actionsheet_cell">示例菜单</div>
+            <div class="weui_actionsheet_cell">示例菜单</div>
+        </div>
+        <div class="weui_actionsheet_action">
+            <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+        </div>
+    </div>
+</div>
+<!--END actionSheet-->
 <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="lib/hotcss/hotcss.js"></script>
 <script type="text/javascript" src="lib/weui/router.min.js"></script>
