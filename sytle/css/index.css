@@ -153,6 +153,12 @@ body {
   height: 0.38095rem;
   background-color: #EFEFEF; }
 
+.text_success {
+  color: green !important; }
+
+.text_warning {
+  color: orange !important; }
+
 .btn_primary {
   border: 1px solid #224491;
   background-color: #224491;
@@ -295,6 +301,11 @@ body {
       outline: none;
       box-shadow: none; }
 
+.actionsheet-bookList .weui_actionsheet_cell {
+  padding-top: 0; }
+.actionsheet-bookList .weui_actionsheet {
+  top: 0;
+  overflow: auto; }
 .actionsheet-bookList dl {
   text-align: left;
   font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
@@ -302,9 +313,25 @@ body {
   font-weight: normal;
   font-size: 0.68571rem; }
   .actionsheet-bookList dl dd {
-    padding-left: 0.38095rem; }
+    padding: 0.38095rem;
+    border-bottom: 1px solid #ddd; }
   .actionsheet-bookList dl dt {
-    display: none; }
+    display: block;
+    font-size: 0.60952rem; }
+    .actionsheet-bookList dl dt .weui_cell {
+      padding: 0.19048rem 0.7619rem;
+      border-bottom: 1px solid #ddd;
+      color: #222; }
+    .actionsheet-bookList dl dt .weui_cell_bd {
+      padding-left: 0.7619rem; }
+.actionsheet-bookList .weui_actionsheet_action {
+  margin: 0.38095rem 0; }
+  .actionsheet-bookList .weui_actionsheet_action .weui_actionsheet_cell {
+    padding: 0.38095rem 0;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
 
 .check-info-detail {
   padding-bottom: 4.57143rem; }

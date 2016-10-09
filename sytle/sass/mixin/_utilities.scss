@@ -90,6 +90,14 @@ body{
   @include setBackgroundColor(#EFEFEF);
 }
 
+//文字预定于颜色
+.text_success{
+  color: green !important;
+}
+.text_warning{
+  color: orange !important;
+}
+
 // 按钮样式
 .btn_primary {
   $btn-primary:#224491;

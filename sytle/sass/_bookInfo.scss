@@ -1,13 +1,37 @@
 @charset "utf-8";
 .actionsheet-bookList{
+    .weui_actionsheet_cell{
+        padding-top: 0;
+    }
+    .weui_actionsheet{
+        top: 0;
+        overflow: auto;
+    }
     dl{
         text-align: left;
         @include setFontInfo(#222, $defaultFontFamily, px2rem(18), normal);
         dd{
-            padding-left: px2rem(10);
+            padding: px2rem(10);
+            border-bottom: 1px solid #ddd;
         }
         dt{
-            display: none;
+            .weui_cell{
+                padding: px2rem(5) px2rem(20);
+                border-bottom: 1px solid #ddd;
+                color: #222;
+            }
+            display: block;
+            font-size: px2rem(16);
+            .weui_cell_bd{
+                padding-left: px2rem(20);
+            }
+        }
+    }
+    .weui_actionsheet_action{
+        margin: px2rem(10) 0;
+        .weui_actionsheet_cell{
+            padding: px2rem(10) 0;
+            @include setFontInfo(#222, $defaultFontFamily, px2rem(18), normal);
         }
     }
 }

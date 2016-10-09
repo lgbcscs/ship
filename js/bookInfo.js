@@ -66,6 +66,13 @@ $(function() {
         }
     };
 
+    $(".bookList-dl dt .weui_cell").click(function(){
+        var mask = $('#mask');
+        var weuiActionsheet = $('#weui_actionsheet');
+        weuiActionsheet.addClass('weui_actionsheet_toggle');
+        hideActionSheet(weuiActionsheet, mask);
+    });
+
     //快速定位的js
     $('#showActionSheet').click(function () {
         var mask = $('#mask');
@@ -81,16 +88,16 @@ $(function() {
         });
         mask.unbind('transitionend').unbind('webkitTransitionEnd');
 
-        function hideActionSheet(weuiActionsheet, mask) {
-            weuiActionsheet.removeClass('weui_actionsheet_toggle');
-            mask.removeClass('weui_fade_toggle');
-            mask.on('transitionend', function () {
-                mask.hide();
-            }).on('webkitTransitionEnd', function () {
-                mask.hide();
-            })
-        }
     });
+    function hideActionSheet(weuiActionsheet, mask) {
+        weuiActionsheet.removeClass('weui_actionsheet_toggle');
+        mask.removeClass('weui_fade_toggle');
+        mask.on('transitionend', function () {
+            mask.hide();
+        }).on('webkitTransitionEnd', function () {
+            mask.hide();
+        })
+    }
     router.push(item_1)
         .push(item_2)
         .setDefault('/item_1')
