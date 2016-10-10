@@ -234,8 +234,19 @@ body {
 .login .weui_cells {
   width: 90%;
   margin: 0 auto; }
+  .login .weui_cells .weui_label {
+    width: 3.80952rem;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
   .login .weui_cells:before {
     border: none; }
+  .login .weui_cells .weui_cell_bd {
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
   .login .weui_cells .weui_input {
     border: none; }
     .login .weui_cells .weui_input:hover, .login .weui_cells .weui_input:focus, .login .weui_cells .weui_input:active {
@@ -244,9 +255,13 @@ body {
     .login .weui_cells .weui_input:focus, .login .weui_cells .weui_input:active {
       border: none;
       outline: none; }
+  .login .weui_cells .weui_cell {
+    border-bottom: 1px solid  #666; }
+    .login .weui_cells .weui_cell:last-child {
+      border-bottom: none; }
 .login .weui_btn_area {
   width: 90%;
-  margin: 30px auto; }
+  margin: 1.14286rem auto; }
 
 .layout-header {
   position: fixed;
@@ -376,6 +391,7 @@ body {
   margin: 0.38095rem;
   background-color: #fff; }
 .check-info-item .ng-info {
+  display: none;
   margin-top: 0.38095rem; }
   .check-info-item .ng-info .weui_cells:before, .check-info-item .ng-info .weui_cells:after {
     border-color: #333; }

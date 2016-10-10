@@ -34,6 +34,19 @@ $(function() {
         //}
     }
 
+    //关于每一个检查项选择结果的操作的事件绑定
+    function itemOptionSet (){
+        var _that = $("input[name='zc']");
+        _that.prop("checked",false);
+        _that.change(function(){
+            if($(this).val()=="N"){
+                $(".ng-info").show();
+            }else{
+                $(".ng-info").hide();
+            }
+        });
+    }
+
     // default
     var item_1 = {
         url: '/item_1',
@@ -52,6 +65,7 @@ $(function() {
                 var _this = $(this);
                 setUrl("goto",_this,currentItem,2);
             });
+            itemOptionSet();
         }
     };
 
@@ -63,8 +77,10 @@ $(function() {
         },
         bind: function () {
             console.info($("#container >div").attr("class"));
+            itemOptionSet();
         }
     };
+
 
     $(".bookList-dl dt .weui_cell").click(function(){
         var mask = $('#mask');

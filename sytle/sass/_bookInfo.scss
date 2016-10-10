@@ -83,6 +83,7 @@
     }
 
     .ng-info{
+        display: none;
         margin-top: px2rem(10);
         .weui_cells{
             &:before,&:after{
