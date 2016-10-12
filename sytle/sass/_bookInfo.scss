@@ -98,3 +98,13 @@
         }
     }
 }
+
+.weui_panel_bd{
+    .weui_media_desc,
+    .weui_media_title{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 222;
+        white-space: normal;
+    }
+}

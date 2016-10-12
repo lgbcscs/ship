@@ -81,6 +81,18 @@ $(function() {
         }
     };
 
+    var item_3 = {
+        url: '/item_3',
+        className: 'item_3',
+        render: function () {
+            return $('#tpl_3').html();
+        },
+        bind: function () {
+            console.info($("#container >div").attr("class"));
+            itemOptionSet();
+        }
+    };
+
 
     $(".bookList-dl dt .weui_cell").click(function(){
         var mask = $('#mask');
@@ -116,6 +128,7 @@ $(function() {
     }
     router.push(item_1)
         .push(item_2)
+        .push(item_3)
         .setDefault('/item_1')
         .init();
 });

@@ -4,6 +4,10 @@ $defaultFontFamily: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft
 $defaultFontSize: px2rem(28) !default;
 $fontLightColor : #808080;
 
+*{
+  max-height: 100%;
+}
+
 @mixin setFontInfo($fontColor:$fontLightColor,$fontFamily:nth($defaultFontFamily,1),$fontSize: 12px,$fontWeight:normal) {
   font-family: $fontFamily;
   color: $fontColor;
