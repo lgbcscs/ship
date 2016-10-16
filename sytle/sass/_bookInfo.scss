@@ -35,8 +35,39 @@
         }
     }
 }
+//每一个检查项的样式
 .check-info-detail{
+    position: relative;
     padding-bottom: px2rem(120);
+    .btn_show_detail{
+        position: absolute;
+        right: px2rem(10);
+        top: px2rem(8);
+        border-color: #000;
+        color: #222;
+    }
+    .weui_media_text{
+        .weui_media_desc,
+        .weui_media_title{
+            overflow: visible;
+            white-space: normal;
+            -webkit-line-clamp: 1000;
+        }
+        .weui_media_title{
+            font-weight: 600;
+        }
+        ul{
+            list-style: square inside url("../../image/eg_arrow.gif");
+            li{
+                p{
+                    display: inline;
+                }
+            }
+        }
+    }
+    .item-detail-info{
+        display: none;
+    }
 }
 .layout-footer{
     @include setBackgroundColor(#fff);
@@ -96,15 +127,5 @@
                 @include setFontInfo(#666, $defaultFontFamily, px2rem(16), normal);
             }
         }
-    }
-}
-
-.weui_panel_bd{
-    .weui_media_desc,
-    .weui_media_title{
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 222;
-        white-space: normal;
     }
 }

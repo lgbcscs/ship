@@ -45,6 +45,9 @@ $(function() {
                 $(".ng-info").hide();
             }
         });
+        $(".btn_show_detail").click(function(){
+            $(this).closest(".check-info-detail").find(".item-detail-info").slideToggle("slow");
+        });
     }
 
     // default
@@ -77,10 +80,19 @@ $(function() {
         },
         bind: function () {
             console.info($("#container >div").attr("class"));
+            $("#go_back").click(function(){
+                var currentItem = $("#container >div").attr("class");
+                var _this = $(this);
+                setUrl("back",_this,currentItem,1);
+            });
+            $("#go_to").click(function(){
+                var currentItem = $("#container >div").attr("class");
+                var _this = $(this);
+                setUrl("goto",_this,currentItem,3);
+            });
             itemOptionSet();
         }
     };
-
     var item_3 = {
         url: '/item_3',
         className: 'item_3',
@@ -89,6 +101,16 @@ $(function() {
         },
         bind: function () {
             console.info($("#container >div").attr("class"));
+            $("#go_back").click(function(){
+                var currentItem = $("#container >div").attr("class");
+                var _this = $(this);
+                setUrl("back",_this,currentItem,2);
+            });
+            $("#go_to").click(function(){
+                var currentItem = $("#container >div").attr("class");
+                var _this = $(this);
+                setUrl("goto",_this,currentItem,3);
+            });
             itemOptionSet();
         }
     };
