@@ -433,6 +433,7 @@ body {
   .info-part {
     padding: 0.38095rem; }
     .info-part > li {
+      position: relative;
       font-size: 0;
       background-color: #fff;
       margin-bottom: 0.38095rem;
@@ -480,9 +481,11 @@ body {
           color: red; }
         .info-part > li .weui_media_box .weui_progress span.weui_progress_opr b {
           color: green; }
-      .info-part > li .item-link {
-        display: block; }
       .info-part > li .item-state {
+        position: absolute;
+        z-index: 9;
+        right: 0.38095rem;
+        top: 0.38095rem;
         text-align: center;
         min-width: 3.04762rem;
         border: 1px solid #ddd;
@@ -491,6 +494,8 @@ body {
         color: #222;
         font-weight: normal;
         font-size: 0.53333rem; }
+      .info-part > li .item-link {
+        display: block; }
       .info-part > li span.item-state {
         background-color: #ddd; }
   .info-title {
@@ -542,6 +547,33 @@ body {
   font-size: 0.60952rem; }
 .check-info-detail .btn-add-next {
   font-size: 0.7619rem; }
+
+.unit_part {
+  padding: 0.38095rem;
+  padding-bottom: 2.28571rem; }
+  .unit_part .unit_item {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 0.38095rem;
+    padding: 0.38095rem; }
+    .unit_part .unit_item dt {
+      font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+      color: #222;
+      font-weight: normal;
+      font-size: 0.7619rem;
+      margin-bottom: 0.38095rem; }
+    .unit_part .unit_item dd {
+      font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+      color: #666;
+      font-weight: normal;
+      font-size: 0.53333rem;
+      margin-bottom: 0.19048rem; }
+
+.fixed-bottom .weui_btn_footer {
+  background-color: #0075C2;
+  color: #fff; }
+  .fixed-bottom .weui_btn_footer:first-child {
+    background-color: green; }
 
 body, html {
   height: 100%;

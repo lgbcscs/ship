@@ -59,6 +59,10 @@ $(function(){
                     $('#add-port').off('click').hide();
                 });
             });
+            $("#js-upload").click(function(e){
+                event.stopPropagation();
+                alert("开始长传");
+            });
         }
     };
 
