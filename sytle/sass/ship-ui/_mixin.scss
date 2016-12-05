@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+
+@import "mixin/px2rem";
+@import "mixin/mixin";
+
+
+@mixin baseFont($font-size,$line-height,$color){
+    font: normal px2rem($font-size)/px2rem($line-height) "Helvetica, Arial, sans-serif";
+    color: $color;
+    max-height: 100%;
+}
+@mixin box-size($width, $height){
+    width: px2rem($width);
+    height: px2rem($height);
+}

@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import "../../_mixin";
+
+.search-result-wrap{
+  background: #fff!important;
+  padding: 0 px2rem(20);
+}
+.search-result{
+
+  li{
+    border-bottom: 1px solid #ccc;
+
+    a{
+      display: block;
+      padding: px2rem(35) px2rem(18);
+
+      > i, > span{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: px2rem(28);
+      }
+
+      > i{
+        color: #999;
+      }
+    }
+  }
+}

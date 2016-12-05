@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+//项目样式命名前缀
+$mySpace : ui-;
+
+
+//系统基础字体相关的变量
+$font-family-base :          Helvetica, Arial, sans-serif !default;
+$line-height-base :          1.42858 !default; // 20/14
+
+$font-size-base:             28 !default;
+
+//页面层级的变量
+$page-padding-val:           20 !default;
+$page-bg:                    #EFEFEF !default;
+$item-margin-bottom:         $page-padding-val !default;
+
+//查询部分的基础字体大小
+$font-search-font:           $font-size-base;
+//内容区域的基础字体大小
+$font-content-font:          16px;
+
+//圆角设置
+$border-radius-base:         4 !default;
+$border-radius-large:        6 !default;
+$border-radius-small:        3 !default;
+
+
+//颜色相关的
+$link-a-default-color :     #3b8bce;
+$font-color-default-blue:   #3b8bce;
+$font-color-default:        #1f1f1f;
+$font-tip-color:            #f86515;
+
+//头部背景颜色
+$header-bg-color :          #161616;
+$header-color:              #fff;
+$header-height:             90;
+
+$gray-base:                 #000 !default;
+$gray-darker:               lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:                 lighten($gray-base, 20%) !default;   // #333
+$gray:                      lighten($gray-base, 33.5%) !default; // #555
+$gray-light:                lighten($gray-base, 46.7%) !default; // #777
+$gray-999:                  lighten($gray-base, 60.0428%) !default; // #999
+$gray-666:                  lighten($gray-base, 40.0428%) !default; // #666
+$gray-lighter:              lighten($gray-base, 93.5%) !default; // #eee
+
+// 导航条颜色
+$brand-primary:             #0075C2;//darken(#49A5F1, 6.5%) !default; // #49A5F1   #0075C2
+$brand-success:             #6EBA57 !default;
+$brand-info:                #60C4E1 !default;
+$brand-warning:             #F1AE4E !default;
+$brand-danger:              #E9605B !default;
+
+// 警告提示文字颜色
+$tip-danger:                #D75453 !default;
+$tip-success:               #5FB660 !default;
+$tip-info:                  #5FC0DC !default;
+$tip-warning:               #f86515 !default;
+
+// 通用文字颜色
+$text-danger:                #D75453 !default;
+$text-success:               #5FB660 !default;
+$text-info:                  #5FC0DC !default;
+$text-warning:               #f86515 !default;
+
+
+//页面边框默认颜色
+$border-defaule-color :     #DEDEDE !default;
+$border-blue-color :        #49A5F2 !default;
+
+//zeus表格最后一行的颜色
+$border-last-tr-bg:         #b7c5da;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-font-weight:                normal !default;
+
+$btn-default-color:              #333 !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             #ccc !default;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             darken($btn-success-bg, 5%) !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 5%) !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+
+$btn-link-disabled-color:        $gray-light !default;
+
+//** Border color for inputs on focus
+$input-border-focus:             #66afe9 !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base:         $border-radius-base !default;
+$btn-border-radius-large:        $border-radius-large !default;
+$btn-border-radius-small:        $border-radius-small !default;
+
+//输入表单的高度，按钮的高度
+$form-ele-height:                60 !default;
+$input-indent-deafult :          8 !default;
+
+//按钮的内间距
+$padding-base-vertical:          6 !default;
+$padding-base-horizontal:        15 !default;
+
+//按钮的间距
+$btn-left-spacing:               10px !default;
+
+
+//==form表单的变量
+$grid-width:                     2em;//表单的格子大小
+$grid-space-width:               0.7em;//表格间的间隙
+$input-defalt-width :            $grid-width * 5 + $grid-space-width * (5 - 1) !default;
+//定义form表单的格子--预定义的类的个数
+$val-length :                    30;//只计算30个格子

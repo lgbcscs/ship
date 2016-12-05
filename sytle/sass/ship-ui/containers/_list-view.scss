@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.ui-list-view{
+    font-size: 0;
+    >li{
+        @include setBackgroundColor(#fff);
+        border: 1px solid $border-defaule-color;
+        margin-bottom: px2rem($page-padding-val);
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+        
+        a{
+            display: block;
+            text-decoration: none;
+            padding: px2rem($page-padding-val);
+        }
+    }
+    .itemInfo{
+        h6{
+            @include setFontInfo($fontColor:$font-color-default,$fontSize:px2rem(28),$fontWeight:600);
+            margin-bottom: px2rem(20);
+        }
+        .info-out{
+            margin-right: px2rem(30);
+        }
+        span,
+        label{
+            display: inline-block;
+            @include setFontInfo($fontColor:$gray-999,$fontSize:px2rem(24));
+            margin-bottom: px2rem(10);
+        }
+        label{
+            color: $font-color-default;
+        }
+    }
+}

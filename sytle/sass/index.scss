@@ -1,79 +1,29 @@
 @charset "utf-8";
 
-@import "mixin/px2rem";
+@import "ship-ui/mixin/px2rem";
 //基础文件
-@import "mixin/mixin";
-@import "weui-theme";
-//@import "mixin/px2rem";
-@import "mixin/utilities";
-//页面文件
-@import "login";
-@import "header";
-@import "bookInfo";
-//登录页面
-//历史列表页面
-@import "list";
+@import "ship-ui/mixin/mixin";
+@import "ship-ui/variables";
 
-//历史详细页面
-@import "viewDetail";
-
-body, html {
-    height: 100%;
-    -webkit-tap-highlight-color: transparent;
-    @include setBackgroundColor(#EFEFEF);
-}
-
-.container {
-    height: 100%;
-    padding-top: px2rem(50);
-    overflow-y: auto;
-
-}
-
-.userInfoPart {
-    min-height: px2rem(260);
-    @include setBackgroundColor(#008BC3);
-    padding-top: px2rem(50);
-    .ico_system {
-        background: url("../../image/ico_logo.png") center no-repeat;
-        width: px2rem(90);
-        height: px2rem(120);
-        margin: 0 auto;
-        background-size: 100% 100%;
-    }
-    .userInfoDiv {
-        margin-top: px2rem(36);
-        padding-bottom: px2rem(20);
-        p {
-            font-size: px2rem(36);
-            color: #A7D5E2;
-            margin-bottom: px2rem(20);
-            span {
-                margin-left: px2rem(25);
-            }
-        }
-    }
-}
-
-.weui_grid {
-    padding: px2rem(50) 0;
-    width: 50%;
-    &:nth-child(3n):before {
-        border-right-width: 1px;
-    }
-    &:nth-child(2n):before {
-        border-right-width: 0;
-    }
-    .weui_grid_icon {
-        width: px2rem(75);
-        height: px2rem(86);
-        img {
+.logoDiv{
+    .logoPic{
+        width: px2rem(200);
+        margin: px2rem(100) auto px2rem(30);
+        img{
             width: 100%;
-            height: 100%;
         }
     }
-    .weui_grid_label {
-        margin-top: px2rem(15);
-        @include setFontInfo(#222, $defaultFontFamily, px2rem(24), normal);
+    .systemTitle{
+        text-align: center;
+        @include setFontInfo($fontColor:$gray-666,$fontSize:px2rem(40));
+    }
+}
+.loginInfo{
+    width: 80%;
+    margin: px2rem(30) auto;
+    .ui-btn{
+        background-color: #224491;
+        font-size: px2rem(36);
+        letter-spacing: px2rem(10);
     }
 }

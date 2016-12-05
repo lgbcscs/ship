@@ -1,0 +1,33 @@
+@charset "utf-8";
+@import "../mixin/px2rem";
+.ui-form-list {
+    //.list-horizontal{
+    //    .ui-from-label{
+    //        width: 4rem;
+    //    }
+    //}
+    .fa-map-marker{
+        color: #E82C2B;
+        margin: 0 px2rem(5);
+    }
+
+}
+//修改江臻关于企业基础信息的样式
+.company-basic{
+    margin-bottom: px2rem(10);
+    .company-basic-pos{
+        margin-bottom: 0;
+    }
+    .pos{
+        padding-left: 0;
+        background: none;
+    }
+    .tagGroup{
+        margin-top: 0.4rem;
+        .tag{
+            display: inline-block;
+            line-height: 0.75556rem;
+            padding: 0 0.3111rem;
+        }
+    }
+}

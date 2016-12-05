@@ -1,0 +1,78 @@
+@charset "utf-8";
+@import "../../_mixin";
+$designWidth: 720;
+/*
+    @jiangz
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eee;
+    width: 16rem;
+    margin: 0 auto;
+}
+
+
+.more-contact,.company-contact{
+    font-size: 0;
+    border-bottom: 1px solid #ddd;
+    padding: px2rem(26) px2rem(25) px2rem(26) px2rem(70);
+    background: #fff url("../../../image/icon_phone.png") no-repeat px2rem(26) px2rem(28);
+    background-size: px2rem(26) px2rem(26);
+    .name,.phone-number{
+        @include baseFont(30,30,#333);
+        display: inline-block;
+    }
+}
+.company-contact{
+    .more{
+        @include baseFont(26,30,#5fa0d8);
+        padding-right: px2rem(36);
+        display: inline-block;
+        background: url("../../../image/icon_slide_down.png") no-repeat px2rem(138) px2rem(8);
+        background-size: px2rem(25) px2rem(14);
+    }
+}
+.more-contact{
+    display: none;
+}
+.grid-nav{
+    margin-top: px2rem(10);
+    .grid-item{
+        float: left;
+        padding: px2rem(40) 0;
+        text-align: center;
+        width: 1/2*100%;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        &:nth-child(odd){
+            border-right: 1px solid #ddd;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            font-size: 0;
+        }
+        h5{
+            display: inline-block;
+            @include baseFont(30,60,#333);
+        }
+        .item-img{
+            width: px2rem(60);
+            height: px2rem(60);
+            display: inline-block;
+            vertical-align: bottom;
+            margin-right: px2rem(21);
+        }
+    }
+}
+
+
+
+
+
+
+

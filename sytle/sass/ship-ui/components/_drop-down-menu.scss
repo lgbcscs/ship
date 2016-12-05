@@ -1,0 +1,11 @@
+@charset "utf-8";
+.ui-drop-down-menu{
+  display: none;
+  position: fixed;
+  width: 100%;
+  background: #f5f5f5;
+  top: px2rem(197);
+  z-index: 10;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 11px 11px #ccc;
+}

@@ -1,0 +1,52 @@
+@charset "utf-8";
+.zeus-item-header{
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    height: px2rem(86);
+    @include setBackgroundColor(#fff);
+    border-bottom: 1px solid $border-defaule-color;
+    border-top: 1px solid $border-defaule-color;
+    margin-bottom: px2rem(20);
+    .zeus-item-title{
+        display: inline-block;
+        padding: 0 px2rem(30);
+        @include setLine(px2rem(85),px2rem(85));
+        border-bottom: 2px solid $border-blue-color;
+        @include setFontInfo($fontColor:#3880bd,$fontSize:px2rem(28));
+    }
+    .ui-btn-simple{
+        color: #5EA0DA;
+        float: right;
+        margin: px2rem(25) px2rem(35) 0 px2rem(8);
+        border-color: #5EA0DA !important;
+        &.triangle-top{
+            margin-top: px2rem(35);
+            font-size: 0 !important;
+        }
+        &.triangle-bottom{
+            font-size: 0 !important;
+        }
+    }
+    //.ui-jjj{
+    //    color: #5EA0DA;
+    //    float: right;
+    //    background: none;
+    //    border: 1px solid #5EA0DA;
+    //    border-top: none;border-left: none;
+    //    width: 30px;
+    //    height: 30px;
+    //    display: inline-block;
+    //    transform:rotate(45deg);
+    //    -ms-transform:rotate(45deg); 	/* IE 9 */
+    //    -moz-transform:rotate(45deg); 	/* Firefox */
+    //    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    //    -o-transform:rotate(45deg); 	/* Opera */
+    //    margin: px2rem(25) px2rem(35) 0 px2rem(8);
+    //}
+    .zeus-item-count{
+        float: right;
+        margin-top: px2rem(25);
+        margin-right: px2rem(20);
+        @include setFontInfo($fontColor:$gray-light,$fontSize:px2rem(28));
+    }
+}

@@ -1,0 +1,8 @@
+@charset "utf-8";
+//列表
+.ui-list{
+  > li{
+    @include setBackgroundColor(#fff);
+    margin: px2rem(20);
+  }
+}

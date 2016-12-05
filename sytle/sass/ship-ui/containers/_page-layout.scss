@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+//页面总体设置
+.ui-html,
+.ui-body{
+    height: 100%;
+    font-family: $font-family-base;
+    overflow-x: hidden;
+    @include setBackgroundColor($page-bg);
+}
+
+//以下为reset样式部分，如果引入框架可以删除
+body,h1,h2,h3,h4,h5,h6,dd,dl,dt,form,th,td,ul,li,ol,p{ margin:0;padding:0;}
+img{ border:0;}
+
+.ui-page{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height:100%;
+    width:100%;
+}
+
+.ui-header{
+    height: px2rem($header-height);
+    @include setBackgroundColor($header-bg-color);
+}
+.ui-header-fixed{
+    .ui-header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .ui-content{
+        padding-top: px2rem($header-height);
+    }
+}
+.layout-inset{
+    margin: px2rem(20);
+    @include setBackgroundColor(#fff);
+    border: 1px solid $border-defaule-color;
+}

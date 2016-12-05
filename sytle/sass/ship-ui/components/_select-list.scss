@@ -1,0 +1,31 @@
+@charset "utf-8";
+//多选的话，添加类 multiple-list ；如果单选的话就是默认的就可以了
+.ui-select-list{
+    @include setBackgroundColor(#fff);
+    >li{
+        @extend %dis-flex;
+        padding: px2rem(22) px2rem(20);
+        border-bottom: 1px solid $border-defaule-color;
+        .select-text{
+            text-align: center;
+            @include setFontInfo($fontColor:$gray-darker,$fontSize:px2rem(28));
+        }
+        .select-ico{
+            //display: none;
+            @include setOpacity(0);
+            width: px2rem(30);
+            height: px2rem(30);
+            -webkit-text-stroke: 4px #fff;
+            color: #0075C2;
+        }
+        &.checkedLi{
+            .select-ico{
+                @include setOpacity(1);
+                display: inline-block;
+            }
+            .select-text{
+                color: #0075C2;
+            }
+        }
+    }
+}

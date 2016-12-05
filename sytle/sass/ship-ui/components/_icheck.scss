@@ -1,0 +1,120 @@
+@charset "utf-8";
+//input[type='radio'],
+//input[type='checkbox']{
+//    -webkit-appearance: none;
+//}
+
+$form_checkbox_radio_border_color: #5FA0D8 !default;
+$form_checkbox_radio_color: blue !default;
+
+.checkBox,
+.radioBox
+{
+    position: relative;
+    display: block;
+    font-weight: 400;
+}
+
+.checkBox,
+.radioBox {
+    padding-left: px2rem(25);
+    color: $form_checkbox_radio_color;
+    //cursor: pointer;
+
+}
+
+.checkBox.state-disabled,
+.radioBox.state-disabled
+{
+    //cursor: default!important;
+    opacity: .6!important;
+}
+.state-disabled.checkBox input+i:after,
+.state-disabled.checkBox input:checked+i,
+.state-disabled.radioBox input+i:after,
+.state-disabled.radioBox input:checked+i
+{
+    border-color: $form_checkbox_radio_border_color!important;
+    color: #333!important;
+}
+.checkBox input,
+.radioBox input {
+    position: absolute;
+    left: -9999px;
+}
+
+.checkBox i,
+.radioBox i {
+    position: absolute;
+    top: px2rem(15);
+    left: 0;
+    display: block;
+    width: px2rem(25);
+    height: px2rem(25);
+    outline: 0;
+    border-width: 1px;
+    border-style: solid;
+    background: #fff;
+}
+
+.radioBox i {
+    border-radius: 50%;
+}
+
+.checkBox i,
+//.smart-form .icon-append,
+//.smart-form .icon-prepend,
+//.smart-form .input input,
+.radioBox i
+//.smart-form .select select,
+//.smart-form .textarea textarea,
+//.smart-form .toggle i
+{
+    border-color: #60A0D7;
+    transition: border-color .3s;
+    -webkit-transition: border-color .3s;
+}
+
+.checkBox input:checked+i,
+.radioBox input:checked+i
+//.smart-form .toggle input:checked+i
+{
+    border-color: $form_checkbox_radio_border_color;
+}
+
+.checkBox input+i:after,
+.radioBox input+i:after {
+    position: absolute;
+    opacity: 0;
+    transition: opacity .1s;
+    -webkit-transition: opacity .1s;
+}
+
+.radioBox input+i:after {
+    content: '';
+    top: px2rem(4);
+    left: px2rem(4);
+    width: px2rem(15);
+    height: px2rem(15);
+    border-radius: 50%;
+}
+
+.radioBox input+i:after {
+    background-color: $form_checkbox_radio_border_color;
+}
+
+.checkBox input:checked+i:after,
+.radioBox input:checked+i:after {
+    opacity: 1;
+}
+
+.checkBox input+i:after {
+    content: '\f00c';
+    top: px2rem(-1);
+    left: px2rem(-7);
+    width: px2rem(25);
+    height: px2rem(25);
+    font: 400 16px/19px FontAwesome;
+    text-align: center;
+    color: #5FA0D8;
+}

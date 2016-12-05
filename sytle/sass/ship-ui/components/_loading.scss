@@ -1,0 +1,48 @@
+@charset "utf-8";
+#ss_loading_text {
+  font-weight: 700;
+  left: -50%;
+  position: relative;
+  top: -50%;
+  background: #757575;
+  color: #fff !important;
+  text-align: left;
+  width: px2rem(350);
+  font-size: px2rem(32);
+  padding: px2rem(15);
+  white-space: nowrap;
+  z-index: 99999;
+  border-radius: px2rem(15);
+}
+
+#ss_loading_text i {
+  background: url(../../image/042.gif);
+  background-size: 100% 100%;
+  display: inline-block;
+  height: px2rem(32);
+  margin: 0 15px;
+  vertical-align: middle;
+  width: px2rem(32);
+}
+#ss_loading_text span{
+}
+
+#ss_loading {
+  position: fixed;
+  z-index: 999999;
+}
+
+.loadingBg {
+  bottom: 0;
+  left: 0;
+  opacity: .8;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.loadingContent {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+}

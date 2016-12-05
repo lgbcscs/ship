@@ -1,0 +1,183 @@
+@charset "utf-8";
+//这个文件放工商网格的公共样式
+@import "../ship-mobile-ui";
+
+.ui-body{
+  font-family: 'Microsoft YaiHei', Helvetica, Arial, sans-serif;
+}
+
+ul, li{
+  list-style: none;
+}
+
+a:link, a:focus, a:hover, a:visited, a:active{
+  text-decoration: none;
+  color: $font-color-default;
+}
+
+img{
+  max-width: 100%;
+  border: none;
+}
+
+/* 标签 */
+.tag{
+  padding: px2rem(3) px2rem(14);
+  @include baseFont(24,24,#666);
+  height: px2rem(34);
+  border: 1px solid #666;
+  background-color: #fff;
+  border-radius: px2rem(16);
+}
+.tag-green{
+  border-color: #81C25D;
+  color: #81C25D;
+}
+.tag-blue{
+  border-color: #5FA0D8;
+  color: #5FA0D8;
+}
+.tag-red{
+  border-color: #e91f1f;
+  color: #e82020;
+}
+.tag-orange{
+  border-color: #f88f49;
+  color: #f88f49;
+}
+.tag-dark-green{
+  border-color: #47babe;
+  color: #46babe;
+}
+
+/* 搜索框 */
+.gswg-search-bar{
+  position: relative;
+  margin-top: px2rem(16);
+  padding: 0 px2rem(15);
+
+  > input{
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: px2rem(50);
+    width: 100%;
+    height: px2rem(70);
+    line-height: px2rem(50);
+    padding-left: px2rem(88);
+    font-size: px2rem(30);
+  }
+
+  > a{
+    position: absolute;
+    left: px2rem(15);
+    top: px2rem(7);
+    width: px2rem(78);
+    height: px2rem(56);
+    line-height: px2rem(56);
+    font-size: px2rem(36);
+    text-align: center;
+    border-right: 1px solid #ccc;
+    text-indent: px2rem(5);
+
+    i{
+      color: #999999;
+    }
+  }
+}
+
+//企业详细-公用头部
+.company-basic-pos{
+  font-size: 0;
+  padding: px2rem(30) px2rem(25);
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  margin-bottom: px2rem(10);
+  .tagGroup,.name,.pos{
+    margin-left: px2rem(125+20);
+  }
+  .photo{
+    float: left;
+    margin-right: px2rem(20);
+    @include box-size(125,125);
+  }
+  .name{
+    @include baseFont(32,32,#333);
+    font-weight: 600;
+  }
+  .pos{
+    padding-left: px2rem(28);
+    @include baseFont(24,24,#999);
+    background: url("../../image/icon_position.png") no-repeat left top;
+    background-size: px2rem(18) px2rem(22);
+  }
+  .tagGroup{
+    font-size: 0;
+    margin-top: px2rem(20);
+    margin-bottom: px2rem(20);
+    .tag{
+      margin-right: px2rem(14);
+    }
+    .tag:last-child{
+      margin-right: px2rem(14);
+    }
+  }
+}
+.company-basic-info{
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  .item{
+    width: 1/3*100%;
+    float: left;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    padding: px2rem(32) 0;
+    @include baseFont(30,30,#333);
+    @include text-overflow;
+    label{
+      display: block;
+      @include baseFont(24,24,#999);
+      margin-top: px2rem(11);
+    }
+  }
+  .item:last-child{
+    border-right: none;
+  }
+}
+
+/* 有搜索框 */
+.searchbar-ui-body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .ui-content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2rem;
+    bottom: 0;
+    padding-top: 0;
+  }
+
+  .search-bar{
+    height: px2rem(102);
+    line-height: px2rem(102);
+    background: #f5f5f5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .search-bar-bottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: px2rem(102);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

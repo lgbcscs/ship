@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.ui-search-bar{
+    font-size: 0;
+    //margin-bottom: px2rem($item-margin-bottom);
+    position: relative;
+    border-bottom: 1px solid $border-defaule-color;
+    @include setBackgroundColor(#fff);
+    padding: px2rem($page-padding-val) px2rem(160) px2rem($page-padding-val) px2rem($page-padding-val);
+    .ui-btn-search{
+        position: absolute;
+        right: px2rem($page-padding-val);
+        top: px2rem($page-padding-val);
+        height: px2rem(60);
+        width: px2rem(120);
+    }
+}
+.ui-form-out{
+    .ui-search-input{
+        padding: 0;
+        @include border-radius(px2rem($border-radius-base));
+        border: 1px solid $border-defaule-color;
+        width: 100%;
+        //height: px2rem($form-ele-height+4);
+        height: px2rem(60);
+        line-height: px2rem(60);
+        @include setNoOutLine();
+        text-indent: px2rem($input-indent-deafult);
+        @include setFontInfo($fontColor:$font-color-default,$fontSize:px2rem(28));
+    }
+ }

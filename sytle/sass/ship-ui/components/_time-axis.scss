@@ -1,0 +1,123 @@
+@charset "utf-8";
+// 时间轴列表
+.timeAxis{
+  padding: px2rem(40);
+
+  .timeAxis-item{
+    margin-bottom: px2rem(20);
+  }
+
+  .time-year{
+    background: #5fa0d8;
+    color: #fff;
+    font-size: px2rem(28);
+    padding: px2rem(10);
+    float: left;
+    margin-left: px2rem(130 + 27 / 2 - 2);
+    position: relative;
+    transform: translate(-50%);
+  }
+
+  .time-daily{
+    padding: px2rem(29) 0;
+    position: relative;
+    display: table;
+    width: 100%;
+
+    &:after{
+      content: '';
+      width: 4px;
+      height: 100%;
+      background: #9ec8ed;
+      position: absolute;
+      left: px2rem(130 + 27 / 2 - 2);
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+    }
+
+    .daily-left{
+      display: table-cell;
+      vertical-align: middle;
+      width: px2rem(130);
+
+      > span{
+        font-size: px2rem(28);
+        color: #1d5381;
+        font-family: '黑体', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+        width: px2rem(130);
+        text-align: center;
+      }
+    }
+
+    .daily-mid{
+      display: table-cell;
+      vertical-align: middle;
+      width: px2rem(27);
+
+      > i{
+        display: inline-block;
+        vertical-align: middle;
+        background: url("../../image/ico_circle.png") no-repeat;
+        background-size: 100% 100%;
+        width: px2rem(27);
+        height: px2rem(27);
+      }
+    }
+
+    .daily-right{
+      display: table-cell;
+      vertical-align: middle;
+
+      .patrol-detail{
+        background: #fff;
+        box-shadow: 1px 1px 4px #bbbbbb;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: px2rem(30);
+        position: relative;
+        border: 1px solid #5fa0d8;
+        padding: px2rem(14) px2rem(24);
+        font-size: px2rem(28);
+        text-decoration: none;
+        color: $font-color-default;
+
+        .arrow{
+          position: absolute;
+          left: -16px;
+          top: 50%;
+          @include triangle(left, 16px, #5fa0d8);
+          margin-top: -16px;
+        }
+
+        .arrow:after{
+          position: absolute;
+          left: 2px;
+          top: -16px;
+          @include triangle(left, 16px, #fff);
+        }
+
+        > span{
+          vertical-align: middle;
+        }
+
+        ul{
+          font-size: 0;
+          display: inline-block;
+          vertical-align: middle;
+          li{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: px2rem(10);
+
+            span{
+            }
+          }
+        }
+      }
+    }
+  }
+}

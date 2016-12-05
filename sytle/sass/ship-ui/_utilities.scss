@@ -1,0 +1,187 @@
+@charset "utf-8";
+*{
+    @include box-sizing(border-box);
+}
+//单独定义的类
+.w-percent-50{
+    width:50% !important;
+}
+.w-percent-60{
+    width:60% !important;
+}
+.w-percent-80{
+    width:80% !important;
+}
+.w-percent-90{
+    width:90% !important;
+}
+.w-percent-100{
+    width:100% !important;
+}
+.clearfix{
+    @include clearfix();
+}
+
+
+
+//计算form表单的格子宽度
+//@include grid-count();
+
+
+
+//时间输入框的ico
+.input-time{
+    //background: url("../image/ico_timeSelect.png") right center no-repeat;
+}
+
+//默认输入框的宽度为170px
+input[type='text'],
+select.form-control,
+input[type='password']{
+    //width: $input-defalt-width;
+    width: 100%;
+    height: px2rem($defaultInputHeight);
+    line-height: px2rem($defaultInputHeight);
+}
+
+//页面分割线的样式
+.page-part-split{
+    height:10px;
+    @include setBackgroundColor($gray-lighter);
+}
+
+//给元素添加border  1px 的默认的颜色的边框
+.has-border{
+    border:1px solid $border-defaule-color;
+    tr:last-child{
+        border-bottom: none;
+    }
+}
+
+//必填项
+.ico-require{
+    color: red;
+    font-style: normal;
+    font-weight: normal;
+    //@include fontSize($font-size-base);
+    margin-right: 5px;
+}
+
+//页面模块距离上下左右px2rem（20）
+.inset-part{
+    margin: px2rem($page-padding-val);
+}
+//警示的提示文字
+.helpTip{
+    font-size: px2rem(20);
+    color: $tip-warning;
+}
+.tip-danger{
+    color: $tip-danger;
+}
+.tip-warning{
+    color: $tip-warning;
+}
+.tip-success{
+    color: $tip-success;
+}
+.tip-info{
+    color: $tip-info;
+}
+// 通用文字颜色， 注意，若文字属于某个模块 例如tip，建议用tip相关的颜色
+.text-danger{
+    color: $text-danger !important;
+}
+.text-warning{
+    color: $text-warning !important;
+}
+.text-success{
+    color: $text-success !important;
+}
+.text-info{
+    color: $text-info !important;
+}
+.text-default{
+    color: $gray-darker !important;
+}
+
+//padding的集中预设值
+.padding-left-0{
+    padding-left: 0 !important;
+}
+.padding-right-0{
+    padding-right: 0 !important;
+}
+.padding-top-0{
+    padding-top: 0 !important;
+}
+.padding-bottom-0{
+    padding-bottom: 0 !important;
+}
+
+//margin的集中预设值
+.margin-left-0{
+    margin-left: 0 !important;
+}
+.margin-right-0{
+    margin-right: 0 !important;
+}
+.margin-top-0{
+    margin-top: 0 !important;
+}
+.margin-bottom-0{
+    margin-bottom: 0 !important;
+}
+.margin-top-item{
+    margin-top: px2rem(10) !important;
+}
+.margin-bottom-line{
+    margin-bottom: px2rem(20) !important;
+}
+
+//线条状的三角形的类
+.triangle-left{
+    @include triangle-thin($direction:left);
+}
+.triangle-right{
+    @include triangle-thin($direction:right);
+}
+.triangle-bottom{
+    @include triangle-thin($direction:bottom);
+}
+.triangle-top{
+    @include triangle-thin($direction:top);
+}
+
+//实心的三角形的类
+.triangle-solid-left{
+    @include triangle($direction:left, $size:px2rem(20), $borderColor:$border-defaule-color);
+}
+.triangle-solid-right{
+    @include triangle($direction:right, $size:px2rem(20), $borderColor:$border-defaule-color);
+}
+.triangle-solid-bottom{
+    @include triangle($direction:bottom, $size:px2rem(20), $borderColor:$border-defaule-color);
+}
+.triangle-solid-top{
+    @include triangle($direction:top, $size:px2rem(20), $borderColor:$border-defaule-color);
+}
+
+.disNone{
+    display: none;
+}
+.disNone-important{
+    display: none !important;
+}
+.dis-flex{
+    @extend %dis-flex;
+}
+.dis-flex-1{
+    @extend %dis-flex-1;
+}
+.f-28{
+    font-size: px2rem(28);
+}
+.f-24{
+    font-size: px2rem(24);
+}

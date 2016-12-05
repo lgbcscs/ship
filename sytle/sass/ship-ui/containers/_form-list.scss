@@ -1,0 +1,229 @@
+@charset "utf-8";
+$defaultInputHeight : 56;
+.ui-form-list{
+    >li{
+        min-height: px2rem(76);
+        padding: px2rem(8) px2rem(20);
+        border-bottom: 1px solid $border-defaule-color;
+        .ui-from-label{
+            word-wrap: break-word;
+            word-break: break-all;
+            display: block;
+            width: 100%;
+            @include setFontInfo($fontColor:$gray-light,$fontSize:px2rem(28));
+            height: px2rem($defaultInputHeight);
+            line-height: px2rem($defaultInputHeight);
+        }
+        .sub-item{
+            margin-top: px2rem(15);
+            margin-bottom: px2rem(10);
+            display: -webkit-box;
+            display: flex;
+            align-items: center;
+            textarea,
+            .radioBox,
+            .checkBox,
+            select,
+            input[type='text'],
+            input[type='date'],
+            input[type='date']{
+                -webkit-appearance: none;
+                text-indent: px2rem($input-indent-deafult);
+                @include setNoOutLine();
+                @include setFontInfo($fontColor:$gray-darker,$fontSize:px2rem(28));
+                @include setBackgroundColor(transparent);
+                height: px2rem($defaultInputHeight);
+                line-height: px2rem($defaultInputHeight);
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+            }
+            input[type='date'],
+            input[type='text']{
+                border: none;
+            }
+            textarea{
+                line-height: normal;
+                border: none;
+                text-indent: 0;
+                resize: none;
+            }
+            //纯文字详细展示
+            .textShow{
+                @include setFontInfo($fontColor:$gray-darker,$fontSize:px2rem(28));
+                &.w-percent-100{
+                    margin-top: px2rem(10);
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                }
+            }
+            .checkBox,
+            .radioBox{
+                flex: none;
+                width: 100%;
+            }
+            .checkBox-inline,
+            .radioBox-inline{
+                flex: none;
+                width: auto;
+                padding-right: px2rem(20);
+                &:last-child{
+                    padding-right: 0;
+                }
+            }
+            select{
+                border:none;
+                -webkit-appearance: none;
+            }
+        }
+        .selectBox{
+            &:after{
+                @include triangle-thin();
+            }
+            .simulateSelect{
+                @extend %dis-flex-1;
+            }
+        }
+        .picBox{
+            .picItem{
+                position: relative;
+                overflow: hidden;
+                float: left;
+                width: px2rem(160);
+                height: px2rem(140);
+                margin: 0 px2rem(20) px2rem(20) 0;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                .btn{
+                    //position: absolute;
+                    padding: px2rem(20);
+                    //left: 0;
+                    //right: 0;
+                    //top: 0;
+                    //bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    @include setBackgroundColor(#DADADA);
+                    border: 1px solid $border-defaule-color;
+                    @include border-radius(px2rem($border-radius-large));
+                    @include setNoOutLine();
+                }
+                .btnAddPic{
+                    background: url("../../image/ico_addFile.png") center no-repeat;
+                    background-size: 100% 100%;
+                }
+                .btnDelPic{
+                    background: url("../../image/ico_delFile.jpg") center no-repeat;
+                    background-size: 100% 100%;
+                }
+                input[type='file']{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    z-index: 2;
+                    width: 100%;
+                    @include setOpacity(0);
+                }
+            }
+        }
+        &.ui-btn-area-inset{
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .zeus-subItem{
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        //&.has-subItem{
+        //    border-bottom: none;
+        //}
+        //&.zeus-subItem{
+        //    margin-left: px2rem(50) !important;
+        //}
+    }
+    .list-horizontal{
+        display: -webkit-box;
+        display: flex;
+        position: relative;
+        align-items: center;
+        .ui-from-label{
+            //width: px2rem(140);
+            display: inline-block;
+            width: auto;
+        }
+        .sub-item{
+            margin-top: 0;
+            margin-bottom: 0;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+        }
+    }
+    &.layout-inset{
+        li{
+            padding: px2rem(8) px2rem(8);
+            margin: 0 px2rem(28);
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+    //整个li都是按钮的时候
+    .list-btn{
+        .ui-btn{
+            @include setFontInfo($fontColor:$gray-darker,$fontSize:px2rem(28));
+            margin: px2rem(10) 0;
+            padding: px2rem(20) px2rem(10);
+            border-color: #ddd;
+            @include setNoOutLine();
+        }
+    }
+}
+
+/*模拟select的色块选择*/
+//选择模块可能是一行可以显示，等宽；  多行显示，等宽；不等宽流布局
+.ui-form-list{
+    .sub-item{
+        flex-wrap: wrap;
+        .select-item{
+            border: 1px solid $border-defaule-color;
+            @include setFontInfo($fontColor:$gray-darker,$fontSize:px2rem(28));
+            float: left;
+            text-align: center;
+            min-width: px2rem(120);
+            padding: px2rem(10) px2rem(15);
+            margin: 0 px2rem(15) px2rem(15) 0;
+        }
+        .active-item{
+            border: 1px solid $border-blue-color;
+            @include setBackgroundColor($brand-primary);
+            color: #fff;
+        }
+    }
+}
+
+/*日期范围选择类型的模块*/
+.ui-form-list{
+    .item-range{
+        height: px2rem(56);
+        .link_line{
+            width: px2rem(30);
+            @include setFontInfo($fontColor:$gray-darker,$fontSize:px2rem(28));
+            flex-shrink:0;
+            //line-height: px2rem(56);
+            text-align: center;
+            font-weight: normal;
+        }
+        input{
+            border: 1px solid $border-defaule-color;
+        }
+    }
+}
+

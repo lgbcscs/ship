@@ -1,0 +1,5 @@
+@charset "utf-8";
+$designWidth : 720; //如设计图是720
+@function px2rem( $px ){
+	@return $px*320/$designWidth/20 + rem;
+}

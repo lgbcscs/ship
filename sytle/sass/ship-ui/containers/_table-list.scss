@@ -1,0 +1,13 @@
+@charset "utf-8";
+.ui-table-list{
+    @include setBackgroundColor(#fff);
+    border-bottom: 1px solid $border-defaule-color;
+    margin-bottom: px2rem(20);
+    display: -webkit-box;
+    display: flex;
+    padding: px2rem(30) px2rem(20);
+    .textShow{
+        @extend %dis-flex-1;
+        @include setFontInfo($fontColor:$gray-darker,$fontSize:px2rem(32));
+    }
+}

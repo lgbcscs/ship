@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+//清除浮动
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//设置宽带高度
+@mixin size($width, $height){
+    width: $width;
+    height: $height;
+}
+
+//设置高-行高
+@mixin setLine($height: px2rem(30), $lineHeight: px2rem(30)){
+    height: $height;
+    line-height: $lineHeight;
+}
+//设置block 并且居中
+@mixin center-block() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//设置字体集合
+@mixin setFontInfo($fontColor:$font-color-default,$fontFamily:$font-family-base,$fontSize: px2rem($font-size-base),$fontWeight:normal) {
+    color: $fontColor;
+    font:{
+        family: $fontFamily;
+        weight: $fontWeight;
+        size: $fontSize;
+    }
+}
+
+//超出省略号显示
+@mixin text-overflow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//盒子模型
+// Box sizing
+@mixin box-sizing($boxmodel){
+    -webkit-box-sizing: $boxmodel;
+    -moz-box-sizing: $boxmodel;
+    box-sizing: $boxmodel;
+}
+
+//阴影
+@mixin box-shadow($shadow...){
+    -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+    box-shadow: $shadow;
+}
+
+//透明
+@mixin setOpacity($opacity:1){
+    opacity: $opacity;
+    filter:alpha(opacity=$opacity*100);
+}
+
+//设置背景颜色
+@mixin setBackgroundColor($bgColor:transparent){
+    background-color: $bgColor;
+}
+
+//设置圆角
+@mixin border-radius($radiusVal){
+    -webkit-border-radius: $radiusVal;
+    -moz-border-radius: $radiusVal;
+    border-radius: $radiusVal;
+}
+
+//按钮等设置在获得焦点等的时候不要outLine以及shadow
+@mixin setNoOutLine(){
+    &:hover,
+    &:focus,
+    &:active{
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+//重置字体
+@mixin reset-text() {
+    font-family: $font-family-base;
+    // We deliberately do NOT reset font-size.
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-break: auto;
+    line-height: $line-height-base;
+    text-align: left; // Fallback for where `start` is not supported
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    white-space: normal;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+}
+
+//重置过滤器 为了IE
+@mixin reset-filter() {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+// 文字能不能被选择
+@mixin user-select($select) {
+    -webkit-user-select: $select;
+    -moz-user-select: $select;
+    -ms-user-select: $select; // IE10+
+    user-select: $select;
+}
+
+//元素获得焦点的时候的样式
+@mixin tab-focus() {
+    // WebKit-specific. Other browsers will keep their default outline style.
+    // (Initially tried to also force default via `outline: initial`,
+    // but that seems to erroneously remove the outline in Firefox altogether.)
+    outline: none;
+    outline-offset: 0;
+}
+
+//liaoyf:链接不要下划线
+@mixin noDecoration(){
+    a:hover,
+    a:focus{
+        text-decoration: none;
+    }
+}
+
+//liaoyf: 三角形
+@mixin triangle($direction, $size, $borderColor ) {
+  content:"";
+  height: 0;
+  width: 0;
+
+  @if $direction == top {
+    border-bottom:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  }
+  @else if $direction == right {
+    border-left:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  }
+  @else if $direction == bottom {
+    border-top:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  }
+  @else if $direction == left {
+    border-right:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  }
+}
+//三角形
+@mixin triangle-thin($direction:right, $size:20,$borderWeight:2px, $borderColor:$border-defaule-color ) {
+    content: "";
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); 	/* IE 9 */
+    -moz-transform:rotate(45deg); 	/* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg); 	/* Opera */
+    width: px2rem($size);
+    height: px2rem($size);
+    //width: 20px;
+    //height: 20px;
+    border: $borderWeight solid $borderColor;
+
+
+    @if $direction == top {
+        border-bottom: none;
+        border-right: none;
+    }
+    @else if $direction == right {
+        border-bottom: none;
+        border-left: none;
+    }
+    @else if $direction == bottom {
+        border-top: none;
+        border-left: none;
+    }
+    @else if $direction == left {
+        border-top: none;
+        border-right: none;
+    }
+}
+
+//设置为flex
+%dis-flex-1{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+%dis-flex{
+    display: flex;
+}

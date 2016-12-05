@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+.ui-header{
+    overflow: hidden;
+    //头部按钮
+    .ui-btn-simple{
+        position: absolute;
+        top: 0;
+        @include setLine(px2rem($header-height),px2rem($header-height));
+        text-decoration: none;
+        @include setFontInfo($fontColor:$header-color,$fontSize:px2rem(30),$fontWeight:600);
+        @include setNoOutLine();
+    }
+    .ui-header-btn-left{
+        left: px2rem($page-padding-val);
+    }
+    .ui-btn-back{
+        padding-left: px2rem(30);
+        &:after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: px2rem(30);
+            top: px2rem(40);
+            left: 0;
+            height: px2rem(60);
+            background-size: 100% 100%;
+            margin-top: -0.62222rem;
+            background-image: url(../../image/ico_left.png);
+            background-color: transparent;
+            background-repeat: no-repeat;
+        }
+    }
+    .ui-header-btn-right{
+        right: px2rem($page-padding-val);
+    }
+    //头部标题
+    .ui-title{
+        text-align: center;
+        color: $header-color;
+        margin: 0 px2rem(120);
+        @include setLine(px2rem($header-height),px2rem($header-height));
+        @include setFontInfo($fontColor:$header-color,$fontSize:px2rem(36),$fontWeight:600);
+    }
+}

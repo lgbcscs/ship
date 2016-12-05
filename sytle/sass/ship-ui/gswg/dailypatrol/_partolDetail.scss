@@ -1,0 +1,89 @@
+@charset "utf-8";
+/**
+ * 版权所有：厦门畅享信息技术有限公司
+ * Copyright 2014 Xiamen Sunsharing Information CO., LTD.
+ * All right reserved.
+ *====================================================
+ * 文件名称: partolDetail.scss
+ * 修订记录：
+ * No    日期				作者(操作:具体内容)
+ * 1.    2016/11/1			Administrator(创建:创建文件)
+ *====================================================
+ * 文件描述：(说明本文件需要实现的内容)
+ *
+ */
+@import "../../mixin/px2rem";
+.li-header{
+    .zeus-item-count{
+        float: right;
+        margin-top: px2rem(10);
+        margin-right: px2rem(20);
+        color: #b6b6b6;
+        font:{
+            family: Helvetica, Arial, sans-serif;
+            weight: normal;
+            size: px2rem(28);
+        }
+    }
+    .triangle-bottom{
+        border-color: #b6b6b6;
+    }
+}
+
+.dzzjxx-info{
+    .li-header{
+        padding-left: px2rem(20) !important;
+        padding-right: px2rem(20) !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .sub-item{
+        margin-top: px2rem(20) !important;
+    }
+    .zj-item{
+        .textShow{
+            margin-bottom: px2rem(10);
+        }
+        .f-24{
+            color: #999 !important;
+        }
+        .pic-div{
+            margin: px2rem(10) 0 px2rem(20) 0;
+        }
+    }
+}
+.btn-cxdw{
+    color: #0075c2;
+    font:{
+        family: Helvetica, Arial, sans-serif;
+        weight: normal;
+        size: px2rem(24);
+    }
+    background-image: url("/src/static/image/ico_dw.png");
+    background-size: px2rem(30) px2rem(30);
+    background-repeat: no-repeat;
+    background-position: left 0;
+    padding-left: px2rem(35);
+}
+
+//当前位置信息
+.dqwzxx{
+    li{
+        background-color: #fff;
+        padding-bottom: px2rem(20);
+        padding-top: px2rem(20);
+    }
+    margin-bottom: px2rem(20);
+}
+.has-ewm-srarchbar{
+    padding-right: px2rem(250);
+    .btn-ewm{
+        position: absolute;
+        top: px2rem(20);
+        right: px2rem(160);
+        height: px2rem(60);
+        width: px2rem(80);
+        background: url("/src/static/image/icon_code.png") center no-repeat;
+        background-size: 50% 50%;
+    }
+}

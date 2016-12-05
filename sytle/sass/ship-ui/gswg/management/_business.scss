@@ -1,0 +1,189 @@
+@charset "utf-8";
+@import "../../mixin/px2rem";
+@import "../../mixin/mixin";
+
+.business-top{
+
+  .search-right{
+    position: absolute;
+    right: px2rem(18);
+    top: 0;
+    width: px2rem(56);
+    line-height: px2rem(102);
+    text-align: center;
+
+    .fa-map-marker{
+      color: #e82c2c;
+    }
+
+    .fa-list{
+      display: none;
+      color: #0075c2;
+    }
+  }
+
+  .search-left{
+    margin-right: px2rem(60);
+  }
+}
+
+.business-list{
+  padding: px2rem(15) px2rem(18) 0;
+
+  > ul > li{
+    > a{
+      display: block;
+      position: relative;
+
+      .photo{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: px2rem(170);
+
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .info{
+        margin-left: px2rem(170);
+        padding: px2rem(15);
+
+        .name{
+          strong{
+            font-size: px2rem(28);
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+
+        ul{
+          @include clearfix;
+          margin: px2rem(15) 0 px2rem(20);
+        }
+
+        li{
+          float: left;
+          margin-right: px2rem(15);
+          font-size: 0;
+        }
+
+        .location{
+          font-size: 0;
+
+          i, span{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: px2rem(24);
+            color: #999;
+          }
+
+          i{
+            margin-right: px2rem(10);
+          }
+        }
+      }
+    }
+  }
+
+  .map{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.map-view{
+  .fa-map-marker{
+    display: none!important;
+  }
+  .fa-list{
+    display: inline-block!important;
+  }
+  .ui-list{
+    display: none;
+  }
+  .map{
+    display: block;
+  }
+
+  .business-map{
+    height: 100%;
+  }
+
+  .map-list{
+    display: none;
+    height: 65%;
+  }
+}
+
+.map-result-view{
+  .business-map{
+    height: 35%;
+  }
+  .map-list{
+    display: block;
+    border-top: 1px solid #ccc;
+    padding: px2rem(24);
+
+    .map-list-wrap{
+      background: #fff;
+      height: 100%;
+      overflow-y: auto;
+      padding: 0 px2rem(20);
+      border: 1px solid #ccc;
+
+      li{
+        border-top: 1px solid #ccc;
+        position: relative;
+
+        > i{
+          display: none;
+          position: absolute;
+          right: px2rem(30);
+          top: 50%;
+          -webkit-text-stroke: 4px white;
+          color: #0075c2;
+          margin-top: px2rem(-30);
+        }
+
+        a{
+          padding: px2rem(25) px2rem(70) 0 0;
+          display: block;
+
+          &:active{
+            background: #efefef;
+          }
+        }
+
+        &:first-child{
+          border-top: none;
+        }
+
+        strong{
+          font-size: px2rem(28);
+        }
+
+        div{
+          color: #999;
+          font-size: px2rem(24);
+          padding: px2rem(15) 0 px2rem(30);
+        }
+
+        &.cur{
+          > i{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

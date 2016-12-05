@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+//没有边框的按钮样式
+.ui-btn-simple{
+    border: none;
+    background: none;
+    @include setNoOutLine();
+}
+.ui-btn{
+    padding: px2rem($padding-base-vertical) px2rem($padding-base-horizontal);
+    @include border-radius(px2rem($border-radius-base));
+    font-size: px2rem(26);
+    &.ui-btn-lg{
+        font-size: px2rem(30);
+    }
+    &.ui-btn-sm{
+        font-size: px2rem(20);
+    }
+}
+.ui-btn-default{
+    @include setBackgroundColor($btn-default-bg);
+    color: $btn-default-color;
+    border: 1px solid $btn-default-border;
+}
+.ui-btn-info{
+    @include setBackgroundColor($btn-info-bg);
+    color: $btn-info-color;
+    border: 1px solid $btn-info-border;
+}
+.ui-btn-primary{
+    @include setBackgroundColor($btn-primary-bg);
+    color: $btn-primary-color;
+    border: 1px solid $btn-primary-border;
+}
+
+
+//页面底部；或者页面中间区域需要按钮块的区域
+.ui-btn-area{
+    margin-top: px2rem(20);
+    font-size: 0;
+    display: -webkit-box;
+    display: flex;
+    .ui-btn{
+        float: left;
+        //-webkit-box-flex: 1;
+        //-webkit-flex: 1;
+        //flex: 1;
+        height: px2rem(80);
+        @include border-radius(0);
+    }
+}
+.ui-tab_bd{
+    .ui-tabbar_item{
+        @include setNoOutLine();
+        @include setBackgroundColor(#fff);
+        padding: px2rem(20) 0;
+        border:none;
+        @extend %dis-flex-1;
+        border-left: 1px solid #ddd;
+        &:first-child{
+            border-left: none;
+        }
+        span{
+            display: block;
+            width: 100%;
+            @include setFontInfo($fontColor:$gray-light,$fontSize:px2rem(28));
+            &:first-child{
+                margin-bottom: px2rem(8);
+                img{
+                    width: px2rem(38);
+                    height: px2rem(38);
+                }
+            }
+        }
+    }
+}

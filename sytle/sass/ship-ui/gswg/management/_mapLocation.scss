@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import "../../mixin/px2rem";
+$designWidth: 720;
+/*
+    @jiangz
+*/
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+%ellipsis{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#myMap{
+    width: px2rem(720);
+    height: 100%;
+}
+
+.infoShow{
+    width: px2rem(572);
+    height: px2rem(108);
+    border: 1px solid #bbb;
+    background-color: #fff;
+    position: absolute;
+    z-index: 5;
+    left: px2rem(90);
+    bottom: px2rem(50);
+    .infoShow-img{
+        float: left;
+        width: px2rem(106);
+        height: px2rem(106);
+    }
+    .infoShow-content{
+        padding: px2rem(9) px2rem(12) px2rem(10);
+        margin-left: px2rem(106);
+        .name{
+            font-weight: 600;
+            font-size: px2rem(28);
+            line-height: px2rem(45);
+            color: #1f1f1f;
+            margin: 0;
+            @extend %ellipsis;
+        }
+        .address{
+            font-weight: normal;
+            font-size: px2rem(24);
+            line-height: px2rem(42);
+            color: #999;
+            @extend %ellipsis;
+        }
+    }
+
+}
+
+.opBar{
+    position: fixed;
+    top: px2rem(20);
+    left: px2rem(20);
+    z-index: 5;
+    button{
+        padding: px2rem(5) px2rem(10);
+        font: 400 px2rem(30)/px2rem(40) "SimHei";
+    }
+}
