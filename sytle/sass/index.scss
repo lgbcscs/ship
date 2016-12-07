@@ -27,3 +27,79 @@
         letter-spacing: px2rem(10);
     }
 }
+
+//首页样式
+.page-index{
+    .topInfo{
+        padding: px2rem(25) 0;
+        //border-bottom: 1px solid #ddd;
+        align-items:center;
+        margin-bottom: px2rem(20);
+        .userInfoPart{
+            width: 25%;
+            .ico_system{
+                background: url("../../image/ico_logo.png") center no-repeat;
+                width: 1.5rem;
+                height: 2rem;
+                margin: 0 auto;
+                background-size: 100% 100%;
+            }
+            .shipName{
+                display: block;
+                margin-top: px2rem(10);
+                text-align: center;
+                @include setFontInfo($fontColor:$gray-light,$fontSize:px2rem(28));
+            }
+        }
+        .staticInfo{
+        }
+    }
+    .staticInfo{
+        font-size: 0;
+        border-left: 1px solid #ddd;
+        li{
+            list-style: none;
+            display: inline-block;
+            margin: px2rem(5) px2rem(10) px2rem(5) px2rem(20);
+            label{
+                display: inline-block;
+                text-align: right;
+                min-width: 8em;
+                @include setFontInfo($fontColor:$gray-666,$fontSize:px2rem(30));
+            }
+            em{
+                font-style: normal;
+                @include setFontInfo($fontColor:$font-tip-color,$fontSize:px2rem(30));
+            }
+        }
+    }
+    .ui_grids_9{
+        .ui_grid{
+            min-height: px2rem(180);
+            text-decoration: none;
+            display: block;
+            float: left;
+            text-align: center;
+            width: 33.333%;
+            padding: px2rem(10) 0;
+            .ui_grid_label{
+                @include setFontInfo($fontColor:$gray-666,$fontSize:px2rem(20));
+            }
+            border: 1px solid #ddd;
+            &:nth-child(3n+1){
+                border-left: none;
+            }
+            &:nth-child(3n){
+                border-right: none;
+            }
+            &:nth-child(2n){
+                border-right: none;
+                border-left: none;;
+            }
+            &:nth-child(6),&:nth-child(4),&:nth-child(5){
+                border-top: none;
+                border-bottom: none;
+            }
+        }
+    }
+}

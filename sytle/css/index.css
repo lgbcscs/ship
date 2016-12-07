@@ -18,4 +18,70 @@
     font-size: 0.8rem;
     letter-spacing: 0.22222rem; }
 
+.page-index .topInfo {
+  padding: 0.55556rem 0;
+  align-items: center;
+  margin-bottom: 0.44444rem; }
+  .page-index .topInfo .userInfoPart {
+    width: 25%; }
+    .page-index .topInfo .userInfoPart .ico_system {
+      background: url("../../image/ico_logo.png") center no-repeat;
+      width: 1.5rem;
+      height: 2rem;
+      margin: 0 auto;
+      background-size: 100% 100%; }
+    .page-index .topInfo .userInfoPart .shipName {
+      display: block;
+      margin-top: 0.22222rem;
+      text-align: center;
+      color: #777777;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      font-size: 0.62222rem; }
+.page-index .staticInfo {
+  font-size: 0;
+  border-left: 1px solid #ddd; }
+  .page-index .staticInfo li {
+    list-style: none;
+    display: inline-block;
+    margin: 0.11111rem 0.22222rem 0.11111rem 0.44444rem; }
+    .page-index .staticInfo li label {
+      display: inline-block;
+      text-align: right;
+      min-width: 8em;
+      color: #666666;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      font-size: 0.66667rem; }
+    .page-index .staticInfo li em {
+      font-style: normal;
+      color: #f86515;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      font-size: 0.66667rem; }
+.page-index .ui_grids_9 .ui_grid {
+  min-height: 4rem;
+  text-decoration: none;
+  display: block;
+  float: left;
+  text-align: center;
+  width: 33.333%;
+  padding: 0.22222rem 0;
+  border: 1px solid #ddd; }
+  .page-index .ui_grids_9 .ui_grid .ui_grid_label {
+    color: #666666;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 0.44444rem; }
+  .page-index .ui_grids_9 .ui_grid:nth-child(3n+1) {
+    border-left: none; }
+  .page-index .ui_grids_9 .ui_grid:nth-child(3n) {
+    border-right: none; }
+  .page-index .ui_grids_9 .ui_grid:nth-child(2n) {
+    border-right: none;
+    border-left: none; }
+  .page-index .ui_grids_9 .ui_grid:nth-child(6), .page-index .ui_grids_9 .ui_grid:nth-child(4), .page-index .ui_grids_9 .ui_grid:nth-child(5) {
+    border-top: none;
+    border-bottom: none; }
+
 /*# sourceMappingURL=index.css.map */
