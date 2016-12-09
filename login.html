@@ -5,12 +5,11 @@
     <title>船舶管理检查智能平台</title>
     <link href="image/shi.ico" rel="shortcut icon">
 
-    <!--<link rel="stylesheet" href="lib/weui/style/weui.css">-->
-    <link rel="stylesheet" href="sytle/css/ship-ui/ship-mobile-ui.css">
+    <link rel="stylesheet" href="lib/weui/style/weui.css">
     <link rel="stylesheet" href="sytle/css/index.css">
 </head>
-<body class="ui-body">
-<div class="ui-page" id="container">
+<body>
+<div class="container" id="container">
     <div class="login">
         <div class="logoDiv">
             <div class="logoPic">
@@ -18,47 +17,38 @@
             </div>
             <p class="systemTitle">船舶管理检查智能平台</p>
         </div>
-        <div class="loginInfo">
-            <ul class="ui-form-list">
-                <li class="list-horizontal">
-                    <div class="sub-item">
-                        <label class="radioBox radioBox-inline" for="cb">
-                            <input type="radio" checked="checked" id="cb" name="lx">船舶
-                            <i></i>
-                        </label>
-                        <label class="radioBox radioBox-inline" for="jw">
-                            <input type="radio" id="jw" name="lx">机务/海务
-                            <i></i>
-                        </label>
-                    </div>
-                </li>
-                <li class="list-horizontal js-show disNone-important">
-                    <label class="ui-from-label" for="ssgs">所属公司：</label>
-                    <div class="sub-item">
-                        <input type="text" id="ssgs" name="ssgs" placeholder="请输入公司名称">
-                    </div>
-                </li>
-                <li class="list-horizontal js-show">
-                    <label class="ui-from-label" for="cm">船名：</label>
-                    <div class="sub-item">
-                        <input type="text" id="cm" name="cm" placeholder="请输入船名">
-                    </div>
-                </li>
-                <li class="list-horizontal">
-                    <label class="ui-from-label" for="zcm">注册码：</label>
-                    <div class="sub-item">
-                        <input type="text" id="zcm" name="zcm" placeholder="请输入注册码">
-                    </div>
-                </li>
-            </ul>
-            <div class="ui-btn-area">
-                <button id="js-login" type="button" class="ui-btn ui-btn-primary w-percent-100">登录</button>
+        <div class="weui_cells">
+            <div class="weui_cell_hd"><label class="weui_label">选择用户角色</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <span>船舶</span>
+                <span>机务/海务</span>
             </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">所属公司</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入公司名称"/>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">船名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="text" placeholder="请输入船名"/>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">注册码</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="text" placeholder="请输入注册码"/>
+                </div>
+            </div>
+        </div>
+        <div class="weui_btn_area">
+            <!--<a class="weui_btn weui_btn_primary" href="#/index" id="showTooltips">登录</a>-->
+            <a class="weui_btn btn_primary" href="index.html" id="showTooltips">登录</a>
         </div>
     </div>
 </div>
 <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="lib/hotcss/hotcss.js"></script>
-<script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

@@ -170,9 +170,6 @@ input[type='password']{
 .disNone{
     display: none;
 }
-.disNone-important{
-    display: none !important;
-}
 .dis-flex{
     @extend %dis-flex;
 }

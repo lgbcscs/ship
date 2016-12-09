@@ -1,87 +1,628 @@
-.logoDiv .logoPic {
-  width: 4.44444rem;
-  margin: 2.22222rem auto 0.66667rem; }
-  .logoDiv .logoPic img {
-    width: 100%; }
-.logoDiv .systemTitle {
-  text-align: center;
-  color: #666666;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 0.88889rem; }
+.weui_tab_bd {
+  padding-bottom: 4.57143rem; }
 
-.loginInfo {
-  width: 80%;
-  margin: 0.66667rem auto; }
-  .loginInfo .ui-btn {
-    background-color: #224491;
-    font-size: 0.8rem;
-    letter-spacing: 0.22222rem; }
+.weui_media_box {
+  padding: 0.38095rem; }
 
-.page-index .topInfo {
-  padding: 0.55556rem 0;
-  align-items: center;
-  margin-bottom: 0.44444rem; }
-  .page-index .topInfo .userInfoPart {
-    width: 25%; }
-    .page-index .topInfo .userInfoPart .ico_system {
-      background: url("../../image/ico_logo.png") center no-repeat;
-      width: 1.5rem;
-      height: 2rem;
-      margin: 0 auto;
-      background-size: 100% 100%; }
-    .page-index .topInfo .userInfoPart .shipName {
-      display: block;
-      margin-top: 0.22222rem;
-      text-align: center;
-      color: #777777;
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: normal;
-      font-size: 0.62222rem; }
-.page-index .staticInfo {
-  font-size: 0;
-  border-left: 1px solid #ddd; }
-  .page-index .staticInfo li {
-    list-style: none;
-    display: inline-block;
-    margin: 0.11111rem 0.22222rem 0.11111rem 0.44444rem; }
-    .page-index .staticInfo li label {
-      display: inline-block;
-      text-align: right;
-      min-width: 8em;
-      color: #666666;
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: normal;
-      font-size: 0.66667rem; }
-    .page-index .staticInfo li em {
-      font-style: normal;
-      color: #f86515;
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: normal;
-      font-size: 0.66667rem; }
-.page-index .ui_grids_9 .ui_grid {
-  min-height: 4rem;
-  text-decoration: none;
-  display: block;
-  float: left;
-  text-align: center;
-  width: 33.333%;
-  padding: 0.22222rem 0;
-  border: 1px solid #ddd; }
-  .page-index .ui_grids_9 .ui_grid .ui_grid_label {
-    color: #666666;
-    font-family: Helvetica, Arial, sans-serif;
+.weui_tabbar .weui_tabbar_item {
+  padding: 0.38095rem 0; }
+  .weui_tabbar .weui_tabbar_item .weui_tabbar_label {
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #888;
     font-weight: normal;
-    font-size: 0.44444rem; }
-  .page-index .ui_grids_9 .ui_grid:nth-child(3n+1) {
-    border-left: none; }
-  .page-index .ui_grids_9 .ui_grid:nth-child(3n) {
-    border-right: none; }
-  .page-index .ui_grids_9 .ui_grid:nth-child(2n) {
+    font-size: 0.60952rem; }
+  .weui_tabbar .weui_tabbar_item.weui_bar_item_on .weui_tabbar_label {
+    color: #09BB07; }
+  .weui_tabbar .weui_tabbar_item .weui_tabbar_icon {
+    width: 0.95238rem;
+    height: 0.95238rem; }
+    .weui_tabbar .weui_tabbar_item .weui_tabbar_icon img {
+      width: 100%;
+      height: 100%; }
+
+.weui_cell {
+  padding: 0.38095rem 0.57143rem; }
+
+.weui_cells {
+  margin-top: 0; }
+  .weui_cells .weui_cell:before {
+    left: 0; }
+  .weui_cells .weui_cell_bd {
+    position: relative; }
+    .weui_cells .weui_cell_bd .btn_primary {
+      position: absolute;
+      right: 0.38095rem;
+      top: 0rem;
+      border: none; }
+    .weui_cells .weui_cell_bd .jc-content {
+      font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+      color: #222;
+      font-weight: normal;
+      font-size: 0.60952rem; }
+  .weui_cells .weui_cell_ft:after {
+    height: 0.38095rem;
+    width: 0.38095rem;
+    border-width: 0.07619rem 0.07619rem 0 0; }
+  .weui_cells .weui_select {
+    line-height: normal;
+    height: 1.29524rem; }
+  .weui_cells .has_btn {
+    min-height: 1.29524rem; }
+    .weui_cells .has_btn .weui_input {
+      padding-right: 5.71429rem; }
+
+.weui_dialog_confirm .weui_dialog .weui_dialog_hd {
+  padding: 0.38095rem 0;
+  font-size: 0; }
+.weui_dialog_confirm .weui_dialog .weui_dialog_title {
+  font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+  color: #222;
+  font-weight: normal;
+  font-size: 0.68571rem; }
+.weui_dialog_confirm .weui_dialog_bd {
+  padding: 0; }
+.weui_dialog_confirm .weui_dialog_ft {
+  height: 1.52381rem;
+  line-height: 1.52381rem;
+  margin-top: 0; }
+  .weui_dialog_confirm .weui_dialog_ft a {
+    font-family: "SimSun";
+    color: #808080;
+    font-weight: normal;
+    font-size: 0.68571rem; }
+    .weui_dialog_confirm .weui_dialog_ft a.weui_btn_dialog.primary {
+      color: #0BB20C; }
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+
+.weui_panel_bd .weui_media_title {
+  font-family: "SimSun";
+  color: #222;
+  font-weight: normal;
+  font-size: 0.7619rem; }
+.weui_panel_bd .weui_media_desc {
+  font-family: "SimSun";
+  color: #666;
+  font-weight: normal;
+  font-size: 0.60952rem; }
+
+body {
+  line-height: normal; }
+
+* {
+  box-sizing: border-box; }
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+.clearfix:after {
+  clear: both; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.pull-right {
+  float: right !important; }
+
+.pull-left {
+  float: left !important; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.hide {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+.invisible {
+  visibility: hidden; }
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.hidden {
+  display: none !important; }
+
+.affix {
+  position: fixed; }
+
+.page-part-split {
+  height: 0.38095rem;
+  background-color: #EFEFEF; }
+
+.text_success {
+  color: green !important; }
+
+.text_warning {
+  color: orange !important; }
+
+.btn_primary {
+  border: 1px solid #224491;
+  background-color: #224491;
+  font-family: "Microsoft YaHei";
+  color: #fff;
+  font-weight: normal;
+  font-size: 0.60952rem;
+  color: #fff !important; }
+  .btn_primary:visited {
+    color: #183168; }
+  .btn_primary:active {
+    color: #fff;
+    background-color: #183168; }
+
+.btn {
+  padding: 0.22857rem 0.45714rem; }
+
+.w-percent-0 {
+  width: 0%; }
+
+.w-percent-10 {
+  width: 10%; }
+
+.w-percent-20 {
+  width: 20%; }
+
+.w-percent-30 {
+  width: 30%; }
+
+.w-percent-40 {
+  width: 40%; }
+
+.w-percent-50 {
+  width: 50%; }
+
+.w-percent-60 {
+  width: 60%; }
+
+.w-percent-70 {
+  width: 70%; }
+
+.w-percent-80 {
+  width: 80%; }
+
+.w-percent-90 {
+  width: 90%; }
+
+.w-percent-100 {
+  width: 100%; }
+
+.w-percent-25 {
+  width: 25%; }
+
+.w-percent-33 {
+  width: 33.333%; }
+
+.login .logoDiv {
+  margin: 50px auto; }
+  .login .logoDiv .logoPic {
+    width: 90px;
+    height: 120px;
+    margin: 0 auto; }
+    .login .logoDiv .logoPic img {
+      width: 100%;
+      height: 100%; }
+  .login .logoDiv .systemTitle {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #204492;
+    font-weight: 600;
+    font-size: 1.44762rem; }
+.login .weui_cells {
+  width: 90%;
+  margin: 0 auto; }
+  .login .weui_cells .weui_label {
+    width: 3.80952rem;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
+  .login .weui_cells:before {
+    border: none; }
+  .login .weui_cells .weui_cell_bd {
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
+  .login .weui_cells .weui_input {
+    border: none; }
+    .login .weui_cells .weui_input:hover, .login .weui_cells .weui_input:focus, .login .weui_cells .weui_input:active {
+      outline: none;
+      box-shadow: none; }
+    .login .weui_cells .weui_input:focus, .login .weui_cells .weui_input:active {
+      border: none;
+      outline: none; }
+  .login .weui_cells .weui_cell {
+    border-bottom: 1px solid  #666; }
+    .login .weui_cells .weui_cell:last-child {
+      border-bottom: none; }
+.login .weui_btn_area {
+  width: 90%;
+  margin: 1.14286rem auto; }
+
+.layout-header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  height: 1.90476rem;
+  background-color: #000; }
+  .layout-header .header-btn-l,
+  .layout-header .header-btn-r {
+    position: absolute;
+    top: 0.57143rem;
+    height: 0.95238rem;
+    line-height: 0.95238rem;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #666;
+    font-weight: normal;
+    font-size: 0.7619rem;
+    color: #fff; }
+  .layout-header .header-btn-l {
+    left: 0.38095rem; }
+    .layout-header .header-btn-l:before {
+      vertical-align: bottom;
+      margin-right: 0.38095rem;
+      content: '';
+      display: inline-block;
+      width: 0.57143rem;
+      height: 0.95238rem;
+      background: url("../../image/ico_left.png") center no-repeat;
+      background-size: 100% 100%; }
+  .layout-header .page-title {
+    text-align: center;
+    position: absolute;
+    left: 2.85714rem;
+    right: 2.85714rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 1.90476rem;
+    line-height: 1.90476rem;
+    color: #fff;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #fff;
+    font-weight: normal;
+    font-size: 0.99048rem; }
+  .layout-header .header-btn-r {
+    cursor: pointer;
+    right: 0.38095rem;
+    background-color: transparent;
+    border: none; }
+    .layout-header .header-btn-r:hover, .layout-header .header-btn-r:focus, .layout-header .header-btn-r:active {
+      outline: none;
+      box-shadow: none; }
+
+.actionsheet-bookList .weui_actionsheet_cell {
+  padding-top: 0; }
+.actionsheet-bookList .weui_actionsheet {
+  top: 0;
+  overflow: auto; }
+.actionsheet-bookList dl {
+  text-align: left;
+  font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+  color: #222;
+  font-weight: normal;
+  font-size: 0.68571rem; }
+  .actionsheet-bookList dl dd {
+    padding: 0.38095rem;
+    border-bottom: 1px solid #ddd; }
+  .actionsheet-bookList dl dt {
+    display: block;
+    font-size: 0.60952rem; }
+    .actionsheet-bookList dl dt .weui_cell {
+      padding: 0.19048rem 0.7619rem;
+      border-bottom: 1px solid #ddd;
+      color: #222; }
+    .actionsheet-bookList dl dt .weui_cell_bd {
+      padding-left: 0.7619rem; }
+.actionsheet-bookList .weui_actionsheet_action {
+  margin: 0.38095rem 0; }
+  .actionsheet-bookList .weui_actionsheet_action .weui_actionsheet_cell {
+    padding: 0.38095rem 0;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
+
+.check-info-detail {
+  position: relative;
+  padding-bottom: 4.57143rem; }
+  .check-info-detail .btn_show_detail {
+    position: absolute;
+    right: 0.38095rem;
+    top: 0.30476rem;
+    border-color: #000;
+    color: #222; }
+  .check-info-detail .weui_media_text .weui_media_desc,
+  .check-info-detail .weui_media_text .weui_media_title {
+    overflow: visible;
+    white-space: normal;
+    -webkit-line-clamp: 1000; }
+  .check-info-detail .weui_media_text .weui_media_title {
+    font-weight: 600; }
+  .check-info-detail .weui_media_text ul {
+    list-style: square inside url("../../image/eg_arrow.gif"); }
+    .check-info-detail .weui_media_text ul li p {
+      display: inline; }
+  .check-info-detail .item-detail-info {
+    display: none; }
+
+.layout-footer {
+  background-color: #fff; }
+  .layout-footer .raido-option-list {
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
+    .layout-footer .raido-option-list .raido-item {
+      float: left;
+      overflow: hidden;
+      width: 25%;
+      height: 1.90476rem;
+      line-height: 1.90476rem;
+      border-left: 1px solid #ddd;
+      border-top: 1px solid #666;
+      text-align: center; }
+      .layout-footer .raido-option-list .raido-item:first-child {
+        border-left: none; }
+      .layout-footer .raido-option-list .raido-item input {
+        margin-right: 0.30476rem; }
+  .layout-footer .weui_dialog_ft {
+    margin-top: 0; }
+  .layout-footer .weui_btn_footer {
+    text-align: center;
+    border-left: none;
     border-right: none;
-    border-left: none; }
-  .page-index .ui_grids_9 .ui_grid:nth-child(6), .page-index .ui_grids_9 .ui_grid:nth-child(4), .page-index .ui_grids_9 .ui_grid:nth-child(5) {
+    height: 1.71429rem;
+    line-height: 1.71429rem;
+    border-top: 1px solid #ddd;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
+    .layout-footer .weui_btn_footer:first-child {
+      border-right: 1px solid #ddd; }
+
+.check-info-item .weui_panel_bd {
+  margin: 0.38095rem;
+  background-color: #fff; }
+.check-info-item .ng-info {
+  display: none;
+  margin-top: 0.38095rem; }
+  .check-info-item .ng-info .weui_cells:before, .check-info-item .ng-info .weui_cells:after {
+    border-color: #333; }
+  .check-info-item .ng-info .weui_cells .weui_textarea {
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #666;
+    font-weight: normal;
+    font-size: 0.60952rem; }
+  .check-info-item .ng-info .weui_cells .weui_textarea_counter {
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #666;
+    font-weight: normal;
+    font-size: 0.60952rem; }
+
+.listPage {
+  height: 100%; }
+  .listPage .weui_tab_bd {
+    background-color: #EFEFEF; }
+  .info-part {
+    padding: 0.38095rem; }
+    .info-part > li {
+      position: relative;
+      font-size: 0;
+      background-color: #fff;
+      margin-bottom: 0.38095rem;
+      border: 1px solid #ddd; }
+      .info-part > li .weui_media_box .weui_media_title {
+        font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+        color: #222;
+        font-weight: normal;
+        font-size: 0.7619rem; }
+        .info-part > li .weui_media_box .weui_media_title .type-name {
+          line-height: 1.06667rem; }
+        .info-part > li .weui_media_box .weui_media_title .check-time {
+          margin-left: 0.7619rem;
+          line-height: 1.06667rem; }
+      .info-part > li .weui_media_box .weui_media_desc {
+        margin-top: 0.30476rem; }
+        .info-part > li .weui_media_box .weui_media_desc > span {
+          display: block;
+          margin-bottom: 0.07619rem;
+          font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+          color: #666;
+          font-weight: normal;
+          font-size: 0.53333rem; }
+      .info-part > li .weui_media_box .weui_progress .weui_progress_label {
+        font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+        color: #666;
+        font-weight: normal;
+        font-size: 0.53333rem; }
+      .info-part > li .weui_media_box .weui_progress span.weui_progress_opr {
+        margin-left: 0.38095rem;
+        width: 2.28571rem;
+        height: 1.14286rem;
+        line-height: 1.14286rem;
+        font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+        color: #666;
+        font-weight: normal;
+        font-size: 0.53333rem; }
+        .info-part > li .weui_media_box .weui_progress span.weui_progress_opr em, .info-part > li .weui_media_box .weui_progress span.weui_progress_opr b {
+          font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+          color: #666;
+          font-weight: normal;
+          font-size: 0.53333rem;
+          font-style: normal; }
+        .info-part > li .weui_media_box .weui_progress span.weui_progress_opr em {
+          color: red; }
+        .info-part > li .weui_media_box .weui_progress span.weui_progress_opr b {
+          color: green; }
+      .info-part > li .item-state {
+        position: absolute;
+        z-index: 9;
+        right: 0.38095rem;
+        top: 0.38095rem;
+        text-align: center;
+        min-width: 3.04762rem;
+        border: 1px solid #ddd;
+        padding: 0.22857rem 0.60952rem;
+        font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+        color: #222;
+        font-weight: normal;
+        font-size: 0.53333rem; }
+      .info-part > li .item-link {
+        display: block; }
+      .info-part > li span.item-state {
+        background-color: #ddd; }
+  .info-title {
     border-top: none;
-    border-bottom: none; }
+    height: 1.90476rem;
+    background-color: #fff;
+    border-bottom: 1px solid #CCC; }
+    .info-title span {
+      padding: 0 0.45714rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      min-width: 0.7619rem;
+      border-bottom: 4px solid #0075C2;
+      text-shadow: none;
+      float: left;
+      text-align: left;
+      height: 1.90476rem;
+      line-height: 1.90476rem;
+      font-family: "Microsoft YaHei";
+      color: #3880bd;
+      font-weight: normal;
+      font-size: 0.60952rem; }
+    .info-title .btn_add {
+      margin-right: 0.38095rem;
+      margin-top: 0.38095rem; }
+
+.check-info-detail .weui_cell_bd {
+  min-height: 0; }
+  .check-info-detail .weui_cell_bd .btn {
+    font-size: 0.53333rem;
+    top: -0.07619rem; }
+.check-info-detail .weui_label {
+  font-family: "SimSun";
+  color: #222;
+  font-weight: normal;
+  font-size: 0.60952rem;
+  width: 3.80952rem; }
+.check-info-detail .weui_input {
+  font-family: "SimSun";
+  color: #222;
+  font-weight: normal;
+  font-size: 0.60952rem; }
+.check-info-detail .weui_select {
+  height: 0.8381rem;
+  font-family: "SimSun";
+  color: #222;
+  font-weight: normal;
+  font-size: 0.60952rem; }
+.check-info-detail .btn-add-next {
+  font-size: 0.7619rem; }
+
+.unit_part {
+  padding: 0.38095rem;
+  padding-bottom: 2.28571rem; }
+  .unit_part .unit_item {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 0.38095rem;
+    padding: 0.38095rem; }
+    .unit_part .unit_item dt {
+      font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+      color: #222;
+      font-weight: normal;
+      font-size: 0.7619rem;
+      margin-bottom: 0.38095rem; }
+    .unit_part .unit_item dd {
+      font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+      color: #666;
+      font-weight: normal;
+      font-size: 0.53333rem;
+      margin-bottom: 0.19048rem; }
+
+.fixed-bottom .weui_btn_footer {
+  background-color: #0075C2;
+  color: #fff; }
+  .fixed-bottom .weui_btn_footer:first-child {
+    background-color: green; }
+
+body, html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #EFEFEF; }
+
+.container {
+  height: 100%;
+  padding-top: 1.90476rem;
+  overflow-y: auto; }
+
+.userInfoPart {
+  min-height: 9.90476rem;
+  background-color: #008BC3;
+  padding-top: 1.90476rem; }
+  .userInfoPart .ico_system {
+    background: url("../../image/ico_logo.png") center no-repeat;
+    width: 3.42857rem;
+    height: 4.57143rem;
+    margin: 0 auto;
+    background-size: 100% 100%; }
+  .userInfoPart .userInfoDiv {
+    margin-top: 1.37143rem;
+    padding-bottom: 0.7619rem; }
+    .userInfoPart .userInfoDiv p {
+      font-size: 1.37143rem;
+      color: #A7D5E2;
+      margin-bottom: 0.7619rem; }
+      .userInfoPart .userInfoDiv p span {
+        margin-left: 0.95238rem; }
+
+.weui_grid {
+  padding: 1.90476rem 0;
+  width: 50%; }
+  .weui_grid:nth-child(3n):before {
+    border-right-width: 1px; }
+  .weui_grid:nth-child(2n):before {
+    border-right-width: 0; }
+  .weui_grid .weui_grid_icon {
+    width: 2.85714rem;
+    height: 3.27619rem; }
+    .weui_grid .weui_grid_icon img {
+      width: 100%;
+      height: 100%; }
+  .weui_grid .weui_grid_label {
+    margin-top: 0.57143rem;
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.91429rem; }
 
 /*# sourceMappingURL=index.css.map */
