@@ -167,11 +167,31 @@ $defaultInputHeight : 56;
         }
     }
     &.layout-inset{
+        //@include setBackgroundColor(transparent);
         li{
+            //@include setBackgroundColor(#fff);
             padding: px2rem(8) px2rem(8);
             margin: 0 px2rem(28);
             &:last-child{
                 border-bottom: none;
+            }
+        }
+        .list-block{
+
+        }
+    }
+    //当每个li都是上下存在间隔的块的时候
+    &.li-block{
+        border:none;
+        @include setBackgroundColor(transparent);
+        >li{
+            @include setBackgroundColor(#fff);
+            margin: 0;
+            margin-bottom: px2rem(10);
+            padding: px2rem(8) px2rem(28);
+            border: 1px solid #ddd;
+            &:last-child{
+                border-bottom: 1px solid #ddd;
             }
         }
     }

@@ -1,79 +1,139 @@
 @charset "utf-8";
 
-@import "mixin/px2rem";
+@import "ship-ui/mixin/px2rem";
 //基础文件
-@import "mixin/mixin";
-@import "weui-theme";
-//@import "mixin/px2rem";
-@import "mixin/utilities";
-//页面文件
-@import "login";
-@import "header";
-@import "bookInfo";
-//登录页面
-//历史列表页面
-@import "list";
+@import "ship-ui/mixin/mixin";
+@import "ship-ui/variables";
 
-//历史详细页面
-@import "viewDetail";
-
-body, html {
-    height: 100%;
-    -webkit-tap-highlight-color: transparent;
-    @include setBackgroundColor(#EFEFEF);
-}
-
-.container {
-    height: 100%;
-    padding-top: px2rem(50);
-    overflow-y: auto;
-
-}
-
-.userInfoPart {
-    min-height: px2rem(260);
-    @include setBackgroundColor(#008BC3);
-    padding-top: px2rem(50);
-    .ico_system {
-        background: url("../../image/ico_logo.png") center no-repeat;
-        width: px2rem(90);
-        height: px2rem(120);
-        margin: 0 auto;
-        background-size: 100% 100%;
+.logoDiv{
+    .logoPic{
+        width: px2rem(200);
+        margin: px2rem(100) auto px2rem(30);
+        img{
+            width: 100%;
+        }
     }
-    .userInfoDiv {
-        margin-top: px2rem(36);
-        padding-bottom: px2rem(20);
-        p {
-            font-size: px2rem(36);
-            color: #A7D5E2;
-            margin-bottom: px2rem(20);
-            span {
-                margin-left: px2rem(25);
+    .systemTitle{
+        text-align: center;
+        @include setFontInfo($fontColor:$gray-666,$fontSize:px2rem(40));
+    }
+}
+.loginInfo{
+    width: 80%;
+    margin: px2rem(30) auto;
+    .ui-btn{
+        background-color: #224491;
+        font-size: px2rem(36);
+        letter-spacing: px2rem(10);
+    }
+}
+
+//首页样式
+.page-index{
+    .topInfo{
+        background-color: lightblue;
+        padding: px2rem(25) 0;
+        //border-bottom: 1px solid #ddd;
+        align-items:center;
+        border-bottom: 0.2rem solid #999;
+        //margin-bottom: px2rem(20);
+        .userInfoPart{
+            width: 25%;
+            .ico_system{
+                background: url("../../image/ico_logo.png") center no-repeat;
+                width: 1.5rem;
+                height: 2rem;
+                margin: 0 auto;
+                background-size: 100% 100%;
+            }
+            .shipName{
+                display: block;
+                margin-top: px2rem(10);
+                text-align: center;
+                @include setFontInfo($fontColor:$gray-light,$fontSize:px2rem(28));
+            }
+        }
+        .staticInfo{
+        }
+    }
+    .staticInfo{
+        font-size: 0;
+        border-left: 1px solid #ddd;
+        li{
+            list-style: none;
+            display: inline-block;
+            margin: px2rem(5) px2rem(10) px2rem(5) px2rem(20);
+            label{
+                display: inline-block;
+                text-align: right;
+                min-width: 8em;
+                @include setFontInfo($fontColor:$gray-666,$fontSize:px2rem(30));
+            }
+            em{
+                font-style: normal;
+                @include setFontInfo($fontColor:$font-tip-color,$fontSize:px2rem(30));
+            }
+        }
+    }
+    .ui_grids_9{
+        .ui_grid{
+            min-height: px2rem(180);
+            text-decoration: none;
+            display: block;
+            float: left;
+            text-align: center;
+            width: 33.333%;
+            padding: px2rem(10) 0;
+            .ui_grid_label{
+                @include setFontInfo($fontColor:$gray-666,$fontSize:px2rem(20));
+            }
+            border: 1px solid #ddd;
+            &:nth-child(3n+1){
+                border-left: none;
+            }
+            &:nth-child(3n){
+                border-right: none;
+            }
+            &:nth-child(2n){
+                border-right: none;
+                border-left: none;;
+            }
+            &:nth-child(6),&:nth-child(4),&:nth-child(5){
+                border-top: none;
+                border-bottom: none;
             }
         }
     }
 }
 
-.weui_grid {
-    padding: px2rem(50) 0;
-    width: 50%;
-    &:nth-child(3n):before {
-        border-right-width: 1px;
+//检查模块的列表样式
+.jc-list-part{
+    font-size: 0;
+    .item-link{
+        display: block;
+        text-decoration: none;
     }
-    &:nth-child(2n):before {
-        border-right-width: 0;
-    }
-    .weui_grid_icon {
-        width: px2rem(75);
-        height: px2rem(86);
-        img {
-            width: 100%;
-            height: 100%;
+    .ui_media_title{
+        color: #222;
+        font-weight: normal;
+        font-size: 0.7619rem;
+        margin: px2rem(10) 0;
+        .check-time{
+            margin-left: px2rem(20);
+            color: #666;
+            font-size: 0.6rem;
         }
     }
-    .weui_grid_label {
-        margin-top: px2rem(15);
-        @include setFontInfo(#222, $defaultFontFamily, px2rem(24), normal);
+    .ui_media_desc{
+        color: #666;
+        font-weight: normal;
+        font-size: 0.60952rem;
+        span{
+            display: block;
+            margin-bottom: 0.07619rem;
+            color: #666;
+            font-weight: normal;
+            font-size: 0.53333rem;
+        }
     }
 }

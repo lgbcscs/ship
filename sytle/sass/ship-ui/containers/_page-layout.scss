@@ -39,6 +39,11 @@ img{ border:0;}
         padding-top: px2rem($header-height);
     }
 }
+.ui-footer-fixed{
+    .ui-content{
+        padding-bottom: px2rem(100);
+    }
+}
 .layout-inset{
     margin: px2rem(20);
     @include setBackgroundColor(#fff);
