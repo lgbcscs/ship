@@ -5,6 +5,7 @@ $defaultInputHeight : 56;
         min-height: px2rem(76);
         padding: px2rem(8) px2rem(20);
         border-bottom: 1px solid $border-defaule-color;
+        list-style: none;
         .ui-from-label{
             word-wrap: break-word;
             word-break: break-all;
@@ -25,6 +26,7 @@ $defaultInputHeight : 56;
             .checkBox,
             select,
             input[type='text'],
+            input[type='password'],
             input[type='date'],
             input[type='date']{
                 -webkit-appearance: none;
@@ -38,6 +40,7 @@ $defaultInputHeight : 56;
                 -webkit-flex: 1;
                 flex: 1;
             }
+            input[type='password'],
             input[type='date'],
             input[type='text']{
                 border: none;

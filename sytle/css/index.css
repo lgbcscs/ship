@@ -22,7 +22,8 @@
   background-color: lightblue;
   padding: 0.55556rem 0;
   align-items: center;
-  border-bottom: 0.2rem solid #999; }
+  border-bottom: 0.2rem solid #999;
+  border-top: 0.2rem solid #999; }
   .page-index .topInfo .userInfoPart {
     width: 25%; }
     .page-index .topInfo .userInfoPart .ico_system {
@@ -61,29 +62,33 @@
       font-weight: normal;
       font-size: 0.66667rem; }
 .page-index .ui_grids_9 .ui_grid {
-  min-height: 4rem;
+  height: 3.33333rem;
   text-decoration: none;
   display: block;
   float: left;
   text-align: center;
   width: 33.333%;
   padding: 0.22222rem 0;
-  border: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd; }
+  .page-index .ui_grids_9 .ui_grid .ui_grid_icon {
+    height: 1.88889rem; }
+    .page-index .ui_grids_9 .ui_grid .ui_grid_icon .icon {
+      display: block;
+      height: 100%; }
+      .page-index .ui_grids_9 .ui_grid .ui_grid_icon .icon img {
+        height: 100%; }
   .page-index .ui_grids_9 .ui_grid .ui_grid_label {
+    margin-top: 0.22222rem;
     color: #666666;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-size: 0.44444rem; }
   .page-index .ui_grids_9 .ui_grid:nth-child(3n+1) {
-    border-left: none; }
-  .page-index .ui_grids_9 .ui_grid:nth-child(3n) {
-    border-right: none; }
-  .page-index .ui_grids_9 .ui_grid:nth-child(2n) {
-    border-right: none;
-    border-left: none; }
-  .page-index .ui_grids_9 .ui_grid:nth-child(6), .page-index .ui_grids_9 .ui_grid:nth-child(4), .page-index .ui_grids_9 .ui_grid:nth-child(5) {
-    border-top: none;
-    border-bottom: none; }
+    border-left: none;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+  .page-index .ui_grids_9 .ui_grid:nth-child(3n+2) {
+    border-right: 1px solid #ddd; }
 
 .jc-list-part {
   font-size: 0; }
@@ -109,5 +114,66 @@
       color: #666;
       font-weight: normal;
       font-size: 0.53333rem; }
+
+.check-step .ui_media_title {
+  color: #222;
+  font-weight: normal;
+  font-size: 0.7619rem;
+  margin: 0.22222rem 0; }
+.check-step .ui_media_desc span {
+  display: block;
+  margin-bottom: 0.07619rem;
+  color: #666;
+  font-weight: normal;
+  font-size: 0.53333rem; }
+.check-step .ng-info {
+  margin-top: 0.38095rem;
+  margin-bottom: 0.38095rem;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa; }
+.check-step .ui_cell {
+  padding: 0.38095rem 0.57143rem;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+  .check-step .ui_cell .ui_cell_bd {
+    font-size: 0.57778rem;
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1; }
+    .check-step .ui_cell .ui_cell_bd textarea {
+      display: block;
+      border: 0;
+      resize: none;
+      width: 100%;
+      color: inherit;
+      font-size: 1em;
+      line-height: inherit;
+      outline: 0; }
+    .check-step .ui_cell .ui_cell_bd .ui_textarea_counter {
+      text-align: right;
+      font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+      color: #666;
+      font-weight: normal;
+      font-size: 0.60952rem; }
+.check-step .item-detail-info {
+  display: none; }
+  .check-step .item-detail-info p {
+    overflow: visible;
+    white-space: normal;
+    -webkit-line-clamp: 1000;
+    font-family: "SimSun";
+    color: #666;
+    font-weight: normal;
+    font-size: 0.60952rem; }
+  .check-step .item-detail-info ul {
+    list-style-position: inside; }
+    .check-step .item-detail-info ul li {
+      margin-left: 0; }
 
 /*# sourceMappingURL=index.css.map */

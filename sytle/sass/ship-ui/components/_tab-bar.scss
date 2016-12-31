@@ -11,6 +11,8 @@
     border-top: 1px solid #ddd;
     background-color: #f7f7fa;
     .ui_tabbar_item{
+        text-align: center;
+        line-height: 1rem;
         display: block;
         -webkit-box-flex: 1;
         -webkit-flex: 1;
@@ -18,7 +20,7 @@
         text-decoration: none;
         //padding: 7px 0 0;
         -webkit-tap-highlight-color: transparent;
-        padding: 0.38095rem 0;
+        padding: 0.3rem 0 0;
         &.ui_bar_item_on{
             .ui_tabbar_label{
                 color: #09BB07;
@@ -40,6 +42,6 @@
         font-weight: normal;
         font-size: 0.60952rem;
         text-align: center;
-        margin-top: px2rem(10);
+        //margin-top: px2rem(10);
     }
 }

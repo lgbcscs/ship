@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>船舶管理检查智能平台</title>
-    <link href="image/shi.ico" rel="shortcut icon">
+    <link href="image/ship.ico" rel="shortcut icon">
+    <script type="text/javascript" src="lib/hotcss/hotcss.js"></script>
 
     <link rel="stylesheet" href="sytle/css/ship-ui/ship-mobile-ui.css">
     <link rel="stylesheet" href="sytle/css/index.css">
+
+    <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body class="ui-body" style="background-color: #fff">
 <div class="ui-page ui-header-fixed">
@@ -16,7 +21,7 @@
         <h1 class="ui-title">远洋号</h1>
         <!--<a href="#" type="button" data-role="changePage" class="ui-btn-simple ui-header-btn-right">编辑</a>-->
     </div>
-    <div class="ui-content page-index">
+    <div class="ui-content page-index" style="position: absolute;top: 2rem;bottom: 0;left: 0;right: 0;padding-top:0;overflow: hidden;">
         <div class="topInfo dis-flex clearfix">
             <div class="userInfoPart">
                 <div class="ico_system"></div>
@@ -50,7 +55,7 @@
         </div>
 
         <div class="ui_grids_9 clearfix">
-            <a href="#" class="ui_grid">
+            <a href="addInspect.html" class="ui_grid">
                 <div class="ui_grid_icon">
                     <i class="icon">
                         <img src="image/ico_gztj.png">
@@ -110,7 +115,7 @@
                     按职务学习
                 </p>
             </a>
-            <a href="#" class="ui_grid">
+            <a href="./userInfo.html" class="ui_grid">
                 <div class="ui_grid_icon">
                     <i class="icon">
                         <img src="image/ico_zdzf.png">
@@ -120,7 +125,7 @@
                     用户信息
                 </p>
             </a>
-            <a href="#" class="ui_grid">
+            <div id="js-goToSystemSet" class="ui_grid">
                 <div class="ui_grid_icon">
                     <i class="icon">
                         <img src="image/ico_zdzf.png">
@@ -129,13 +134,37 @@
                 <p class="ui_grid_label">
                     系统设置
                 </p>
-            </a>
-            <a href="#" class="ui_grid"></a>
-            <a href="#" class="ui_grid"></a>
+            </div>
+            <a href="javaScript:void (0)" class="ui_grid"></a>
         </div>
     </div>
 </div>
-
+<div class="ui_dialog_confirm" id="modal-systemSetKey" style="display: none">
+    <div class="ui_mask"></div>
+    <div class="ui_dialog">
+        <div class="ui_dialog_hd"><strong class="ui_dialog_title">获取系统设置权限</strong></div>
+        <div class="ui_dialog_bd">
+            <ul class="ui-form-list layout-inset margin-top-0 margin-bottom-0">
+                <li class="list-horizontal"><!--行内显示-->
+                    <label class="ui-from-label">管理员姓名：</label>
+                    <div class="sub-item">
+                        <input type="text" placeholder="请输入管理员姓名">
+                    </div>
+                </li>
+                <li class="list-horizontal"><!--行内显示-->
+                    <label class="ui-from-label">密码：</label>
+                    <div class="sub-item">
+                        <input type="password" placeholder="请输入密码">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ui_dialog_ft">
+            <a href="javascript:;" class="ui_btn_dialog default js-close-modal">取消</a>
+            <a id="js-checkOut" href="javascript:;" class="ui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div>
 <!--<script type="text/html" id="tpl_list">-->
     <!--<div class="weui_tab">-->
         <!--<div class="nav-item-cont weui_tab_bd">-->
@@ -407,9 +436,5 @@
     <!--</div>-->
     <!--&lt;!&ndash;END dialog2&ndash;&gt;-->
 <!--</script>-->
-<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="lib/hotcss/hotcss.js"></script>
-<!--<script type="text/javascript" src="lib/weui/router.min.js"></script>-->
-<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

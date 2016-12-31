@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="ui-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>船舶管理检查智能平台</title>
+    <link href="image/ship.ico" rel="shortcut icon">
+    <script type="text/javascript" src="lib/hotcss/hotcss.js"></script>
+
+    <link rel="stylesheet" href="sytle/css/ship-ui/ship-mobile-ui.css">
+    <link rel="stylesheet" href="sytle/css/index.css">
+
+    <script TYPE="text/javascript" src="lib/jquery/jquery.min.js"></script>
+    <script TYPE="text/javascript" src="js/public.js"></script>
+    <script TYPE="text/javascript" src="js/addInspect.js"></script>
+</head>
+<body class="ui-body">
+<div class="ui-page ui-header-fixed ui-footer-fixed">
+    <div class="ui-header">
+        <a href="./index.html" data-role="goBackPage" class="ui-btn-simple ui-btn-back ui-header-btn-left">返回</a><!--无边框的按钮ui-btn-simple；链接ui-btn-link;-->
+        <h1 class="ui-title">新增检查项</h1>
+        <!--<a href="#" type="button" data-role="changePage" class="ui-btn-simple ui-header-btn-right">编辑</a>-->
+    </div>
+    <div class="ui-content page-index">
+        <div class="partInfo">
+            <h3 class="zeus-item-header js-part-dropdown">
+                <span class="zeus-item-title">检查项基础信息</span>
+            </h3>
+            <ul class="ui-form-list layout-inset">
+                <li class="list-horizontal">
+                    <label class="ui-from-label">船名：</label>
+                    <div class="sub-item">
+                        <span class="textShow">启程号</span>
+                    </div>
+                </li>
+                <li class="list-horizontal">
+                    <label class="ui-from-label">检查开始时间：</label>
+                    <div class="sub-item">
+                        <span class="textShow">2016-12-12 10:10</span>
+                    </div>
+                </li>
+                <li class="list-horizontal">
+                    <label class="ui-from-label">检查结束时间：</label>
+                    <div class="sub-item">
+                        <span class="textShow">2016-12-12 12:00</span>
+                    </div>
+                </li>
+                <li class="list-horizontal"><!--行内显示-->
+                    <label class="ui-from-label" for="gj">所在国家：</label>
+                    <div class="sub-item">
+                        <input type="text" id="gj" name="gj" placeholder="请输入国家">
+                    </div>
+                    <button id="js-addCountry" type="button" class="ui-btn ui-btn-primary">新增国家</button>
+                </li>
+                <li class="list-horizontal"><!--行内显示-->
+                    <label class="ui-from-label" for="gk">港口：</label>
+                    <div class="sub-item">
+                        <input type="text" id="gk" name="gk" placeholder="请输入港口">
+                    </div>
+                    <button id="js-addPort" type="button" class="ui-btn ui-btn-primary">新增港口</button>
+                </li>
+                <li class="list-horizontal"><!--行内显示-->
+                    <label class="ui-from-label">检查项目职务：</label>
+                    <div class="sub-item selectBox">
+                        <select class="form-control">
+                            <option>船长</option>
+                            <option>船副</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="list-horizontal"><!--行内显示-->
+                    <label class="ui-from-label" for="jcrxm">检查人姓名：</label>
+                    <div class="sub-item">
+                        <input type="text" id="jcrxm" name="jcrxm" placeholder="请输入检查人姓名">
+                    </div>
+                </li>
+                <li class="list-horizontal"><!--行内显示-->
+                    <label class="ui-from-label">检查人职务：</label>
+                    <div class="sub-item selectBox">
+                        <select class="form-control">
+                            <option>船长</option>
+                            <option>船副</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="ui_tabbar ui-btn-area">
+        <a href="checkStep.html" class="ui_tabbar_item ui-btn ui-btn-primary">
+            下一步
+        </a>
+    </div>
+</div>
+
+<div class="ui_dialog_confirm" id="modal-addCountry" style="display: none">
+    <div class="ui_mask"></div>
+    <div class="ui_dialog">
+        <div class="ui_dialog_hd"><strong class="ui_dialog_title">新增国家</strong></div>
+        <div class="ui_dialog_bd">
+            <ul class="ui-form-list layout-inset margin-top-0 margin-bottom-0">
+                <li class="list-horizontal"><!--行内显示-->
+                    <label class="ui-from-label">国家名称：</label>
+                    <div class="sub-item">
+                        <input type="text" placeholder="请输入国家名称">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ui_dialog_ft">
+            <a href="javascript:;" class="ui_btn_dialog default js-close-modal">取消</a>
+            <a href="javascript:;" class="ui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div>
+<div class="ui_dialog_confirm" id="modal-addPort" style="display: none">
+    <div class="ui_mask"></div>
+    <div class="ui_dialog">
+        <div class="ui_dialog_hd"><strong class="ui_dialog_title">新增港口</strong></div>
+        <div class="ui_dialog_bd">
+            <ul class="ui-form-list layout-inset margin-top-0 margin-bottom-0">
+                <li class="list-horizontal"><!--行内显示-->
+                    <label class="ui-from-label">港口名称：</label>
+                    <div class="sub-item">
+                        <input type="text" placeholder="请输入港口名称">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ui_dialog_ft">
+            <a href="javascript:;" class="ui_btn_dialog default js-close-modal">取消</a>
+            <a href="javascript:;" class="ui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div>
+<!--<script type="text/html" id="unit_1">-->
+    <!--<div class="unit_info">-->
+        <!--<h5 class="info-title">-->
+            <!--<span>第一章:概况</span>-->
+        <!--</h5>-->
+        <!--<div class="unit_part">-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.01:船名</dt>-->
+                <!--<dd>检查结果：是(Y)</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.02:船舶IMO编码</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.03:船旗</dt>-->
+                <!--<dd>检查结果：未见(NS)</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.04:载重吨</dt>-->
+                <!--<dd>检查结果：不适用(NA)</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.05:交船日期</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.06:船舶类型</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.07:船体（结构）类型（参照《国际防止污染证书》（IOPPC）格式）</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.08:船舶经营人名称</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.09:前船舶经营人开始承担责任的日期</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.10:船级社名称</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.11:船舶入级证书到期日期</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.12:上次特别检验完成时间</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.13:船级社认可的上次出坞或修理完成日期</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.14:上次船舶检验状况报告日期</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.16:上一次接受PSC检查的时间</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.17:上一次接受PSC检查的港口</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.18:船舶自查完成日期</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.19:船舶自查地点</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.20:岸基检查人员登船日期和时间</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.21:岸基检查人员离船日期和时间</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.22:岸基检查所花费时间</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.23:岸基检查人员姓名</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.24:岸基检查时船舶作业状况</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+            <!--<dl class="unit_item">-->
+                <!--<dt>1.25:岸基检查时船舶货载情况</dt>-->
+                <!--<dd>检查结果：不是(N)</dd>-->
+                <!--<dd>原因：这里填写原因</dd>-->
+            <!--</dl>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="layout-footer fixed-bottom">-->
+        <!--<div class="weui_dialog_ft">-->
+            <!--<a href="javascript:;" id="go_back" class="weui_btn_footer weui_btn_plain_default">上一章</a>-->
+            <!--<a href="#/1_02" id="go_to" class="weui_btn_footer weui_btn_plain_default">下一章</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</script>-->
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/viewDetail.js"></script>
+</body>
+</html>

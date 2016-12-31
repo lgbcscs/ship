@@ -85,7 +85,8 @@ img {
 .ui-form-list > li {
   min-height: 1.68889rem;
   padding: 0.17778rem 0.44444rem;
-  border-bottom: 1px solid #DEDEDE; }
+  border-bottom: 1px solid #DEDEDE;
+  list-style: none; }
   .ui-form-list > li .ui-from-label {
     word-wrap: break-word;
     word-break: break-all;
@@ -108,6 +109,7 @@ img {
     .ui-form-list > li .sub-item .checkBox,
     .ui-form-list > li .sub-item select,
     .ui-form-list > li .sub-item input[type='text'],
+    .ui-form-list > li .sub-item input[type='password'],
     .ui-form-list > li .sub-item input[type='date'],
     .ui-form-list > li .sub-item input[type='date'] {
       -webkit-appearance: none;
@@ -135,6 +137,9 @@ img {
       .ui-form-list > li .sub-item input[type='text']:hover,
       .ui-form-list > li .sub-item input[type='text']:focus,
       .ui-form-list > li .sub-item input[type='text']:active,
+      .ui-form-list > li .sub-item input[type='password']:hover,
+      .ui-form-list > li .sub-item input[type='password']:focus,
+      .ui-form-list > li .sub-item input[type='password']:active,
       .ui-form-list > li .sub-item input[type='date']:hover,
       .ui-form-list > li .sub-item input[type='date']:focus,
       .ui-form-list > li .sub-item input[type='date']:active,
@@ -143,6 +148,7 @@ img {
       .ui-form-list > li .sub-item input[type='date']:active {
         outline: none;
         box-shadow: none; }
+    .ui-form-list > li .sub-item input[type='password'],
     .ui-form-list > li .sub-item input[type='date'],
     .ui-form-list > li .sub-item input[type='text'] {
       border: none; }
@@ -314,6 +320,7 @@ img {
     border: 1px solid #DEDEDE; }
 
 .zeus-item-header {
+  position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   height: 1.91111rem;
@@ -349,6 +356,10 @@ img {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-size: 0.62222rem; }
+  .zeus-item-header .ui-header-btn-right {
+    position: absolute;
+    right: 0.55556rem;
+    top: 0.44444rem; }
 
 .ui-table-list {
   background-color: #fff;
@@ -362,6 +373,64 @@ img {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-size: 0.71111rem; }
+
+.ui_mask {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+.ui_dialog_confirm .ui_dialog {
+  position: fixed;
+  z-index: 5000;
+  width: 85%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #FAFAFC;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden; }
+  .ui_dialog_confirm .ui_dialog .ui_dialog_hd {
+    padding: 0.38095rem 0;
+    font-size: 0; }
+  .ui_dialog_confirm .ui_dialog .ui_dialog_title {
+    font-family: "SimSun" "arial" "Helvetica" "NSimSun" "FangSong" "Microsoft YaHei";
+    color: #222;
+    font-weight: normal;
+    font-size: 0.68571rem; }
+.ui_dialog_confirm .ui_dialog_bd {
+  padding: 0; }
+.ui_dialog_confirm .ui_dialog_ft {
+  height: 1.55556rem;
+  position: relative;
+  line-height: 1.55556rem;
+  margin-top: 20px;
+  font-size: 17px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  border-top: 1px solid #ddd; }
+  .ui_dialog_confirm .ui_dialog_ft a {
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    color: #808080;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    border-left: 1px solid #ddd;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 0.44444rem; }
+    .ui_dialog_confirm .ui_dialog_ft a:first-child {
+      margin-left: 0; }
+    .ui_dialog_confirm .ui_dialog_ft a.ui_btn_dialog.primary {
+      color: #0BB20C; }
 
 .ui-header {
   overflow: hidden; }
@@ -440,6 +509,11 @@ img {
   background-color: #0075C2;
   color: #fff;
   border: 1px solid #0066a9; }
+
+.ui-btn-success {
+  background-color: #6EBA57;
+  color: #fff;
+  border: 1px solid #60af48; }
 
 .ui-btn-area {
   margin-top: 0.44444rem;
@@ -847,13 +921,15 @@ img {
   border-top: 1px solid #ddd;
   background-color: #f7f7fa; }
   .ui_tabbar .ui_tabbar_item {
+    text-align: center;
+    line-height: 1rem;
     display: block;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
-    padding: 0.38095rem 0; }
+    padding: 0.3rem 0 0; }
     .ui_tabbar .ui_tabbar_item.ui_bar_item_on .ui_tabbar_label {
       color: #09BB07; }
   .ui_tabbar .ui_tabbar_icon {
@@ -868,8 +944,7 @@ img {
     color: #888;
     font-weight: normal;
     font-size: 0.60952rem;
-    text-align: center;
-    margin-top: 0.22222rem; }
+    text-align: center; }
 
 * {
   -webkit-box-sizing: border-box;

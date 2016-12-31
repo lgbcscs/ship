@@ -1,5 +1,6 @@
 @charset "utf-8";
 .zeus-item-header{
+    position: relative;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     height: px2rem(86);
@@ -48,5 +49,10 @@
         margin-top: px2rem(25);
         margin-right: px2rem(20);
         @include setFontInfo($fontColor:$gray-light,$fontSize:px2rem(28));
+    }
+    .ui-header-btn-right{
+        position: absolute;
+        right: px2rem(25);
+        top: px2rem(20);
     }
 }
