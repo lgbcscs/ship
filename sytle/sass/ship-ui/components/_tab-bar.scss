@@ -1,9 +1,10 @@
 @charset "utf-8";
 //关于固定在页脚，或者页头的固定的导航
 .ui_tabbar{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
+    //display: -webkit-box;
+    //display: -webkit-flex;
+    //display: flex;
+    //flex-wrap: nowrap;
     position: fixed;
     z-index: 500;
     bottom: 0;
@@ -43,5 +44,24 @@
         font-size: 0.60952rem;
         text-align: center;
         //margin-top: px2rem(10);
+    }
+
+    //固定在页脚中的操作--radio的操作
+    .raido-option-list{
+        width: 100%;
+        .radioBox,
+        .raido-item{
+            $height: px2rem(60);
+            height: $height;
+            line-height: $height;
+            color: #222;
+            font-weight: normal;
+            font-size: 0.60952rem;
+            text-align: center;
+            border-left: 1px solid #ddd;
+            &:first-child{
+                border-left: 0;
+            }
+        }
     }
 }

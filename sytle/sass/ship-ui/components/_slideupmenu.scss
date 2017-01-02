@@ -1,0 +1,70 @@
+@charset "utf-8";
+.ui_mask_transition{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    transition:background .3s;
+}
+.ui_fade_toggle{
+    background: rgba(0,0,0,.6);
+}
+$bgColor:#ECECEC;
+$uiCellBorderColor:#D9D9D9;
+@mixin setTopLine($c: #C7C7C7) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid $c;
+    color: $c;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+}
+.ui_actionsheet {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 100%);
+    backface-visibility: hidden;
+    z-index: 5000;
+    width: 100%;
+    background-color: #eee;
+    //slide up animation
+    transition: transform .3s;
+}
+.ui_actionsheet_menu{
+    background-color: #FFFFFF;
+}
+.ui_actionsheet_action {
+    margin-top: 6px;
+    background-color: #FFFFFF;
+}
+.ui_actionsheet_cell {
+    position: relative;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    &:before {
+        @include setTopLine($uiCellBorderColor);
+    }
+    &:active{
+        background-color: $bgColor;
+    }
+    &:first-child{
+        &:before{
+            display: none;
+        }
+    }
+}
+
+//actionSheet aniamtion
+.ui_actionsheet_toggle{
+    transform: translate(0, 0);
+}

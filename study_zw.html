@@ -12,133 +12,122 @@
 
     <script TYPE="text/javascript" src="lib/jquery/jquery.min.js"></script>
     <script TYPE="text/javascript" src="js/public.js"></script>
-    <script TYPE="text/javascript" src="js/addInspect.js"></script>
+    <script TYPE="text/javascript" src="js/study_zj_list.js"></script>
 </head>
 <body class="ui-body">
 <div class="ui-page ui-header-fixed ui-footer-fixed">
-    <div class="ui-header">
-        <a href="./index.html" data-role="goBackPage" class="ui-btn-simple ui-btn-back ui-header-btn-left">返回</a><!--无边框的按钮ui-btn-simple；链接ui-btn-link;-->
-        <h1 class="ui-title">新增检查项</h1>
-        <!--<a href="#" type="button" data-role="changePage" class="ui-btn-simple ui-header-btn-right">编辑</a>-->
+    <div class="ui-header ui-header-btnStyle">
+        <a href="./study_zw_list.html" data-role="goBackPage" class="ui-btn-simple ui-btn-back ui-header-btn-left">返回</a><!--无边框的按钮ui-btn-simple；链接ui-btn-link;-->
+        <h1 class="ui-title">按章节学习</h1>
+        <button id="js-show-select" type="button" class="ui-btn-simple ui-header-btn-right">快速定位</button>
     </div>
     <div class="ui-content page-index">
         <div class="partInfo">
             <h3 class="zeus-item-header js-part-dropdown">
-                <span class="zeus-item-title">检查项基础信息</span>
+                    <span class="zeus-item-title">第一章</span>
             </h3>
-            <ul class="ui-form-list layout-inset">
-                <li class="list-horizontal">
-                    <label class="ui-from-label">船名：</label>
-                    <div class="sub-item">
-                        <span class="textShow">启程号</span>
+            <ul class="ui-form-list layout-inset li-block check-step">
+                <li>
+                    <div class="ui_panel_bd">
+                        <div class="ui_media_box ui_media_text clearfix">
+                            <h4 class="ui_media_title clearfix">
+                                <span class="pull-left">1.01:船名</span>
+                            </h4>
+                            <p class="ui_media_desc">
+                                <span>船名是否规范，是否正确</span>
+                            </p>
+                        </div>
                     </div>
-                </li>
-                <!--<li class="list-horizontal">--><!--如果是船务使用的话，则船名使用输入框-->
-                    <!--<label class="ui-from-label">船名：</label>-->
-                    <!--<div class="sub-item">-->
-                        <!--<input type="text" placeholder="请输入船名">-->
-                    <!--</div>-->
-                <!--</li>-->
-                <li class="list-horizontal">
-                    <label class="ui-from-label">检查开始时间：</label>
-                    <div class="sub-item">
-                        <span class="textShow">2016-12-12 10:10</span>
-                    </div>
-                </li>
-                <li class="list-horizontal">
-                    <label class="ui-from-label">检查结束时间：</label>
-                    <div class="sub-item">
-                        <span class="textShow">2016-12-12 12:00</span>
-                    </div>
-                </li>
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label" for="gj">所在国家：</label>
-                    <div class="sub-item">
-                        <input type="text" id="gj" name="gj" placeholder="请输入国家">
-                    </div>
-                    <button id="js-addCountry" type="button" class="ui-btn ui-btn-primary">新增国家</button>
-                </li>
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label" for="gk">港口：</label>
-                    <div class="sub-item">
-                        <input type="text" id="gk" name="gk" placeholder="请输入港口">
-                    </div>
-                    <button id="js-addPort" type="button" class="ui-btn ui-btn-primary">新增港口</button>
-                </li>
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label">检查项目职务：</label>
-                    <div class="sub-item selectBox">
-                        <select class="form-control">
-                            <option>船长</option>
-                            <option>船副</option>
-                        </select>
-                    </div>
-                </li>
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label" for="jcrxm">检查人姓名：</label>
-                    <div class="sub-item">
-                        <input type="text" id="jcrxm" name="jcrxm" placeholder="请输入检查人姓名">
-                    </div>
-                </li>
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label">检查人职务：</label>
-                    <div class="sub-item selectBox">
-                        <select class="form-control">
-                            <option>船长</option>
-                            <option>船副</option>
-                        </select>
+                    <div class="item-detail-info" style="display: block">
+                        <p class="weui_media_desc">【相关文件】《船舶证书文件管理规定》、《船旗国政府证书文件管理规定》、
+                            《船舶台账记录管理规定》、《联合国海洋法公约》</p>
+                        <p class="weui_media_desc">【理解】</p>
+                        <p class="weui_media_desc">1、船舶登记是船舶所有人、经营人、抵押人、光租人等主体依据有关国
+                            际公约和各国法律规定（海商法、中华人民共和国船舶登记条例、中华人民共和国船舶最低安全规则、
+                            船旗国有关船舶登记的法规）向船舶登记机关提出申请，船舶登记机关审查符合条件后依法予以登记，
+                            发放相应证书，其作用可以获得船旗国的法定保护、合法权益、主管机关有效监管、确定船舶所具有的
+                            法律地位各权利义务；</p>
+                        <p class="weui_media_desc">2、船舶登记分为：船名、船舶识别号、烟囱马克、所有权登记、船舶国
+                            籍登记、抵押权登记、租赁权登记等，登记后可获得船旗国国藉以及悬挂其国旗航行的权利；</p>
+                        <p class="weui_media_desc">3、船舶登记证书根据不同船旗国规定有所不同，大致有如下几种证书：</p>
+                        <ul>
+                            <li><p class="weui_media_desc">船舶所有权登记证书；</p></li>
+                            <li><p class="weui_media_desc">船舶登记证书（香港旗为“Certificate of Registry《注册登记证明书》”；</p></li>
+                            <li><p class="weui_media_desc">巴拿马旗为“Statutory Certificate of Registry /International  Service”）；</p></li>
+                            <li><p class="weui_media_desc">船舶抵压权登记证书；</p></li>
+                            <li><p class="weui_media_desc">船舶租赁权登记证书等；</p></li>
+                        </ul>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="ui_tabbar ui-btn-area">
-        <a href="checkStep.html" class="ui_tabbar_item ui-btn ui-btn-primary">
-            下一步
-        </a>
+    <div class="ui_tabbar check-step-tabBar">
+        <div class="ui-btn-area margin-top-0">
+            <a href="javascript:;" class="ui_tabbar_item ui-btn ui-btn-success">
+                上一项
+            </a>
+            <a href="javascript:;" class="ui_tabbar_item ui-btn ui-btn-primary">
+                下一项
+            </a>
+        </div>
     </div>
 </div>
 
-<div class="ui_dialog_confirm" id="modal-addCountry" style="display: none">
-    <div class="ui_mask"></div>
-    <div class="ui_dialog">
-        <div class="ui_dialog_hd"><strong class="ui_dialog_title">新增国家</strong></div>
-        <div class="ui_dialog_bd">
-            <ul class="ui-form-list layout-inset margin-top-0 margin-bottom-0">
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label">国家名称：</label>
-                    <div class="sub-item">
-                        <input type="text" placeholder="请输入国家名称">
-                    </div>
-                </li>
-            </ul>
+<div id="js-zj-select" class="actionsheet-selectList">
+    <div class="ui_mask_transition"></div>
+    <div class="ui_actionsheet">
+        <div class="ui_actionsheet_menu">
+            <div class="ui_actionsheet_cell">
+                <dl class="selectList-dl">
+                    <dd>第一章</dd>
+                    <dt>
+                        <a href="study_zj.html" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第一节</p>
+                            </div>
+                        </a>
+                    </dt>
+                    <dt>
+                        <a href="study_zj.html" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第二节</p>
+                            </div>
+                        </a>
+                    </dt>
+                </dl>
+                <dl class="selectList-dl">
+                    <dd>第二章</dd>
+                    <dt>
+                        <a href="study_zj.html" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第一节</p>
+                            </div>
+                        </a>
+                    </dt>
+                    <dt>
+                        <a href="study_zj.html" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第二节</p>
+                            </div>
+                        </a>
+                    </dt>
+                    <dt>
+                        <a href="study_zj.html" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第三节</p>
+                            </div>
+                        </a>
+                    </dt>
+                </dl>
+            </div>
         </div>
-        <div class="ui_dialog_ft">
-            <a href="javascript:;" class="ui_btn_dialog default js-close-modal">取消</a>
-            <a href="javascript:;" class="ui_btn_dialog primary">确定</a>
+        <div class="ui_actionsheet_action">
+            <div class="btn-cancel-actionsheet">取消</div>
         </div>
     </div>
 </div>
-<div class="ui_dialog_confirm" id="modal-addPort" style="display: none">
-    <div class="ui_mask"></div>
-    <div class="ui_dialog">
-        <div class="ui_dialog_hd"><strong class="ui_dialog_title">新增港口</strong></div>
-        <div class="ui_dialog_bd">
-            <ul class="ui-form-list layout-inset margin-top-0 margin-bottom-0">
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label">港口名称：</label>
-                    <div class="sub-item">
-                        <input type="text" placeholder="请输入港口名称">
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="ui_dialog_ft">
-            <a href="javascript:;" class="ui_btn_dialog default js-close-modal">取消</a>
-            <a href="javascript:;" class="ui_btn_dialog primary">确定</a>
-        </div>
-    </div>
-</div>
+
 <!--<script type="text/html" id="unit_1">-->
     <!--<div class="unit_info">-->
         <!--<h5 class="info-title">-->
@@ -271,8 +260,8 @@
         <!--</div>-->
     <!--</div>-->
 <!--</script>-->
-<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/viewDetail.js"></script>
+<!--<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<!--<script type="text/javascript" src="js/viewDetail.js"></script>-->
 </body>
 </html>

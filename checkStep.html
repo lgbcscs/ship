@@ -16,10 +16,15 @@
 </head>
 <body class="ui-body">
 <div class="ui-page ui-header-fixed ui-footer-fixed">
-    <div class="ui-header">
+    <div class="ui-header ui-header-btnStyle">
         <a href="./addInspect.html" data-role="goBackPage" class="ui-btn-simple ui-btn-back ui-header-btn-left">返回</a><!--无边框的按钮ui-btn-simple；链接ui-btn-link;-->
         <h1 class="ui-title">新增检查项</h1>
-        <!--<a href="#" type="button" data-role="changePage" class="ui-btn-simple ui-header-btn-right">编辑</a>-->
+        <button id="js-show-select" type="button" class="ui-btn-simple ui-header-btn-right">快速定位</button>
+        <i class="ico-up disNone"></i>
+        <ul class="ui-select-list disNone">
+            <li><label for="zj"><input type="radio" value="zj" id="zj" name="fs">按章节定位</label></li>
+            <li><label for="wz"><input type="radio" value="wz" id="wz" name="fs">按检查地点</label></li>
+        </ul>
     </div>
     <div class="ui-content page-index">
         <div class="partInfo">
@@ -32,17 +37,24 @@
                     <div class="ui_panel_bd">
                         <div class="ui_media_box ui_media_text clearfix">
                             <h4 class="ui_media_title clearfix">
-                                <span class="pull-left">1.01:船名</span>
+                                <span class="pull-left">船名</span>
                             </h4>
                             <p class="ui_media_desc">
-                                <span>检查结果：是(Y)</span>
+                                <span>船名是否规范，是否正确</span>
                             </p>
                         </div>
                     </div>
-                    <div class="ng-info ui_cell">
-                        <div class="ui_cell_bd ui_cell_primary">
-                            <textarea class="ui_textarea" placeholder="请输入不规范的理由" rows="3"></textarea>
-                            <div class="ui_textarea_counter"><span>0</span>/200</div>
+                    <div class="ng-info">
+                        <div class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <textarea class="ui_textarea" placeholder="请输入不规范的理由" rows="3"></textarea>
+                                <div class="ui_textarea_counter">
+                                    <button type="button" class="ui-btn ui-btn-info">上传缺陷照片</button>
+                                    <label>
+                                        <span>0</span>/200
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="item-detail-info">
@@ -69,7 +81,7 @@
             </ul>
         </div>
     </div>
-    <div class="ui_tabbar ui-btn-area">
+    <div class="ui_tabbar check-step-tabBar">
         <div class="raido-option-list clearfix">
             <label class="raido-item" for="Y">
                 <input type="radio" name="zc" value="Y" id="Y">是(Y)
@@ -84,52 +96,131 @@
                 <input type="radio" name="zc" value="NA" id="NA">不适用(NA)
             </label>
         </div>
-        <a href="javascript:;" class="ui_tabbar_item ui-btn ui-btn-success">
-            上一项
-        </a>
-        <a href="javascript:;" class="ui_tabbar_item ui-btn ui-btn-primary">
-            下一项
-        </a>
+        <div class="ui-btn-area margin-top-0">
+            <a href="javascript:;" class="ui_tabbar_item ui-btn ui-btn-success">
+                上一项
+            </a>
+            <a href="javascript:;" class="ui_tabbar_item ui-btn ui-btn-primary">
+                下一项
+            </a>
+        </div>
     </div>
 </div>
 
-<div class="ui_dialog_confirm" id="modal-addCountry" style="display: none">
-    <div class="ui_mask"></div>
-    <div class="ui_dialog">
-        <div class="ui_dialog_hd"><strong class="ui_dialog_title">新增国家</strong></div>
-        <div class="ui_dialog_bd">
-            <ul class="ui-form-list layout-inset margin-top-0 margin-bottom-0">
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label">国家名称：</label>
-                    <div class="sub-item">
-                        <input type="text" placeholder="请输入国家名称">
-                    </div>
-                </li>
-            </ul>
+<div id="js-zj-select" class="actionsheet-selectList">
+    <div class="ui_mask_transition"></div>
+    <div class="ui_actionsheet">
+        <div class="ui_actionsheet_menu">
+            <div class="ui_actionsheet_cell">
+                <dl class="selectList-dl">
+                    <dd>第一章</dd>
+                    <dt>
+                        <a href="#" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第一节</p>
+                            </div>
+                            <div class="ui_cell_ft text_success">完成</div>
+                        </a>
+                    </dt>
+                    <dt>
+                        <a href="#" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第二节</p>
+                            </div>
+                            <div class="ui_cell_ft text_warning">未完成</div>
+                        </a>
+                    </dt>
+                </dl>
+                <dl class="selectList-dl">
+                    <dd>第二章</dd>
+                    <dt>
+                        <a href="#" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第一节</p>
+                            </div>
+                            <div class="ui_cell_ft text_success">完成</div>
+                        </a>
+                    </dt>
+                    <dt>
+                        <a href="#" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第二节</p>
+                            </div>
+                            <div class="ui_cell_ft text_warning">未完成</div>
+                        </a>
+                    </dt>
+                    <dt>
+                        <a href="#" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第三节</p>
+                            </div>
+                            <div class="ui_cell_ft text_success">完成</div>
+                        </a>
+                    </dt>
+                </dl>
+            </div>
         </div>
-        <div class="ui_dialog_ft">
-            <a href="javascript:;" class="ui_btn_dialog default js-close-modal">取消</a>
-            <a href="javascript:;" class="ui_btn_dialog primary">确定</a>
+        <div class="ui_actionsheet_action">
+            <div class="btn-cancel-actionsheet">取消</div>
         </div>
     </div>
 </div>
-<div class="ui_dialog_confirm" id="modal-addPort" style="display: none">
-    <div class="ui_mask"></div>
-    <div class="ui_dialog">
-        <div class="ui_dialog_hd"><strong class="ui_dialog_title">新增港口</strong></div>
-        <div class="ui_dialog_bd">
-            <ul class="ui-form-list layout-inset margin-top-0 margin-bottom-0">
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label">港口名称：</label>
-                    <div class="sub-item">
-                        <input type="text" placeholder="请输入港口名称">
-                    </div>
-                </li>
-            </ul>
+
+<div id="js-wz-select" class="actionsheet-selectList">
+    <div class="ui_mask_transition"></div>
+    <div class="ui_actionsheet">
+        <div class="ui_actionsheet_menu">
+            <div class="ui_actionsheet_cell">
+                <dl class="selectList-dl">
+                    <dd>厨房</dd>
+                    <dt>
+                        <a href="#" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第一节第一节</p>
+                            </div>
+                            <div class="ui_cell_ft text_success">完成</div>
+                        </a>
+                    </dt>
+                    <dt>
+                        <a href="#" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第五章第二节</p>
+                            </div>
+                            <div class="ui_cell_ft text_warning">未完成</div>
+                        </a>
+                    </dt>
+                </dl>
+                <dl class="selectList-dl">
+                    <dd>救生艇</dd>
+                    <dt>
+                        <a href="#" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第二章第六节</p>
+                            </div>
+                            <div class="ui_cell_ft text_success">完成</div>
+                        </a>
+                    </dt>
+                    <dt>
+                        <a href="#" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第八章第二节</p>
+                            </div>
+                            <div class="ui_cell_ft text_warning">未完成</div>
+                        </a>
+                    </dt>
+                    <dt>
+                        <a href="#" class="ui_cell">
+                            <div class="ui_cell_bd ui_cell_primary">
+                                <p>第三节</p>
+                            </div>
+                            <div class="ui_cell_ft text_success">完成</div>
+                        </a>
+                    </dt>
+                </dl>
+            </div>
         </div>
-        <div class="ui_dialog_ft">
-            <a href="javascript:;" class="ui_btn_dialog default js-close-modal">取消</a>
-            <a href="javascript:;" class="ui_btn_dialog primary">确定</a>
+        <div class="ui_actionsheet_action">
+            <div class="btn-cancel-actionsheet">取消</div>
         </div>
     </div>
 </div>
@@ -265,8 +356,8 @@
         <!--</div>-->
     <!--</div>-->
 <!--</script>-->
-<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/viewDetail.js"></script>
+<!--<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<!--<script type="text/javascript" src="js/viewDetail.js"></script>-->
 </body>
 </html>

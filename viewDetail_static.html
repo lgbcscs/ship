@@ -9,134 +9,67 @@
 
     <link rel="stylesheet" href="sytle/css/ship-ui/ship-mobile-ui.css">
     <link rel="stylesheet" href="sytle/css/index.css">
-
-    <script TYPE="text/javascript" src="lib/jquery/jquery.min.js"></script>
-    <script TYPE="text/javascript" src="js/public.js"></script>
-    <script TYPE="text/javascript" src="js/addInspect.js"></script>
 </head>
 <body class="ui-body">
 <div class="ui-page ui-header-fixed ui-footer-fixed">
     <div class="ui-header">
-        <a href="./index.html" data-role="goBackPage" class="ui-btn-simple ui-btn-back ui-header-btn-left">返回</a><!--无边框的按钮ui-btn-simple；链接ui-btn-link;-->
-        <h1 class="ui-title">新增检查项</h1>
+        <a href="historyList_static.html" data-role="goBackPage" class="ui-btn-simple ui-btn-back ui-header-btn-left">返回</a><!--无边框的按钮ui-btn-simple；链接ui-btn-link;-->
+        <h1 class="ui-title">历史检查项统计</h1>
         <!--<a href="#" type="button" data-role="changePage" class="ui-btn-simple ui-header-btn-right">编辑</a>-->
     </div>
-    <div class="ui-content page-index">
+    <div class="ui-content">
         <div class="partInfo">
             <h3 class="zeus-item-header js-part-dropdown">
-                <span class="zeus-item-title">检查项基础信息</span>
+                <span class="zeus-item-title">船舶自查(2016-06-06)</span>
             </h3>
-            <ul class="ui-form-list layout-inset">
-                <li class="list-horizontal">
-                    <label class="ui-from-label">船名：</label>
-                    <div class="sub-item">
-                        <span class="textShow">启程号</span>
+            <ul class="ui-form-list layout-inset li-block jc-list-part">
+                <li>
+                    <div class="ui_panel_bd">
+                        <div class="ui_media_box ui_media_text clearfix">
+                            <h4 class="ui_media_title clearfix">
+                                <span class="pull-left">章节缺陷分布</span>
+                            </h4>
+                            <p class="ui_media_desc clearfix">
+                                <span class="w-percent-50 pull-left">第一章：<em class="text-warning">2个</em></span>
+                                <span class="w-percent-50 pull-left">第二章：<em class="text-warning">2个</em></span>
+                                <span class="w-percent-50 pull-left">第三章：<em class="text-warning">2个</em></span>
+                                <span class="w-percent-50 pull-left">第四章：<em class="text-warning">2个</em></span>
+                                <span class="w-percent-50 pull-left">第五章：<em class="text-warning">2个</em></span>
+                                <span class="w-percent-50 pull-left">第六章：<em class="text-warning">2个</em></span>
+                            </p>
+                        </div>
                     </div>
                 </li>
-                <!--<li class="list-horizontal">--><!--如果是船务使用的话，则船名使用输入框-->
-                    <!--<label class="ui-from-label">船名：</label>-->
-                    <!--<div class="sub-item">-->
-                        <!--<input type="text" placeholder="请输入船名">-->
-                    <!--</div>-->
-                <!--</li>-->
-                <li class="list-horizontal">
-                    <label class="ui-from-label">检查开始时间：</label>
-                    <div class="sub-item">
-                        <span class="textShow">2016-12-12 10:10</span>
-                    </div>
-                </li>
-                <li class="list-horizontal">
-                    <label class="ui-from-label">检查结束时间：</label>
-                    <div class="sub-item">
-                        <span class="textShow">2016-12-12 12:00</span>
-                    </div>
-                </li>
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label" for="gj">所在国家：</label>
-                    <div class="sub-item">
-                        <input type="text" id="gj" name="gj" placeholder="请输入国家">
-                    </div>
-                    <button id="js-addCountry" type="button" class="ui-btn ui-btn-primary">新增国家</button>
-                </li>
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label" for="gk">港口：</label>
-                    <div class="sub-item">
-                        <input type="text" id="gk" name="gk" placeholder="请输入港口">
-                    </div>
-                    <button id="js-addPort" type="button" class="ui-btn ui-btn-primary">新增港口</button>
-                </li>
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label">检查项目职务：</label>
-                    <div class="sub-item selectBox">
-                        <select class="form-control">
-                            <option>船长</option>
-                            <option>船副</option>
-                        </select>
-                    </div>
-                </li>
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label" for="jcrxm">检查人姓名：</label>
-                    <div class="sub-item">
-                        <input type="text" id="jcrxm" name="jcrxm" placeholder="请输入检查人姓名">
-                    </div>
-                </li>
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label">检查人职务：</label>
-                    <div class="sub-item selectBox">
-                        <select class="form-control">
-                            <option>船长</option>
-                            <option>船副</option>
-                        </select>
+                <li>
+                    <div class="ui_panel_bd">
+                        <div class="ui_media_box ui_media_text clearfix">
+                            <h4 class="ui_media_title clearfix">
+                                <span class="pull-left">按检查位置缺陷分布</span>
+                            </h4>
+                            <p class="ui_media_desc clearfix">
+                                <span class="w-percent-50 pull-left">夹板：<em class="text-warning">2个</em></span>
+                                <span class="w-percent-50 pull-left">厨房：<em class="text-warning">2个</em></span>
+                                <span class="w-percent-50 pull-left">船概况：<em class="text-warning">2个</em></span>
+                                <span class="w-percent-50 pull-left">船证书：<em class="text-warning">2个</em></span>
+                                <span class="w-percent-50 pull-left">驾驶室：<em class="text-warning">2个</em></span>
+                                <span class="w-percent-50 pull-left">机房：<em class="text-warning">2个</em></span>
+                            </p>
+                        </div>
                     </div>
                 </li>
             </ul>
+
         </div>
     </div>
     <div class="ui_tabbar ui-btn-area">
-        <a href="checkStep.html" class="ui_tabbar_item ui-btn ui-btn-primary">
-            下一步
+        <a href="javascript:;" class="ui_tabbar_item ui-btn ui-btn-primary">
+            <!--<p class="ui_tabbar_label">上一章</p>-->
+            上一次检查
         </a>
-    </div>
-</div>
-
-<div class="ui_dialog_confirm" id="modal-addCountry" style="display: none">
-    <div class="ui_mask"></div>
-    <div class="ui_dialog">
-        <div class="ui_dialog_hd"><strong class="ui_dialog_title">新增国家</strong></div>
-        <div class="ui_dialog_bd">
-            <ul class="ui-form-list layout-inset margin-top-0 margin-bottom-0">
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label">国家名称：</label>
-                    <div class="sub-item">
-                        <input type="text" placeholder="请输入国家名称">
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="ui_dialog_ft">
-            <a href="javascript:;" class="ui_btn_dialog default js-close-modal">取消</a>
-            <a href="javascript:;" class="ui_btn_dialog primary">确定</a>
-        </div>
-    </div>
-</div>
-<div class="ui_dialog_confirm" id="modal-addPort" style="display: none">
-    <div class="ui_mask"></div>
-    <div class="ui_dialog">
-        <div class="ui_dialog_hd"><strong class="ui_dialog_title">新增港口</strong></div>
-        <div class="ui_dialog_bd">
-            <ul class="ui-form-list layout-inset margin-top-0 margin-bottom-0">
-                <li class="list-horizontal"><!--行内显示-->
-                    <label class="ui-from-label">港口名称：</label>
-                    <div class="sub-item">
-                        <input type="text" placeholder="请输入港口名称">
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="ui_dialog_ft">
-            <a href="javascript:;" class="ui_btn_dialog default js-close-modal">取消</a>
-            <a href="javascript:;" class="ui_btn_dialog primary">确定</a>
-        </div>
+        <a href="javascript:;" class="ui_tabbar_item ui-btn ui-btn-success">
+            <!--<p class="ui_tabbar_label">下一章</p>-->
+            下一次检查
+        </a>
     </div>
 </div>
 <!--<script type="text/html" id="unit_1">-->
